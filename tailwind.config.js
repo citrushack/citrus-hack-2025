@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        poppins: ["var(--font-poppins)"],
+        lily: ["var(--font-lily)"],
       },
       colors: {
         hackathon: {
@@ -61,6 +61,12 @@ module.exports = {
           ring: "#FFCF55",
           "primary-foreground": "#F5F5F5",
           "accent-foreground": "#22577A",
+        },
+        citrus: {
+          "red-100": "#72231C",
+          "red-200": "#500000",
+          beige: "#FFEBD2",
+          yellow: "#EAA54F",
         },
       },
       keyframes: {
