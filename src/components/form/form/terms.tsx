@@ -16,11 +16,11 @@ const Terms = ({ options, toggle, onClick }: props) => {
 
   return (
     <>
-      <p className="mb-1 mt-3 font-semibold">
+      <p className="mb-1 mt-3 font-kumar font-semibold text-white">
         Terms and Conditions
         <span className="text-red-500">*</span>
       </p>
-      <ul className="mb-4 list-disc pl-5 text-sm">
+      <ul className="mb-4 list-disc pl-5 font-kumar text-sm text-white">
         {options.map((option, index) => (
           <li key={index}>{option}</li>
         ))}

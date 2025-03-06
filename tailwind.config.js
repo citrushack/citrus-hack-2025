@@ -14,8 +14,11 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
+        kumar: ["'Kumar One'", "cursive"],
       },
       colors: {
+        citrusDarkRed: "#460000",
+        citrusGray: "#C8C8C8",
         hackathon: {
           "blue-100": "#38A3A5",
           "blue-200": "#22577A",

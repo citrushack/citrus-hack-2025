@@ -7,7 +7,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/tailwind";
 
 const labelVariants = cva(
-  "mb-1 m-0.2 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 hover:cursor-pointer ",
+  "mb-1 m-0.2 text-white font-bold font-kumar leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 hover:cursor-pointer ",
 );
 
 const Label = React.forwardRef<

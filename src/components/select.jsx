@@ -37,7 +37,7 @@ const VirtualizedContent = ({ items, setSelected, userFn, searchable }) => {
       className="dropdown-content h-fit max-h-[400px] w-[var(--radix-dropdown-menu-trigger-width)] overflow-y-scroll pt-0"
       data-cy="select-menu"
     >
-      <div className="sticky top-0 z-50 bg-white pt-1">
+      <div className="sticky top-0 z-50 bg-citrusGray pt-1">
         {searchable && (
           <Input
             placeholder="Search"
@@ -91,7 +91,7 @@ const Select = ({
   return (
     <>
       {title && (
-        <p className="mb-1 font-semibold">
+        <p className="mb-1 font-kumar font-semibold text-white">
           {title}
           {required && <span className="text-red-500">*</span>}
         </p>
@@ -100,16 +100,14 @@ const Select = ({
         <DropdownMenuTrigger className="w-full" asChild>
           <Button
             data-cy="select-toggle"
-            className="w-full justify-between whitespace-normal break-words text-left capitalize"
+            className="w-full justify-between whitespace-normal break-words bg-citrusGray text-left capitalize"
             variant="outline"
             disabled={disabled}
           >
             {selected ? (
               selected
             ) : (
-              <p className="font-normal text-hackathon-gray-200">
-                {placeholder}
-              </p>
+              <p className="font-kumar font-bold text-black">{placeholder}</p>
             )}
             <ChevronDown />
           </Button>
