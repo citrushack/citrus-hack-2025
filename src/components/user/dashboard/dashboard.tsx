@@ -1,5 +1,5 @@
-import Countdown from "./countdown";
 import Header from "../header";
+import Countdown from "./countdown";
 import Tile from "./tile";
 import { QrCode, ParkingCircle } from "lucide-react";
 import Rooms from "./rooms";
