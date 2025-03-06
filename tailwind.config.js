@@ -17,8 +17,12 @@ module.exports = {
         kumar: ["'Kumar One'", "cursive"],
       },
       colors: {
-        citrusDarkRed: "#460000",
-        citrusGray: "#C8C8C8",
+        citrus: {
+          darkred: "#460000",
+          gray: "#C8C8C8",
+          brown: "#776666",
+          jet: "#2D2D2E",
+        },
         hackathon: {
           "blue-100": "#38A3A5",
           "blue-200": "#22577A",

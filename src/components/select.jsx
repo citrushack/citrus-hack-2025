@@ -37,7 +37,7 @@ const VirtualizedContent = ({ items, setSelected, userFn, searchable }) => {
       className="dropdown-content h-fit max-h-[400px] w-[var(--radix-dropdown-menu-trigger-width)] overflow-y-scroll pt-0"
       data-cy="select-menu"
     >
-      <div className="sticky top-0 z-50 bg-citrusGray pt-1">
+      <div className="sticky top-0 z-50 bg-citrus-gray pt-1">
         {searchable && (
           <Input
             placeholder="Search"
@@ -100,7 +100,7 @@ const Select = ({
         <DropdownMenuTrigger className="w-full" asChild>
           <Button
             data-cy="select-toggle"
-            className="w-full justify-between whitespace-normal break-words bg-citrusGray text-left capitalize"
+            className="w-full justify-between whitespace-normal break-words bg-citrus-gray text-left capitalize"
             variant="outline"
             disabled={disabled}
           >

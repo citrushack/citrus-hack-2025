@@ -9,6 +9,9 @@ import Image from "next/image";
 import LOGO from "@/app/favicon.ico";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import filmTop from "@/public/assets/filmRollWavyTop.svg";
+import filmLeft from "@/public/assets/filmRollWavyLeft .svg";
+import filmBottom from "@/public/assets/filmRollWavyBottom.svg";
 
 const Form = ({
   object,
@@ -27,8 +30,8 @@ const Form = ({
   );
 
   return (
-    <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-kumar">
-      <div className="mt-4 flex w-full flex-row justify-end space-x-4">
+    <div className="overflow-scroll-y relative flex h-full w-full flex-col items-center font-kumar">
+      <div className="z-20 mt-4 flex w-full flex-row justify-end space-x-4">
         <Button asChild>
           <Link href="/">Back to Home</Link>
         </Button>
@@ -36,12 +39,24 @@ const Form = ({
           Sign Out
         </Button>
       </div>
+
       <div className="flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 xl:w-1/3">
         <Image src={LOGO} className="m-4 w-1/4" alt="Logo" />
-        <p className="m-0 w-full rounded-t bg-citrusDarkRed px-4 py-4 text-xl font-semibold text-white">
+
+        <p className="z-20 m-0 w-full rounded-t bg-citrus-darkred px-4 py-4 text-xl font-semibold text-white">
           {header}
         </p>
-        <div className="rounded-b bg-[#776666] p-8 font-kumar text-white">
+        <div className="absolute inset-0 z-0 w-screen">
+          <Image src={filmTop} className="z-0 w-[100%]" alt="film" />
+          <Image
+            src={filmLeft}
+            className="absolute top-1/2 z-0 w-[100%]"
+            alt="film"
+          />
+          <Image src={filmBottom} className="top-1/3 z-0 w-[100%]" alt="film" />
+        </div>
+
+        <div className="relative z-20 rounded-b bg-citrus-brown p-8 font-kumar text-white">
           <div className="grid grid-cols-1 gap-3">
             {state === 0 ? (
               <Status object={object} statuses={statuses} setState={setState} />
