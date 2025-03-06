@@ -5,6 +5,7 @@ import Providers from "@/components/providers";
 import { Toaster } from "react-hot-toast";
 import { getServerSession } from "next-auth";
 import { options } from "@/utils/auth";
+import Cursor from "@/components/live/custom/cursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ const RootLayout = async ({ children }: Props) => {
           <Providers session={session}>
             <Toaster />
             {children}
+            <Cursor />
           </Providers>
         </div>
       </body>

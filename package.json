@@ -67,6 +67,7 @@
     "compressorjs": "^1.2.1",
     "firebase": "^10.13.1",
     "firebase-admin": "^12.5.0",
+    "framer-motion": "^12.4.10",
     "gray-matter": "^4.0.3",
     "input-otp": "^1.2.4",
     "jszip": "^3.10.1",
