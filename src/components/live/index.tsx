@@ -14,7 +14,7 @@ const Live = () => {
   return (
     <>
       <Cursor />
-      <div>
+      <div className="bg-[#2d2d2e]">
         <Landing />
         <About />
         <Tracks />
