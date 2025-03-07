@@ -111,8 +111,13 @@ module.exports = {
             opacity: "0",
           },
         },
+        flicker: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0.5 },
+        },
       },
       animation: {
+        "cinema-flicker": "flicker 8s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "collapsible-down": "collapsible-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
