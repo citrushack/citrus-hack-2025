@@ -56,7 +56,7 @@ const Cursor = () => {
 
   return (
     <motion.div
-      className="cursor z-100 flex items-center justify-center"
+      className="cursor z-50 flex items-center justify-center"
       variants={variants}
       animate="default"
     />
