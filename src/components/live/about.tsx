@@ -45,7 +45,7 @@ const About = () => {
           <Title>Coming Soon</Title>
         </motion.div>
         <motion.p
-          className="mt-6 text-lg text-white md:text-xl"
+          className="mt-6 text-lg tracking-wider text-white md:text-xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
