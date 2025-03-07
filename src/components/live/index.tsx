@@ -8,20 +8,24 @@ import Committees from "./committees";
 import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
+import Cursor from "./custom/cursor";
 
 const Live = () => {
   return (
     <>
-      <Landing />
-      <About />
-      <Tracks />
-      <Schedule />
-      <Sponsors />
-      <Team />
-      <Committees />
-      <Judges />
-      <FAQ />
-      <Footer />
+      <Cursor />
+      <div>
+        <Landing />
+        <About />
+        <Tracks />
+        <Schedule />
+        <Sponsors />
+        <Team />
+        <Committees />
+        <Judges />
+        <FAQ />
+        <Footer />
+      </div>
     </>
   );
 };
