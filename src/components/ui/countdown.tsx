@@ -72,11 +72,11 @@ const Countdown = ({ classNames }: countdownProps) => {
 
   return (
     <div className="flex items-center justify-center gap-20">
-      {Object.entries(countdown).map(([unit, value], index) => (
+      {Object.entries(countdown).map(([unit, value], index, array) => (
         <div key={index} className="relative flex flex-row items-end">
           <Digits unit={unit} value={value} classNames={classNames} />
 
-          {unit !== "seconds" && (
+          {index !== array.length - 1 && (
             <span className="absolute -right-12 bottom-4 h-4 w-4 self-center rounded-full bg-black" />
           )}
         </div>
