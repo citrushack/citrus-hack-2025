@@ -1,5 +1,7 @@
 import Countdown from "@/components/ui/countdown";
 
+import LandingBottom from "./landing-bottom";
+
 const Landing = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-[5%]">
@@ -33,6 +35,13 @@ const Landing = () => {
           }}
         />
       </div>
+      {/* <div className=" grid grid-cols-2 my-20 text-citrus-yellow justify-items-center w-1/5 gap-4">
+        <div>participant</div>
+        <div>participant</div>
+        <div>participant</div>
+        <div>participant</div>
+      </div> */}
+      <LandingBottom />
     </div>
   );
 };
