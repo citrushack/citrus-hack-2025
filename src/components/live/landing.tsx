@@ -1,6 +1,6 @@
 import Countdown from "@/components/ui/countdown";
 
-import LandingBottom from "./landing-bottom";
+import LandingBottom from "./landingassets";
 
 const Landing = () => {
   return (

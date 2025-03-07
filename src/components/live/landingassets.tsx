@@ -6,7 +6,7 @@ import Seats from "@/public/assets/seats.svg";
 // import CitrusCredits from "@/public/assets/rolliingcredits.svg";
 import rolling from "@/public/assets/rolling.svg";
 
-const LandingBottom = () => {
+const LandingAssets = () => {
   return (
     <div className="relative mt-10 flex w-full flex-col">
       <Image src={Seats} alt="cinema seats" className="w-full" />
@@ -28,14 +28,11 @@ const LandingBottom = () => {
         </motion.div>
       </div> */}
       <div className="relative z-10 w-full overflow-hidden">
-        {/* Background image */}
         <Image
           src={rolling}
           alt="cinema credits"
           className="absolute h-full w-full object-cover"
         />
-
-        {/* Marquee text */}
         <motion.div
           initial={{ x: "0%" }}
           animate={{ x: "-100%" }}
@@ -61,4 +58,4 @@ const LandingBottom = () => {
   );
 };
 
-export default LandingBottom;
+export default LandingAssets;
