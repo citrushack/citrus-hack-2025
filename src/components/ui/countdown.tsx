@@ -14,22 +14,23 @@ interface digitProps {
 
 const Digits = ({ value, unit, classNames }: digitProps) => {
   return (
-    <div className="flex flex-col items-center gap-4 last:hidden sm:last:flex">
-      <div className="m-3 mb-0 flex gap-1 lg:!gap-1">
+    <div className="flex flex-col items-center justify-center gap-6 text-center last:hidden sm:last:flex">
+      <div className={`text-lg ${classNames.unit}`}>{unit}</div>
+      <div className="flex items-center gap-0 lg:!gap-0">
         {value
           .toString()
           .padStart(2, "0")
           .split("")
           .map((digit, index) => (
-            <div
-              className={`flex items-center justify-center rounded ${classNames.background} bg-opacity-40 p-3 text-lg font-bold ${classNames.digit} lg:min-w-11 lg:p-3 lg:text-3xl`}
-              key={index}
-            >
-              {digit}
+            <div key={index}>
+              <div
+                className={`flex items-center justify-center rounded ${classNames.background} bg-opacity-40 text-lg ${classNames.digit} lg:text-4xl`}
+              >
+                {digit}
+              </div>
             </div>
           ))}
       </div>
-      <div className={`m-2 mt-0 text-xs ${classNames.unit}`}>{unit}</div>
     </div>
   );
 };
@@ -70,9 +71,15 @@ const Countdown = ({ classNames }: countdownProps) => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center font-bold">
+    <div className="flex items-center justify-center gap-20">
       {Object.entries(countdown).map(([unit, value], index) => (
-        <Digits key={index} unit={unit} value={value} classNames={classNames} />
+        <div key={index} className="relative flex flex-row items-end">
+          <Digits unit={unit} value={value} classNames={classNames} />
+
+          {unit !== "seconds" && (
+            <span className="absolute -right-12 bottom-4 h-4 w-4 self-center rounded-full bg-black" />
+          )}
+        </div>
       ))}
     </div>
   );
