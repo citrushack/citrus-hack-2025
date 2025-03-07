@@ -27,9 +27,15 @@ const LandingBottom = () => {
           <Image src={CitrusCredits} alt="cinema credits" className="w-full" />
         </motion.div>
       </div> */}
-      {/* <Image src={CitrusCredits} alt="cinema credits" className="w-full" /> */}
-      <div className="relative w-full pb-4">
-        <Image src={rolling} alt="cinema credits" className="absolute w-full" />
+      <div className="relative z-10 w-full overflow-hidden">
+        {/* Background image */}
+        <Image
+          src={rolling}
+          alt="cinema credits"
+          className="absolute h-full w-full object-cover"
+        />
+
+        {/* Marquee text */}
         <motion.div
           initial={{ x: "0%" }}
           animate={{ x: "-100%" }}
@@ -39,16 +45,16 @@ const LandingBottom = () => {
             duration: 20,
             ease: "linear",
           }}
-          className="mt-8 whitespace-nowrap"
+          className="flex items-center whitespace-nowrap py-4 sm:py-6 md:py-8 lg:py-10"
         >
-          <span className="px-4 text-4xl font-bold tracking-wider text-white">
+          <p className="px-4 text-sm font-bold tracking-wider text-white sm:text-xl md:text-3xl lg:text-4xl">
             CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS •
             CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS •
             CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS •
             CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS •
             CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS •
             CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS • CITRUS •
-          </span>
+          </p>
         </motion.div>
       </div>
     </div>
