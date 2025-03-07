@@ -8,6 +8,6 @@
 }
 
 .text-outline-yellow {
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: theme("colors.citrus.yellow");
 }
