@@ -5,7 +5,7 @@ import LandingBottom from "./landing-bottom";
 const Landing = () => {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center bg-citrus-gray py-[5%]">
-      <div className="relative flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[15px] border-black bg-citrus-beige px-5 py-14">
+      <div className="relative flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[15px] border-black bg-citrus-beige px-5 py-10">
         {/* add logo here */}
         {/* <div className="absolute -top-[11.45%]">
           <div className="relative flex h-32 w-32 flex-col items-center justify-center rounded-full bg-citrus-red-200 text-white">
