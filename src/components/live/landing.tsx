@@ -1,16 +1,19 @@
 import Countdown from "@/components/ui/countdown";
 
+import LandingBottom from "./landing-bottom";
+
 const Landing = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-[5%]">
+    <div className="flex h-full w-full flex-col items-center justify-center bg-citrus-gray py-[5%]">
       <div className="relative flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[15px] border-black bg-citrus-beige px-5 py-14">
-        <div className="absolute -top-[11.45%]">
+        {/* add logo here */}
+        {/* <div className="absolute -top-[11.45%]">
           <div className="relative flex h-32 w-32 flex-col items-center justify-center rounded-full bg-citrus-red-200 text-white">
             <span className="absolute -left-4 h-2 w-2 rounded-full bg-gray-300" />
             <div>LOGO</div>
             <span className="absolute -right-4 h-2 w-2 rounded-full bg-gray-300" />
           </div>
-        </div>
+        </div> */}
         <div className="text-outline-red text-4xl text-citrus-yellow">
           The Golden Age of
         </div>
@@ -33,6 +36,13 @@ const Landing = () => {
           }}
         />
       </div>
+      {/* <div className=" grid grid-cols-2 my-20 text-citrus-yellow justify-items-center w-1/5 gap-4">
+        <div>participant</div>
+        <div>participant</div>
+        <div>participant</div>
+        <div>participant</div>
+      </div> */}
+      <LandingBottom />
     </div>
   );
 };
