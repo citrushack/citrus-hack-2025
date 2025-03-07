@@ -14,7 +14,7 @@ interface digitProps {
 
 const Digits = ({ value, unit, classNames }: digitProps) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-6 text-center last:hidden sm:last:flex">
+    <div className="flex flex-col items-center justify-center gap-2 text-center last:hidden sm:last:flex md:gap-6">
       <div className={`text-lg ${classNames.unit}`}>{unit}</div>
       <div className="flex items-center gap-0 lg:!gap-0">
         {value
@@ -71,13 +71,16 @@ const Countdown = ({ classNames }: countdownProps) => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center gap-20">
+    <div className="flex flex-row items-center justify-center gap-5 md:gap-20">
       {Object.entries(countdown).map(([unit, value], index, array) => (
-        <div key={index} className="relative flex flex-row items-end">
+        <div
+          key={index}
+          className="relative flex flex-row items-end last:hidden sm:last:flex"
+        >
           <Digits unit={unit} value={value} classNames={classNames} />
 
           {index !== array.length - 1 && (
-            <span className="absolute -right-12 bottom-4 h-4 w-4 self-center rounded-full bg-black" />
+            <span className="absolute -right-12 bottom-4 hidden h-4 w-4 self-center rounded-full bg-black md:flex" />
           )}
         </div>
       ))}
