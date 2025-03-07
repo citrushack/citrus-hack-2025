@@ -22,6 +22,7 @@ module.exports = {
           gray: "#C8C8C8",
           brown: "#776666",
           jet: "#2D2D2E",
+          black: "#1E1E1E",
         },
         hackathon: {
           "blue-100": "#38A3A5",

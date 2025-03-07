@@ -10,7 +10,7 @@ import LOGO from "@/app/favicon.ico";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import filmTop from "@/public/assets/filmRollWavyTop.svg";
-import filmLeft from "@/public/assets/filmRollWavyLeft .svg";
+import filmLeft from "@/public/assets/filmRollWavyLeft.svg";
 import filmBottom from "@/public/assets/filmRollWavyBottom.svg";
 
 const Form = ({
@@ -41,22 +41,26 @@ const Form = ({
       </div>
 
       <div className="flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 xl:w-1/3">
-        <Image src={LOGO} className="m-4 w-1/4" alt="Logo" />
+        <Image src={LOGO} className="z-20 m-4 w-1/4" alt="Logo" />
 
         <p className="z-20 m-0 w-full rounded-t bg-citrus-darkred px-4 py-4 text-xl font-semibold text-white">
           {header}
         </p>
-        <div className="absolute inset-0 z-0 w-screen">
-          <Image src={filmTop} className="z-0 w-[100%]" alt="film" />
+        <div className="absolute inset-0 z-0 h-screen w-screen">
           <Image
-            src={filmLeft}
-            className="absolute top-1/2 z-0 w-[100%]"
+            src={filmTop}
+            className="absolute inset-0 -top-[45%] left-5 z-0"
             alt="film"
           />
-          <Image src={filmBottom} className="top-1/3 z-0 w-[100%]" alt="film" />
-        </div>
 
-        <div className="relative z-20 rounded-b bg-citrus-brown p-8 font-kumar text-white">
+          <Image
+            src={filmLeft}
+            className="left-0 z-0 h-full w-full"
+            alt="film"
+          />
+          <Image src={filmBottom} className="z-0 h-[100%] w-full" alt="film" />
+        </div>
+        <div className="relative z-20 rounded-b bg-transparent p-8 font-kumar text-white backdrop-blur-md">
           <div className="grid grid-cols-1 gap-3">
             {state === 0 ? (
               <Status object={object} statuses={statuses} setState={setState} />
