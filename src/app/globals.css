@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-outline-red {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: theme("colors.citrus.red-200");
+}
+
+.text-outline-yellow {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: theme("colors.citrus.yellow");
+}

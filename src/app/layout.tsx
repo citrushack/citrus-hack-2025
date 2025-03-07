@@ -1,12 +1,13 @@
 /* eslint-disable new-cap */
+/* eslint-disable camelcase */
+import { Lily_Script_One } from "next/font/google";
 import "./globals.css";
-import { Poppins } from "next/font/google";
 
-const poppins = Poppins({
+const lily = Lily_Script_One({
   subsets: ["latin"],
   display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins",
+  weight: ["400"],
+  variable: "--font-lily",
 });
 
 type Props = {
@@ -16,7 +17,7 @@ type Props = {
 const RootLayout = async ({ children }: Props) => {
   return (
     <html lang="en" className="h-full">
-      <body className={`${poppins.variable} flex h-full flex-col lg:flex-row`}>
+      <body className={`${lily.className} flex h-full flex-col lg:flex-row`}>
         <div className="flex h-full w-full">{children}</div>
       </body>
     </html>
