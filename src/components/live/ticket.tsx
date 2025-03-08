@@ -1,3 +1,5 @@
+/* eslint-disable new-cap */
+/* eslint-disable camelcase */
 import Image from "next/image";
 import { Kumar_One } from "next/font/google";
 import TicketComp from "@/public/assets/ticket.svg";
