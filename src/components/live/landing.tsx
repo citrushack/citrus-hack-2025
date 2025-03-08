@@ -2,6 +2,7 @@ import Countdown from "@/components/ui/countdown";
 import LandingAssets from "./landing-assets";
 import TextStroke from "./text-stroke";
 import CinemaLights from "./cinema-lights";
+import Ticket from "./ticket";
 
 const Landing = () => {
   return (
@@ -48,12 +49,12 @@ const Landing = () => {
           }}
         />
       </div>
-      {/* <div className=" grid grid-cols-2 my-20 text-citrus-yellow justify-items-center w-1/5 gap-4">
-        <div>participant</div>
-        <div>participant</div>
-        <div>participant</div>
-        <div>participant</div>
-      </div> */}
+      <div className="my-20 grid w-2/5 grid-cols-2 justify-items-center gap-x-20 gap-y-8">
+        <Ticket title="Participants" link="form/participant" />
+        <Ticket title="Volunteers" link="form/volunteer" />
+        <Ticket title="Mentors" link="form/mentor" />
+        <Ticket title="Sponsors" link="form/sponsor" />
+      </div>
       <LandingAssets />
     </div>
   );
