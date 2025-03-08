@@ -15,3 +15,33 @@
 .bg-theater {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 5%, black 95%);
 }
+
+.cinema-container {
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  right: -11px;
+  bottom: -11px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cinema-light {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d7c88a;
+  box-shadow: 0 0 10px 2px rgba(255, 204, 0, 0.7);
+  animation: lightBlink 1.2s infinite;
+}
+
+@keyframes lightBlink {
+  50% {
+    opacity: 0.4;
+  }
+  0%,
+  100% {
+    opacity: 1;
+  }
+}

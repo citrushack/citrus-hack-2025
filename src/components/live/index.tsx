@@ -1,5 +1,6 @@
 import Landing from "./landing";
 import About from "./about";
+// import Cursor from "./custom/cursor";
 // import Schedule from "./schedule";
 // import Tracks from "./tracks";
 // import Sponsors from "./sponsors";
@@ -12,7 +13,8 @@ import About from "./about";
 const Live = () => {
   return (
     <>
-      <div className="bg-citrus-gray">
+      {/* <Cursor /> */}
+      <div className="z-0 bg-citrus-gray">
         <Landing />
         <About />
         {/* 
