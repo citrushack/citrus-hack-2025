@@ -27,7 +27,7 @@ const Form = ({
   );
 
   return (
-    <div className="overflow-scroll-y font-poppins flex h-full w-full flex-col items-center">
+    <div className="overflow-scroll-y font-kumar flex h-full w-full flex-col items-center">
       <div className="mt-4 flex w-full flex-row justify-end space-x-4">
         <Button asChild>
           <Link href="/">Back to Home</Link>
@@ -38,10 +38,10 @@ const Form = ({
       </div>
       <div className="flex w-10/12 flex-col items-center pb-12 pt-5 md:w-1/2 xl:w-1/3">
         <Image src={LOGO} className="m-4 w-1/4" alt="Logo" />
-        <p className="m-0 w-full rounded-t bg-hackathon-green-300 px-4 py-4 text-xl font-semibold">
+        <p className="z-20 m-0 w-full rounded-t bg-citrus-darkred px-4 py-4 text-xl font-semibold text-white">
           {header}
         </p>
-        <div className="rounded-b bg-white p-8">
+        <div className="font-kumar relative z-20 rounded-b bg-transparent p-8 text-white backdrop-blur-md">
           <div className="grid grid-cols-1 gap-3">
             {state === 0 ? (
               <Status object={object} statuses={statuses} setState={setState} />
