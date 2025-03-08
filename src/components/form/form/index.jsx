@@ -9,9 +9,6 @@ import Image from "next/image";
 import LOGO from "@/app/favicon.ico";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import filmTop from "@/public/assets/filmrollTop.svg";
-import filmLeft from "@/public/assets/filmrollLeft.svg";
-import filmBottom from "@/public/assets/filmrollBottom.svg";
 
 const Form = ({
   object,
@@ -39,13 +36,7 @@ const Form = ({
           Sign Out
         </Button>
       </div>
-      <div className="absolute inset-0 z-0 flex h-screen w-screen flex-col justify-start">
-        <Image src={filmTop} className="z-0 -translate-y-1/4" alt="film" />
 
-        <Image src={filmLeft} className="z-0 -translate-y-1/2" alt="film" />
-
-        <Image src={filmBottom} className="z-0 -translate-y-1/2" alt="film" />
-      </div>
       <div className="flex w-10/12 flex-col items-center justify-start pb-12 pt-5 md:w-1/2 xl:w-1/3">
         <Image src={LOGO} className="z-20 m-4 w-1/4" alt="Logo" />
         <p className="z-20 m-0 w-full rounded-t bg-citrus-darkred px-4 py-4 text-xl font-semibold text-white">
