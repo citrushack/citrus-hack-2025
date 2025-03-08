@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         lily: ["var(--font-lily)"],
+        kumar: ["var(--font-kumarOne)"],
       },
       colors: {
         citrus: {
