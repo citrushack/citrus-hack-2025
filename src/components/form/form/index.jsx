@@ -60,11 +60,13 @@ const Form = ({
           />
           <Image src={filmBottom} className="z-0 h-[100%] w-full" alt="film" />
         </div>
+
         <div className="relative z-20 rounded-b bg-transparent p-8 font-kumar text-white backdrop-blur-md">
           <div className="grid grid-cols-1 gap-3">
             {state === 0 ? (
               <Status object={object} statuses={statuses} setState={setState} />
             ) : state === 1 ? (
+              // comment to fix build
               <Questions
                 loading={loading}
                 setLoading={setLoading}
