@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
+        lily: ["var(--font-lily)"],
         kumar: ["'Kumar One'", "cursive"],
       },
       colors: {
@@ -23,6 +24,11 @@ module.exports = {
           brown: "#776666",
           jet: "#2D2D2E",
           black: "#1E1E1E",
+          "red-100": "#72231C",
+          "red-200": "#500000",
+          beige: "#FFEBD2",
+          yellow: "#EAA54F",
+          gray: "#2e2e2e",
         },
         hackathon: {
           "blue-100": "#38A3A5",
@@ -112,8 +118,13 @@ module.exports = {
             opacity: "0",
           },
         },
+        flicker: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0.5 },
+        },
       },
       animation: {
+        "cinema-flicker": "flicker 8s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "collapsible-down": "collapsible-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
