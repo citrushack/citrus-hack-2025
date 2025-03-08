@@ -23,7 +23,9 @@ type Props = {
 const RootLayout = async ({ children }: Props) => {
   return (
     <html lang="en" className="h-full">
-      <body className={`${lily.className} flex h-full flex-col lg:flex-row`}>
+      <body
+        className={`${lily.className} ${kumarOne.className} flex h-full flex-col lg:flex-row`}
+      >
         <div className="flex h-full w-full">{children}</div>
       </body>
     </html>
