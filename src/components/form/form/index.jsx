@@ -66,7 +66,6 @@ const Form = ({
             {state === 0 ? (
               <Status object={object} statuses={statuses} setState={setState} />
             ) : state === 1 ? (
-              // comment to fix build
               <Questions
                 loading={loading}
                 setLoading={setLoading}
