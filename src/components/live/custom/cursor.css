@@ -8,10 +8,10 @@
   pointer-events: none;
   background: radial-gradient(
     circle,
-    rgb(16, 97, 210) 0%,
-    rgba(117, 117, 111, 0.4) 80%
+    rgb(234, 234, 109) 0%,
+    rgba(132, 132, 124, 0.4) 80%
   );
-  mix-blend-mode: hard-light;
+
   transition: transform 0.1s ease-out;
 }
 

@@ -5,7 +5,8 @@ import TextStroke from "./text-stroke";
 const Landing = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-20 md:py-[5%]">
-      <div className="relative z-0 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-8 border-black bg-citrus-beige px-5 py-10 md:border-[15px] md:py-14">
+      <div className="relative z-0 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[15px] border-black bg-citrus-beige px-5 py-10 md:border-[15px] md:py-14">
+        <MarqueeLights />
         {/* <div className="absolute -top-[50%] left-0 w-full z-20">
           <Image src={cut} alt="cut" className="w-full" />
         </div> */}
@@ -56,3 +57,72 @@ const Landing = () => {
 };
 
 export default Landing;
+
+const MarqueeLights = () => {
+  const generateLights = () => {
+    const lights = [];
+    const topLightCount = 12;
+    const sideLightCount = 8;
+
+    for (let i = 0; i < topLightCount; i++) {
+      lights.push(
+        <div
+          key={`top-${i}`}
+          className="marquee-light"
+          style={{
+            top: 0,
+            left: `${(i / (topLightCount - 1)) * 100}%`,
+            animationDelay: `${i * 0.06}s`,
+          }}
+        />,
+      );
+    }
+
+    for (let i = 0; i < topLightCount; i++) {
+      lights.push(
+        <div
+          key={`bottom-${i}`}
+          className="marquee-light"
+          style={{
+            bottom: 0,
+            left: `${(i / (topLightCount - 1)) * 100}%`,
+            animationDelay: `${i * 0.06}s`,
+          }}
+        />,
+      );
+    }
+
+    for (let i = 0; i < sideLightCount; i++) {
+      lights.push(
+        <div
+          key={`left-${i}`}
+          className="marquee-light"
+          style={{
+            left: 0,
+            top: `${((i + 1) / (sideLightCount + 1)) * 100}%`,
+            animationDelay: `${(i + topLightCount) * 0.06}s`,
+          }}
+        />,
+      );
+    }
+
+    // Right side lights
+    for (let i = 0; i < sideLightCount; i++) {
+      lights.push(
+        <div
+          key={`right-${i}`}
+          className="marquee-light"
+          style={{
+            right: 0,
+            top: `${((i + 1) / (sideLightCount + 1)) * 100}%`,
+            animationDelay: `${(i + topLightCount + sideLightCount) * 0.06}s`,
+          }}
+        />,
+      );
+    }
+
+    return lights;
+  };
+
+  return <div className="marquee-container">{generateLights()}</div>;
+};
