@@ -6,7 +6,7 @@ import CinemaLights from "./cinema-lights";
 const Landing = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-20 md:py-[5%]">
-      <div className="relative z-0 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[10px] border-black bg-citrus-beige px-5 py-10 md:border-[15px] md:py-14">
+      <div className="relative z-0 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[10px] border-black bg-citrus-beige px-5 py-10 md:border-[22px] md:py-14">
         <CinemaLights />
         {/* <div className="absolute -top-[50%] left-0 w-full z-20">
           <Image src={cut} alt="cut" className="w-full" />

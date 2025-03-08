@@ -11,7 +11,7 @@ const CinemaLights = () => {
           className="cinema-light"
           style={{
             top: 0,
-            left: `calc(${(i / (topLightCount - 1)) * 98.9}% + 3px)`,
+            left: `calc(${(i / (topLightCount - 1)) * 98.5}% + 3px)`,
             animationDelay: `${i * 0.06}s`,
           }}
         />,
@@ -25,7 +25,7 @@ const CinemaLights = () => {
           className="cinema-light"
           style={{
             bottom: 0,
-            left: `calc(${(i / (topLightCount - 1)) * 98.9}% + 3px)`,
+            left: `calc(${(i / (topLightCount - 1)) * 98.5}% + 3px)`,
             animationDelay: `${-i * 0.06}s`,
           }}
         />,
