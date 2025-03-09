@@ -1,6 +1,7 @@
 /* eslint-disable new-cap */
 /* eslint-disable camelcase */
 import { Lily_Script_One } from "next/font/google";
+import { Kumar_One } from "next/font/google";
 import "./globals.css";
 
 const lily = Lily_Script_One({
@@ -10,6 +11,13 @@ const lily = Lily_Script_One({
   variable: "--font-lily",
 });
 
+const kumarOne = Kumar_One({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+  variable: "--font-kumarOne",
+});
+
 type Props = {
   children: React.ReactNode;
 };
@@ -17,7 +25,9 @@ type Props = {
 const RootLayout = async ({ children }: Props) => {
   return (
     <html lang="en" className="h-full">
-      <body className={`${lily.className} flex h-full flex-col lg:flex-row`}>
+      <body
+        className={`${lily.variable} ${kumarOne.variable} flex h-full flex-col lg:flex-row`}
+      >
         <div className="flex h-full w-full">{children}</div>
       </body>
     </html>

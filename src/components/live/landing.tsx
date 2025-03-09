@@ -2,11 +2,12 @@ import Countdown from "@/components/ui/countdown";
 import LandingAssets from "./landing-assets";
 import TextStroke from "./text-stroke";
 import CinemaLights from "./cinema-lights";
+import Ticket from "./ticket";
 
 const Landing = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-20 md:py-[5%]">
-      <div className="relative z-0 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[10px] border-black bg-citrus-beige px-5 py-10 md:border-[22px] md:py-14">
+    <div className="flex w-full flex-col items-center justify-center py-20 font-lily md:py-[5%]">
+      <div className="relative z-0 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[10px] border-black bg-citrus-beige px-5 py-10 font-lily md:border-[22px] md:py-14">
         <CinemaLights />
         {/* <div className="absolute -top-[50%] left-0 w-full z-20">
           <Image src={cut} alt="cut" className="w-full" />
@@ -48,12 +49,12 @@ const Landing = () => {
           }}
         />
       </div>
-      {/* <div className=" grid grid-cols-2 my-20 text-citrus-yellow justify-items-center w-1/5 gap-4">
-        <div>participant</div>
-        <div>participant</div>
-        <div>participant</div>
-        <div>participant</div>
-      </div> */}
+      <div className="my-20 grid w-2/5 grid-cols-2 justify-items-center gap-14">
+        <Ticket title="Participants" link="form/participant" />
+        <Ticket title="Volunteers" link="form/volunteer" />
+        <Ticket title="Mentors" link="form/mentor" />
+        <Ticket title="Sponsors" link="form/sponsor" />
+      </div>
       <LandingAssets />
     </div>
   );
