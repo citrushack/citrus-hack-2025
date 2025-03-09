@@ -1,15 +1,17 @@
 "use client";
 
-import camera from "../../../public/assets/camera_black.svg";
-import wheel from "../../../public/assets/wheel.svg";
-import board from "../../../public/assets/board.svg";
-import boxes from "../../../public/assets/boxes.svg";
+import camera from "@/public/assets/camera_black.svg";
+import wheel from "@/public/assets/wheel.svg";
+import board from "@/public/assets/board.svg";
+import boxes from "@/public/assets/boxes.svg";
 import Image from "next/image";
+
 const images = [
   { img: camera, alt: "camera" },
   { img: wheel, alt: "wheel" },
   { img: board, alt: "board" },
 ];
+
 const About = () => {
   return (
     <div className="relative flex h-screen flex-col items-center justify-center gap-10 overflow-hidden font-lily">
