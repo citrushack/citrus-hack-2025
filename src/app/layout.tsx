@@ -1,9 +1,15 @@
 /* eslint-disable new-cap */
 /* eslint-disable camelcase */
-import { Lily_Script_One } from "next/font/google";
+import { Lily_Script_One, Kameron } from "next/font/google";
 import { Kumar_One } from "next/font/google";
 import "./globals.css";
 
+const kameron = Kameron({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
+  variable: "--font-kameron",
+});
 const lily = Lily_Script_One({
   subsets: ["latin"],
   display: "swap",
@@ -26,7 +32,7 @@ const RootLayout = async ({ children }: Props) => {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${lily.variable} ${kumarOne.variable} flex h-full flex-col lg:flex-row`}
+        className={`${lily.variable} ${kumarOne.variable} ${kameron.variable} flex h-full flex-col lg:flex-row`}
       >
         <div className="flex h-full w-full">{children}</div>
       </body>
