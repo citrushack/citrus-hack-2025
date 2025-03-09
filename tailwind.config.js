@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         lily: ["var(--font-lily)"],
+        kumar: ["var(--font-kumarOne)"],
       },
       colors: {
         citrus: {
@@ -116,13 +117,13 @@ module.exports = {
             opacity: "0",
           },
         },
-        flicker: {
+        pulse: {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0.5 },
         },
       },
       animation: {
-        "cinema-flicker": "flicker 8s infinite",
+        pulse: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "collapsible-down": "collapsible-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

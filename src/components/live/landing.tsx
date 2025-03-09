@@ -1,11 +1,14 @@
 import Countdown from "@/components/ui/countdown";
 import LandingAssets from "./landing-assets";
 import TextStroke from "./text-stroke";
+import CinemaLights from "./cinema-lights";
+import Ticket from "./ticket";
 
 const Landing = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-20 md:py-[5%]">
-      <div className="relative z-50 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-8 border-black bg-citrus-beige px-5 py-10 md:border-[15px] md:py-14">
+    <div className="flex w-full flex-col items-center justify-center py-20 font-lily md:py-[5%]">
+      <div className="relative z-0 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[10px] border-black bg-citrus-beige px-5 py-10 font-lily md:border-[22px] md:py-14">
+        <CinemaLights />
         {/* <div className="absolute -top-[50%] left-0 w-full z-20">
           <Image src={cut} alt="cut" className="w-full" />
         </div> */}
@@ -19,8 +22,8 @@ const Landing = () => {
         </div> */}
         <TextStroke
           title="The Golden Age of"
-          color="text-outline-red text-center text-3xl text-citrus-yellow md:text-4xl"
-          subColor="text-center text-3xl text-citrus-yellow md:text-4xl"
+          color="text-outline-red text-center text-2xl text-citrus-yellow md:text-4xl"
+          subColor="text-center text-2xl text-citrus-yellow md:text-4xl"
         />
 
         <div className="bg-beige text-outline-yellow w-11/12 rounded-2xl border-[6px] border-citrus-red-100 py-2 text-center text-6xl text-citrus-red-100 shadow-md md:w-3/4 md:text-8xl">
@@ -29,8 +32,10 @@ const Landing = () => {
         <div className="mt-2 flex flex-col gap-4 text-center text-2xl md:text-4xl">
           <TextStroke
             title="Released in"
-            color={"text-outline-red text-center text-white text-5xl"}
-            subColor="text-center text-white text-5xl"
+            color={
+              "text-outline-red text-center text-white text-2xl md:text-5xl"
+            }
+            subColor="text-center text-white text-2xl md:text-5xl"
           />
           <div>Winston Chung Hall</div>
           <div className="text-citrus-red-200">-- SHOW TIME --</div>
@@ -44,12 +49,12 @@ const Landing = () => {
           }}
         />
       </div>
-      {/* <div className=" grid grid-cols-2 my-20 text-citrus-yellow justify-items-center w-1/5 gap-4">
-        <div>participant</div>
-        <div>participant</div>
-        <div>participant</div>
-        <div>participant</div>
-      </div> */}
+      <div className="my-20 grid w-2/5 grid-cols-2 justify-items-center gap-14">
+        <Ticket title="Participants" link="form/participant" />
+        <Ticket title="Volunteers" link="form/volunteer" />
+        <Ticket title="Mentors" link="form/mentor" />
+        <Ticket title="Sponsors" link="form/sponsor" />
+      </div>
       <LandingAssets />
     </div>
   );
