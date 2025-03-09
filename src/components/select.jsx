@@ -37,7 +37,7 @@ const VirtualizedContent = ({ items, setSelected, userFn, searchable }) => {
       className="dropdown-content h-fit max-h-[400px] w-[var(--radix-dropdown-menu-trigger-width)] overflow-y-scroll pt-0"
       data-cy="select-menu"
     >
-      <div className="sticky top-0 z-50 bg-white pt-1">
+      <div className="sticky top-0 z-50 bg-citrus-lightgray pt-1">
         {searchable && (
           <Input
             placeholder="Search"
@@ -107,9 +107,7 @@ const Select = ({
             {selected ? (
               selected
             ) : (
-              <p className="font-normal text-hackathon-gray-200">
-                {placeholder}
-              </p>
+              <p className="font-normal text-black">{placeholder}</p>
             )}
             <ChevronDown />
           </Button>

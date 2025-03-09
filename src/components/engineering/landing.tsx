@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { SiGithub as Github } from "@icons-pack/react-simple-icons";
-import Pages from "@/public/engineering/pages.webp";
-import Image from "next/image";
 
 const Landing = () => {
   return (
@@ -25,13 +23,6 @@ const Landing = () => {
           GitHub
         </Link>
       </div>
-      <Image
-        src={Pages}
-        alt="Hackathon Web Pages"
-        className="mb-6 w-11/12 drop-shadow-lg"
-        width={750}
-        height={750}
-      />
     </div>
   );
 };

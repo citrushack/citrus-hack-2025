@@ -18,11 +18,16 @@ module.exports = {
       },
       colors: {
         citrus: {
+          darkred: "#460000",
           "red-100": "#72231C",
           "red-200": "#500000",
           beige: "#FFEBD2",
           yellow: "#EAA54F",
           gray: "#2e2e2e",
+          lightgray: "#C8C8C8",
+          jet: "#2D2D2E",
+          brown: "#776666",
+          black: "#1E1E1E",
         },
         hackathon: {
           "blue-100": "#38A3A5",
