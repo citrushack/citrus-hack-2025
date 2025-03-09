@@ -1,5 +1,6 @@
 import Landing from "./landing";
 import About from "./about";
+import Navigation from "./navigation";
 // import Schedule from "./schedule";
 // import Tracks from "./tracks";
 // import Sponsors from "./sponsors";
@@ -13,6 +14,7 @@ const Live = () => {
   return (
     <>
       <div className="bg-citrus-gray">
+        <Navigation />
         <Landing />
         <About />
         {/* 

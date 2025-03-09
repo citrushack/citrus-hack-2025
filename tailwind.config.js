@@ -17,6 +17,7 @@ module.exports = {
       },
       colors: {
         citrus: {
+          red: "#bf4a3f",
           "red-100": "#72231C",
           "red-200": "#500000",
           beige: "#FFEBD2",
