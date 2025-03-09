@@ -4,8 +4,8 @@
 // import Link from "next/link";
 import { ITEMS } from "@/data/live/navigation";
 import { Menu } from "lucide-react";
-import { useEffect, useState } from "react";
-import { Link, scroller } from "react-scroll";
+import { useState } from "react";
+import { Link } from "react-scroll";
 
 const Navigation = () => {
   // const { data: session } = useSession();
