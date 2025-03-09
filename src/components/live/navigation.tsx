@@ -6,7 +6,6 @@ import { useState } from "react";
 import { Link as Scroll } from "react-scroll";
 import { motion } from "framer-motion";
 
-
 const Navigation = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
