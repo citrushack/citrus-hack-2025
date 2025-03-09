@@ -12,7 +12,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`transition-width fixed left-3 top-1/2 z-[1000] flex w-14 -translate-y-1/2 list-none flex-col items-center justify-center gap-y-4 rounded-md bg-white p-2 font-rubiks text-citrus-red-200 shadow duration-300 hover:w-44`}
+      className={`transition-width fixed left-3 top-1/2 z-[1000] flex w-14 -translate-y-1/2 list-none flex-col items-center justify-center gap-y-4 rounded-md bg-white p-2 font-rubiks text-citrus-red-200 shadow duration-200 hover:w-44`}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
@@ -30,7 +30,7 @@ const Navigation = () => {
           activeClass="bg-citrus-red"
           className={`flex w-full origin-left transform cursor-pointer items-center rounded-md py-2 transition hover:translate-x-4 hover:scale-110 hover:bg-citrus-red hover:pl-2`}
         >
-          <span className="ml-1 mr-4 flex-shrink-0">{item.icon}</span>
+          <span className="ml-0 mr-4 flex-shrink-0">{item.icon}</span>
           <span
             className={`overflow-hidden whitespace-nowrap text-xl transition-[max-width,opacity] duration-300 ${isOpen ? "max-w-xs opacity-100" : "max-w-0 opacity-0"} `}
           >

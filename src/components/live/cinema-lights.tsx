@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 
 const CinemaLights = () => {
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0,
-  );
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth); // Set width after client mounts
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
