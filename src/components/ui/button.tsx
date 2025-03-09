@@ -20,7 +20,8 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50",
         link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50",
-        citrus: "bg-white text-black",
+        citrus: "bg-white text-black relative hover:opacity-90 transition-transform duration-500 ease-out hover:translate-y-1"
+,
       },
       size: {
         default: "h-10 px-4 py-2",

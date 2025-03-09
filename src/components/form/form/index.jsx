@@ -31,7 +31,7 @@ const Form = ({
 
   return (
     <div className="overflow-scroll-y font-kumar flex h-full w-full flex-col items-center">
-      <div className="z-20 mt-4 flex w-full flex-row justify-end space-x-4">
+      <div className="z-20 mt-4 flex w-full flex-row justify-end space-x-4 p-3">
         <Button variant="citrus" asChild>
           <Link href="/">Back to Home</Link>
         </Button>
