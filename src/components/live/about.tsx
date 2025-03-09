@@ -32,7 +32,10 @@ const About = () => {
   };
 
   return (
-    <div className="relative flex h-screen flex-col items-center justify-center gap-10 overflow-hidden font-lily">
+    <div
+      className="relative flex h-screen flex-col items-center justify-center gap-10 overflow-hidden font-lily"
+      id="about"
+    >
       <motion.div
         className="absolute h-64 w-64 rounded-full bg-gradient-to-r from-citrus-yellow to-citrus-yellow/10 blur-3xl"
         variants={pulseVariants}

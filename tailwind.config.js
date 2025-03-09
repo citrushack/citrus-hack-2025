@@ -15,9 +15,11 @@ module.exports = {
       fontFamily: {
         lily: ["var(--font-lily)"],
         kumar: ["var(--font-kumarOne)"],
+        rubiks: ["var(--font-rubiks)"],
       },
       colors: {
         citrus: {
+          red: "#bf4a3f",
           darkred: "#460000",
           "red-100": "#72231C",
           "red-200": "#500000",
