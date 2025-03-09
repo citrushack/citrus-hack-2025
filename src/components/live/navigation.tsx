@@ -1,11 +1,11 @@
 "use client";
 
 import { ITEMS } from "@/data/live/navigation";
-import { ChevronLeft, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link as Scroll } from "react-scroll";
 import { motion } from "framer-motion";
-import Link from "next/link";
+
 
 const Navigation = () => {
   const [isHovered, setIsHovered] = useState(false);
