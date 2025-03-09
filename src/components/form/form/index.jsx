@@ -30,7 +30,7 @@ const Form = ({
   );
 
   return (
-    <div className="overflow-scroll-y font-kumar flex h-full w-full flex-col items-center">
+    <div className="overflow-scroll-y flex h-full w-full flex-col items-center font-kumar">
       <div className="z-20 mt-4 flex w-full flex-row justify-end space-x-4 p-3">
         <Button variant="citrus" asChild>
           <Link href="/">Back to Home</Link>
@@ -65,7 +65,7 @@ const Form = ({
           {header}
         </p>
 
-        <div className="font-kumar relative z-20 rounded-b bg-transparent p-8 text-white backdrop-blur-md">
+        <div className="relative z-20 rounded-b bg-transparent p-8 font-kumar text-white backdrop-blur-md">
           <div className="grid grid-cols-1 gap-3">
             {state === 0 ? (
               <Status object={object} statuses={statuses} setState={setState} />

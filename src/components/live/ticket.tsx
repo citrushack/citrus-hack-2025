@@ -24,7 +24,7 @@ export default function Ticket({ title, link }: TicketProps) {
             duration: 5,
             repeat: Infinity,
             repeatType: "mirror",
-            ease: "easeOut"
+            ease: "easeOut",
           },
         }}
         whileHover={{
@@ -41,7 +41,7 @@ export default function Ticket({ title, link }: TicketProps) {
           className={`absolute inset-0 flex items-center justify-center font-kumar text-xl text-[#232323]`}
         >
           {title}
-        {/* {isHovered && (
+          {/* {isHovered && (
               <motion.div 
                 className="absolute top-0 left-0 w-full h-96 bg-white opacity-0"
                 initial={{ opacity: 0, x: "-80%" }}
@@ -52,8 +52,8 @@ export default function Ticket({ title, link }: TicketProps) {
                 transition={{ duration: 1, ease: "easeInOut" }}
               />
             )} */}
-          </div>
-        </motion.div>
+        </div>
+      </motion.div>
     </Link>
   );
 }
