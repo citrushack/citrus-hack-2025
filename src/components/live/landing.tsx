@@ -6,8 +6,8 @@ import Ticket from "./ticket";
 
 const Landing = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-20 font-lily md:py-[3%]">
-      <div className="relative z-0 flex w-3/4 flex-col items-center gap-4 rounded-2xl border-[10px] border-black bg-citrus-beige px-5 py-10 font-lily md:border-[22px] md:py-14">
+    <div className="flex w-full flex-col items-center justify-center py-12 font-lily md:py-[3%]">
+      <div className="relative z-0 flex w-11/12 flex-col items-center gap-4 rounded-2xl border-[11px] border-black bg-citrus-beige px-5 py-10 font-lily md:w-3/4 md:border-[22px] md:py-14">
         <CinemaLights />
         {/* <div className="absolute -top-[50%] left-0 w-full z-20">
           <Image src={cut} alt="cut" className="w-full" />
@@ -29,7 +29,7 @@ const Landing = () => {
         <div className="bg-beige text-outline-yellow w-11/12 rounded-2xl border-[6px] border-citrus-red-100 py-2 text-center text-6xl text-citrus-red-100 shadow-md md:w-3/4 md:text-8xl">
           Citrus Hack
         </div>
-        <div className="mt-2 flex flex-col gap-4 text-center text-2xl md:text-4xl">
+        <div className="mt-0 flex flex-col gap-1 text-center text-2xl md:mt-2 md:gap-4 md:text-4xl">
           <TextStroke
             title="Released in"
             color={
@@ -49,7 +49,7 @@ const Landing = () => {
           }}
         />
       </div>
-      <div className="my-20 grid w-2/5 grid-cols-2 justify-items-center gap-14">
+      <div className="my-10 grid w-10/12 grid-cols-2 justify-items-center gap-5 md:my-16 md:w-3/5 md:gap-y-14">
         <Ticket title="Participants" link="form/participant" />
         <Ticket title="Volunteers" link="form/volunteer" />
         <Ticket title="Mentors" link="form/mentor" />

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .text-outline-red {
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: theme("colors.citrus.red-200");
 }
 

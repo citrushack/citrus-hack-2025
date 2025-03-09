@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Title from "@/components/ui/title";
+import inner from "@/public/assets/inner.svg";
+import Image from "next/image";
 
 const About = () => {
   const titleVariants = {
@@ -30,7 +32,7 @@ const About = () => {
   };
 
   return (
-    <div className="relative flex h-screen items-center justify-center overflow-hidden">
+    <div className="relative flex h-screen flex-col items-center justify-center gap-10 overflow-hidden font-lily">
       <motion.div
         className="absolute h-64 w-64 rounded-full bg-gradient-to-r from-citrus-yellow to-citrus-yellow/10 blur-3xl"
         variants={pulseVariants}
@@ -52,6 +54,13 @@ const About = () => {
         >
           Something amazing is in the works
         </motion.p>
+      </motion.div>
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        className="flex justify-center"
+      >
+        <Image src={inner} alt="wheel" />
       </motion.div>
     </div>
   );

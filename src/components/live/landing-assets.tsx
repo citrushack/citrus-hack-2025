@@ -7,7 +7,7 @@ import rolling from "@/public/assets/rolling.svg";
 
 const LandingAssets = () => {
   return (
-    <div className="relative mt-10 flex w-full flex-col">
+    <div className="relative mt-2 flex w-full flex-col md:mt-5">
       <Image src={Seats} alt="cinema seats" className="w-full" />
       <div className="relative z-10 w-full overflow-hidden">
         <Image

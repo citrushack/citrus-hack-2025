@@ -121,9 +121,14 @@ module.exports = {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0.5 },
         },
+        lightBlink: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0.4 },
+        },
       },
       animation: {
         pulse: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "light-blink": "lightBlink 1.2s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "collapsible-down": "collapsible-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
