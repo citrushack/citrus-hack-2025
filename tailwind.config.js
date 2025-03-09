@@ -14,15 +14,21 @@ module.exports = {
     extend: {
       fontFamily: {
         lily: ["var(--font-lily)"],
+        kumar: ["var(--font-kumarOne)"],
       },
       colors: {
         citrus: {
           red: "#bf4a3f",
+          darkred: "#460000",
           "red-100": "#72231C",
           "red-200": "#500000",
           beige: "#FFEBD2",
           yellow: "#EAA54F",
           gray: "#2e2e2e",
+          lightgray: "#C8C8C8",
+          jet: "#2D2D2E",
+          brown: "#776666",
+          black: "#1E1E1E",
         },
         hackathon: {
           "blue-100": "#38A3A5",
@@ -112,13 +118,18 @@ module.exports = {
             opacity: "0",
           },
         },
-        flicker: {
+        pulse: {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0.5 },
         },
+        lightBlink: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0.4 },
+        },
       },
       animation: {
-        "cinema-flicker": "flicker 8s infinite",
+        pulse: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "light-blink": "lightBlink 1.2s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "collapsible-down": "collapsible-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

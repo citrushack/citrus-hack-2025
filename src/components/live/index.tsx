@@ -1,6 +1,7 @@
 import Landing from "./landing";
 import About from "./about";
 import Navigation from "./navigation";
+// import Cursor from "./custom/cursor";
 // import Schedule from "./schedule";
 // import Tracks from "./tracks";
 // import Sponsors from "./sponsors";
@@ -8,12 +9,13 @@ import Navigation from "./navigation";
 // import Committees from "./committees";
 // import Judges from "./judges";
 // import FAQ from "./faq";
-// import Footer from "./footer";
+import Footer from "./footer";
 
 const Live = () => {
   return (
     <>
-      <div className="bg-citrus-gray">
+      {/* <Cursor /> */}
+      <div className="z-0 bg-citrus-gray">
         <Navigation />
         <Landing />
         <About />
@@ -25,7 +27,8 @@ const Live = () => {
       <Committees />
       <Judges />
       <FAQ />
-      <Footer /> */}
+      */}
+        <Footer />
       </div>
     </>
   );
