@@ -14,7 +14,10 @@ const images = [
 
 const About = () => {
   return (
-    <div className="relative flex h-screen flex-col items-center justify-center gap-10 overflow-hidden font-lily">
+    <div
+      id="about"
+      className="relative flex h-screen flex-col items-center justify-center gap-10 overflow-hidden font-lily"
+    >
       <div className="hidden w-full gap-3 md:block">
         {Array.from({ length: 3 }).map((_, index) => (
           <div key={index} className="grid w-full grid-cols-6 justify-between">
