@@ -6,11 +6,7 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  background: radial-gradient(
-    circle,
-    rgb(234, 234, 109) 0%,
-    rgba(132, 132, 124, 0.4) 80%
-  );
+  background: rgb(234, 234, 109) 0%;
 
   transition: transform 0.1s ease-out;
 }

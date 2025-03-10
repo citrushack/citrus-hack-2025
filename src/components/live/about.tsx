@@ -53,7 +53,7 @@ const About = () => {
                 ease: "easeInOut",
                 repeatType: "reverse",
               }}
-              className="absolute left-[85%] z-0 h-[150%] w-[150%] -translate-x-1/2 rounded bg-gradient-to-b from-citrus-yellow/15 to-transparent opacity-50 blur-lg"
+              className="absolute left-[85%] z-0 h-[150%] w-[150%] -translate-x-1/2 rounded bg-gradient-to-b from-white/15 to-transparent opacity-50 blur-lg"
             />
 
             <motion.p
@@ -71,26 +71,26 @@ const About = () => {
               <Image src={film1} alt="film 1" />
             </motion.p>
             <Image src={camera1} alt="camera" className="w-[55%]" />
-            <div className="absolute bottom-12 h-10 w-60 rounded bg-citrus-red-200 opacity-70 blur-lg" />
+            <div className="absolute bottom-12 h-10 w-60 rounded bg-white opacity-70 blur-lg" />
           </div>
         </motion.div>
         <motion.div
-          className="z-50 w-full overflow-hidden rounded-lg border-2 border-citrus-yellow bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-citrus-yellow/20 md:w-1/3"
+          className="border-citrus-white z-50 w-full overflow-hidden rounded-lg border-2 bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-white/20 md:w-1/3"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="relative h-6 bg-citrus-yellow">
+          {/* <div className="relative h-6 bg-citrus-yellow">
             <div className="absolute bottom-0 left-0 right-0 flex h-3 justify-between">
               {Array.from({ length: 20 }).map((_, idx) => (
                 <div key={idx} className="h-3 w-2 bg-black"></div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="p-6 md:p-8">
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="font-kumar text-3xl text-citrus-yellow md:text-5xl">
+              <h2 className="font-kumar text-3xl text-white md:text-5xl">
                 ABOUT US
               </h2>
               <motion.div
