@@ -6,11 +6,8 @@ import Ticket from "./ticket";
 
 const Landing = () => {
   return (
-    <div
-      className="flex w-full flex-col items-center justify-center py-12 font-lily md:py-[3%]"
-      id="home"
-    >
-      <div className="relative z-0 flex w-11/12 flex-col items-center gap-4 rounded-2xl border-[11px] border-black bg-citrus-beige px-5 py-10 font-lily md:w-3/4 md:border-[22px] md:py-14">
+    <div className="flex w-full flex-col items-center justify-center py-12 font-lily md:py-[3%]">
+      <div className="relative z-0 flex w-11/12 flex-col items-center gap-4 rounded-2xl border-[11px] border-black bg-citrus-beige px-5 py-10 font-lily md:w-2/3 md:border-[22px] md:py-14">
         <CinemaLights />
         {/* <div className="absolute -top-[50%] left-0 w-full z-20">
           <Image src={cut} alt="cut" className="w-full" />
