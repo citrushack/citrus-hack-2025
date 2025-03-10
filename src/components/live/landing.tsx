@@ -7,7 +7,7 @@ import Ticket from "./ticket";
 const Landing = () => {
   return (
     <div
-      className="py-18 flex w-full flex-col items-center justify-center font-lily md:py-[3%]"
+      className="flex w-full flex-col items-center justify-center pt-20 font-lily md:py-[3%]"
       id="home"
     >
       <div className="relative z-0 flex w-11/12 flex-col items-center gap-4 rounded-2xl border-[11px] border-black bg-citrus-beige px-5 py-10 font-lily md:w-2/3 md:border-[22px] md:py-14">

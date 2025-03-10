@@ -6,11 +6,7 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  background: radial-gradient(
-    circle,
-    rgb(234, 234, 109) 0%,
-    rgba(132, 132, 124, 0.4) 80%
-  );
+  background: rgb(234, 234, 109) 0%;
 
   transition: transform 0.1s ease-out;
 }
@@ -23,6 +19,21 @@ body .cursor.hovered {
     rgba(0, 0, 0, 1) 90%
   );
 }
+
+/* .cursor {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+  background: url('../../../../public/assets/board.svg') center/contain no-repeat;
+}
+
+body .cursor.hovered {
+  transform: translate(-50%, -50%) scale(2);
+} */
 
 .cursor {
   display: block !important;

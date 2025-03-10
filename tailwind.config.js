@@ -28,6 +28,7 @@ module.exports = {
           "red-100": "#72231C",
           "red-200": "#500000",
           beige: "#FFEBD2",
+          blue: "#273854",
           yellow: "#EAA54F",
           gray: "#2e2e2e",
           lightgray: "#C8C8C8",

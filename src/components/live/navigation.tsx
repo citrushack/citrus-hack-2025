@@ -29,24 +29,10 @@ const Navigation = () => {
             duration={500}
             spy={true}
             activeClass="bg-citrus-red"
-            className={`flex w-full items-center rounded-md`}
+            className={`flex w-full items-center rounded-md p-1`}
           >
             <motion.div
-              className="relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-md p-0.5 transition hover:translate-x-0 hover:scale-105 hover:bg-citrus-red hover:px-2"
-              initial={{ y: 0 }}
-              animate={{
-                y: [0, -5, 0],
-                transition: {
-                  duration: 5,
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                  ease: "easeOut",
-                },
-              }}
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.3, ease: "easeOut" },
-              }}
+              className="relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-md p-1 duration-300 hover:scale-105 hover:bg-citrus-red hover:px-2"
               onHoverStart={() => setIsHovered(true)}
               onHoverEnd={() => setIsHovered(false)}
             >

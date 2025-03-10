@@ -12,9 +12,9 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative flex min-h-screen w-full justify-between overflow-hidden font-lily text-white"
+      className="relative mt-8 flex min-h-screen w-full justify-between overflow-hidden font-lily text-white md:mt-2"
     >
-      <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-8 px-4 pt-16 md:flex-row">
+      <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-8 px-4 pt-0 md:flex-row">
         <motion.div
           className="flex-col items-center md:flex md:w-1/3"
           initial={{ x: -100, opacity: 0 }}
@@ -27,12 +27,13 @@ const About = () => {
             initial={{ rotate: 0 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="grid grid-cols-2 gap-6 p-2 text-center">
+            <div className="grid grid-cols-3 gap-5 p-2 text-center lg:grid-cols-2">
               <Card text={"400 \n Hackers"} />
               <Card text={"50+ \n Projects"} />
               <Card text={"10 \n Years"} />
               <Card text={"2k+ \n Prizes"} />
-              <Card text={"2025"} />
+              <Card text={"15+ \n Workshops"} />
+              <Card text={"36 \n Hours"} />
             </div>
           </motion.div>
         </motion.div>
@@ -43,40 +44,53 @@ const About = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="relative hidden aspect-square w-full items-center justify-center p-4 md:flex">
+            <motion.div
+              initial={{ opacity: 0.4, scale: 1 }}
+              animate={{ opacity: 0.7, scale: 1.1 }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+                ease: "easeInOut",
+                repeatType: "reverse",
+              }}
+              className="absolute left-[85%] z-0 h-[150%] w-[150%] -translate-x-1/2 rounded bg-gradient-to-b from-white/15 to-transparent opacity-50 blur-lg"
+            />
+
             <motion.p
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute left-[27%] top-6 w-[16%]"
+              className="absolute left-[28%] top-6 w-[16%]"
             >
               <Image src={film2} alt="film 2" />
             </motion.p>
             <motion.p
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute right-1/3 top-2 w-[19%]"
+              className="absolute right-[32%] top-2 w-[19%]"
             >
               <Image src={film1} alt="film 1" />
             </motion.p>
             <Image src={camera1} alt="camera" className="w-[55%]" />
+            <div className="absolute bottom-12 h-10 w-60 rounded bg-white opacity-70 blur-lg" />
           </div>
         </motion.div>
         <motion.div
-          className="w-full overflow-hidden rounded-lg border-2 border-citrus-yellow bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-citrus-yellow/20 md:w-1/3"
+          className="border-citrus-white z-40 w-full overflow-hidden rounded-lg border-2 bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-white/20 md:w-1/3"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="relative h-6 bg-citrus-yellow">
+          {/* <div className="relative h-6 bg-citrus-yellow">
             <div className="absolute bottom-0 left-0 right-0 flex h-3 justify-between">
               {Array.from({ length: 20 }).map((_, idx) => (
                 <div key={idx} className="h-3 w-2 bg-black"></div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="p-6 md:p-8">
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="font-kumar text-3xl text-citrus-yellow md:text-5xl">
+              <h2 className="font-kumar text-3xl text-white md:text-5xl">
                 ABOUT US
               </h2>
               <motion.div

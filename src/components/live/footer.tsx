@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="relative">
           <Image src={chair} alt="Chair" className="w-full" />
         </div>
-        <div className="absolute right-1/2 top-2/3 z-20 flex rotate-[-40deg] space-x-5 max-sm:hidden">
+        <div className="absolute right-1/2 top-[72%] z-20 flex rotate-[-40deg] space-x-5 md:top-2/3">
           <Link
             target="_blank"
             href="https://www.instagram.com/citrushack_ucr/"
