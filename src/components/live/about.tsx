@@ -12,9 +12,9 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative flex min-h-screen w-full justify-between overflow-hidden font-lily text-white"
+      className="relative mt-8 flex min-h-screen w-full justify-between overflow-hidden font-lily text-white md:mt-2"
     >
-      <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-8 px-4 pt-16 md:flex-row">
+      <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-8 px-4 pt-0 md:flex-row">
         <motion.div
           className="flex-col items-center md:flex md:w-1/3"
           initial={{ x: -100, opacity: 0 }}
@@ -43,7 +43,7 @@ const About = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="relative hidden aspect-square w-full items-center p-4 md:flex">
+          <div className="relative hidden aspect-square w-full items-center justify-center p-4 md:flex">
             <motion.div
               initial={{ opacity: 0.4, scale: 1 }}
               animate={{ opacity: 0.7, scale: 1.1 }}
@@ -53,24 +53,25 @@ const About = () => {
                 ease: "easeInOut",
                 repeatType: "reverse",
               }}
-              className="absolute -top-[40%] left-[80%] z-0 h-[150%] w-[150%] -translate-x-1/2 bg-gradient-to-b from-citrus-yellow/20 to-transparent opacity-50 blur-lg"
+              className="absolute left-[85%] z-0 h-[150%] w-[150%] -translate-x-1/2 rounded bg-gradient-to-b from-citrus-yellow/15 to-transparent opacity-50 blur-lg"
             />
 
             <motion.p
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute left-[8%] top-6 w-[16%]"
+              className="absolute left-[28%] top-6 w-[16%]"
             >
               <Image src={film2} alt="film 2" />
             </motion.p>
             <motion.p
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute right-[52%] top-2 w-[19%]"
+              className="absolute right-[32%] top-2 w-[19%]"
             >
               <Image src={film1} alt="film 1" />
             </motion.p>
             <Image src={camera1} alt="camera" className="w-[55%]" />
+            <div className="absolute bottom-12 h-10 w-60 rounded bg-citrus-red-200 opacity-70 blur-lg" />
           </div>
         </motion.div>
         <motion.div
