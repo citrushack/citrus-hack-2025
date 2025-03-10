@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { Instagram, Mail, Linkedin } from "lucide-react";
-import { motion } from "framer-motion";
 
 import smallRoller from "@/public/assets/smallRoller.svg";
 import chair from "@/public/assets/chair.svg";
