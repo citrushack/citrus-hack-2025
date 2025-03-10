@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/accordion";
 import { QUESTIONS } from "@/data/faq";
 // import Title from "@/components/ui/title";
-import Popcorn from "@/public/assets/popcorn.svg";
 import Pop from "@/public/assets/poppiece.svg";
 import FAQt from "@/public/assets/filmroll4.svg";
 import Image from "next/image";
