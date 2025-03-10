@@ -75,7 +75,7 @@ const About = () => {
           </div>
         </motion.div>
         <motion.div
-          className="border-citrus-white z-50 w-full overflow-hidden rounded-lg border-2 bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-white/20 md:w-1/3"
+          className="border-citrus-white z-40 w-full overflow-hidden rounded-lg border-2 bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-white/20 md:w-1/3"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
