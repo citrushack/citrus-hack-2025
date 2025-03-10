@@ -42,8 +42,6 @@ const send = async ({
     react: Email({ id, name, position, preview }),
   });
 
-  console.log(data, error);
-
   return { data, error };
 };
 
