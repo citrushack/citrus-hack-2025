@@ -24,6 +24,21 @@ body .cursor.hovered {
   );
 }
 
+/* .cursor {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+  background: url('../../../../public/assets/board.svg') center/contain no-repeat;
+}
+
+body .cursor.hovered {
+  transform: translate(-50%, -50%) scale(2);
+} */
+
 .cursor {
   display: block !important;
 }
