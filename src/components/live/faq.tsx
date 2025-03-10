@@ -13,29 +13,26 @@ import Image from "next/image";
 
 const FAQ = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center bg-yellow-100 p-10 py-48">
+    <div className="flex min-h-screen w-full flex-col items-center p-10 py-48">
       <div className="relative w-full max-w-3xl">
-        <div className="bg-brown-800 relative flex justify-center rounded-t-lg border-b-4 border-yellow-600 p-4">
-          <div className="absolute -right-32 -top-36">
-            <Image src={Popcorn} alt="Popcorn" className="size-1/2" />
-          </div>
-        </div>
         <Image src={FAQt} alt="FAQ Title" className="w-fit" />
-        <div className="w-full border-4 border-citrus-red-100 bg-[#CE9000] px-6 py-10 shadow-lg">
+        <div className="w-full border-4 border-citrus-red-100 bg-[#FFDA84] px-6 py-10 shadow-lg">
           <Accordion type="single" collapsible className="w-full">
             {QUESTIONS.map(({ question, answer }, index) => (
               <AccordionItem
                 value={question}
                 key={index}
-                className="border-b-2 border-[#641902]"
+                className="border-b-2 border-citrus-red-100"
               >
-                <AccordionTrigger className="flex items-center gap-2 font-lily text-2xl font-semibold text-yellow-100">
+                <AccordionTrigger className="flex items-center gap-2 font-lily text-2xl font-semibold text-citrus-red-100">
                   <div>
                     <Image src={Pop} alt="Popcorn Piece" className="size-3/4" />
                   </div>
-                  {question}
+                  <div className="absolute pl-16 text-3xl text-white">
+                    {question}
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="p-2 text-yellow-100">
+                <AccordionContent className="p-2 text-black">
                   {answer}
                 </AccordionContent>
               </AccordionItem>

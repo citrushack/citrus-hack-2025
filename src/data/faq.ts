@@ -5,23 +5,55 @@ type QuestionAnswer = {
 
 export const QUESTIONS: QuestionAnswer[] = [
   {
-    question: "What is hackathon website?",
+    question: "What is a hackathon?",
     answer:
-      "This repo centralizes the backbone for all websites. It serves as a template for mainly the backend, user registration, user dashboard and and admin portal for organizers. The frontend is built out by respective hackathon committees.",
+      "A hackathon is an event where people come together to collaborate on technology projects, typically over a short period of time. Participants work in teams to create software, hardware, or other tech solutions, often addressing specific challenges or themes.",
   },
   {
-    question: "How do I join the committee?",
+    question: "When does Citrus Hack start?",
     answer:
-      "No experience is required. You can reach out to us on discord and start working! We have weekly meetings and tasks via GitHub",
+      "Citrus Hack will start Saturday Morning on April 19. Stay tuned to the schedule for updated times",
   },
   {
-    question: "How to get started with coding?",
+    question: "Where is the hackathon?",
     answer:
-      "Attend weekly meetings for full onboarding. You can clone the repo, install necesssary packages with `npm i`(download node.js first). You would need to reach out to a swe lead for repo secrets file. Follow the steps on the readme for more.",
+      "It will take place in your favorite engineering buildings! It will be held throughout Winston Chung Hall and certain BCOE buildings and classrooms. There will be a comprehensive list of activities and their locations in the final itinerary!",
   },
   {
-    question: "How did we build out this robust system with so many services?",
+    question: "Who can come to Citrus Hack?",
     answer:
-      "Check out `/engineering` to read up on the different technologies we used and the challenges we solved!",
+      "Citrus Hack is targeted towards beginners, but we welcome anyone to participate regardless of their experience or education level.",
+  },
+  {
+    question: "Is Citrus Hack free?",
+    answer:
+      "Citrus Hack is a completely free event! You will be allowed to attend workshops, listen to some wonderful speakers, and best of all, win great prizes with no entrance fee. 🤠",
+  },
+  {
+    question: "How long do I have to hack?",
+    answer: "For Citrus you will have 36 hours!",
+  },
+  {
+    question: "Do I have to hack or make a project?",
+    answer:
+      "Absolutely not!! While we encourage everyone to make a project anyone is welcome to come for the free food and shirt! ",
+  },
+  {
+    question: "What if I've never been to a hackathon?",
+    answer:
+      "All the more reason to come and experience a hackathon! You can learn from the various workshops, speakers, and mentors, and they can help guide a personal project of your choice if you want!",
+  },
+  {
+    question: "What if I don't have a team?",
+    answer:
+      "We will have oppotunites to meet new people as well as our team page will allow you to find people to work with!",
+  },
+  {
+    question: "Where will I submit?",
+    answer: "Devpost. We will tell provide guidence on submission as well!",
+  },
+  {
+    question: "My question isn't here.",
+    answer: "Feel free to email us your question at citrushack@gmail.com!",
   },
 ];
