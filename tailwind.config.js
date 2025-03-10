@@ -16,6 +16,9 @@ module.exports = {
         lily: ["var(--font-lily)"],
         kumar: ["var(--font-kumarOne)"],
       },
+      fontSize: {
+        xxs: "0.625rem",
+      },
       colors: {
         citrus: {
           darkred: "#460000",
