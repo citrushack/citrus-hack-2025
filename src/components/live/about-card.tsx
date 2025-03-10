@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
-const AboutCard = ({ text }: { text: string }) => {
+const AboutCard = ({ text }: { text: ReactNode }) => {
   return (
     <motion.div
-      className="relative h-28 w-28 rounded border-2 border-dashed border-gray-700 bg-gray-900 md:h-40 md:w-40"
+      className="relative h-28 w-28 rounded border-2 border-gray-700 bg-gray-900 md:h-48 md:w-48"
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400 }}
     >
       <motion.div
-        className="flex h-full items-center justify-center text-base font-bold text-citrus-yellow md:text-3xl"
+        className="flex h-full items-center justify-center text-base font-bold text-white md:text-3xl"
         animate={{
           scale: [1, 1.1, 1],
           textShadow: [

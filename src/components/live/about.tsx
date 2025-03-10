@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative mt-8 flex min-h-screen w-full justify-between overflow-hidden font-lily text-white md:mt-2"
+      className="relative mt-8 flex min-h-screen w-full justify-between overflow-hidden font-rubiks text-white md:mt-2"
     >
       <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-8 px-4 pt-0 md:flex-row">
         <motion.div
@@ -22,18 +22,54 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="mb-6 overflow-visible rounded-lg border-4 border-citrus-yellow p-1 shadow-lg shadow-citrus-yellow/30"
+            className="mb-6 overflow-visible rounded-lg border-4 border-white p-1 shadow-lg shadow-white/30"
             whileHover={{ rotate: 0 }}
             initial={{ rotate: 0 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="grid grid-cols-3 gap-5 p-2 text-center lg:grid-cols-2">
-              <Card text={"400 \n Hackers"} />
-              <Card text={"50+ \n Projects"} />
-              <Card text={"10 \n Years"} />
-              <Card text={"2k+ \n Prizes"} />
-              <Card text={"15+ \n Workshops"} />
-              <Card text={"36 \n Hours"} />
+              <Card
+                text={
+                  <>
+                    {400} <br /> Hackers
+                  </>
+                }
+              />
+              <Card
+                text={
+                  <>
+                    {"50+"} <br /> Hackers
+                  </>
+                }
+              />
+              <Card
+                text={
+                  <>
+                    {10} <br /> Years
+                  </>
+                }
+              />
+              <Card
+                text={
+                  <>
+                    {"2k+"} <br /> Prizes
+                  </>
+                }
+              />
+              <Card
+                text={
+                  <>
+                    {"15+"} <br /> Workshops
+                  </>
+                }
+              />
+              <Card
+                text={
+                  <>
+                    {36} <br /> Hours
+                  </>
+                }
+              />
             </div>
           </motion.div>
         </motion.div>

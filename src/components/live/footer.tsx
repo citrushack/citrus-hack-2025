@@ -1,12 +1,13 @@
+"use client";
 import Image from "next/image";
 import { Instagram, Mail, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
-// Import images
 import smallRoller from "@/public/assets/smallRoller.svg";
 import chair from "@/public/assets/chair.svg";
 import bigRoller from "@/public/assets/bigRoller.svg";
 import popChair from "@/public/assets/popChair.svg";
-// import rollerCorner from "@/public/assets/cornerRoller.svg";
+import rollerCorner from "@/public/assets/cornerRoller.svg";
 import Link from "next/link";
 
 const Footer = () => {
@@ -61,12 +62,13 @@ const Footer = () => {
             Made with <span className="text-orange-500">🧡</span>
             <div className="text-center">By the Citrus Hack Team</div>
           </div>
-          {/* <Image
-            src={rollerCorner}
-            alt="Corner Roller"
-            className="absolute right-"
-          /> */}
         </div>
+
+        <Image
+          src={rollerCorner}
+          alt="Corner Roller"
+          className="absolute -bottom-0 right-0"
+        />
       </div>
     </div>
   );
