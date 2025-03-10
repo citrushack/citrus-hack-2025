@@ -1,6 +1,6 @@
 /* eslint-disable new-cap */
 /* eslint-disable camelcase */
-import { Lily_Script_One, Kameron, Kumar_One, Rubik } from "next/font/google";
+import { Lily_Script_One, Kumar_One, Kameron, Rubik } from "next/font/google";
 
 import "./globals.css";
 
