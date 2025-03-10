@@ -1,8 +1,21 @@
 /* eslint-disable new-cap */
 /* eslint-disable camelcase */
-import { Lily_Script_One } from "next/font/google";
-import { Kumar_One } from "next/font/google";
+import { Lily_Script_One, Kameron, Kumar_One, Rubik } from "next/font/google";
+
 import "./globals.css";
+
+const kameron = Kameron({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
+  variable: "--font-kameron",
+});
+
+const rubiks = Rubik({
+  weight: "600",
+  subsets: ["latin"],
+  variable: "--font-rubiks",
+});
 
 const lily = Lily_Script_One({
   subsets: ["latin"],
