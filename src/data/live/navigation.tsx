@@ -5,24 +5,24 @@ export const ITEMS = [
     name: "Home",
     link: "/",
     id: "home",
-    icon: <House size={40} />,
+    icon: <House />,
   },
   {
     name: "About",
     link: "#about",
     id: "about",
-    icon: <Info size={40} />,
+    icon: <Info />,
   },
   {
     name: "Tracks",
     link: "#tracks",
     id: "tracks",
-    icon: <Waypoints size={40} />,
+    icon: <Waypoints />,
   },
   {
     name: "FAQ",
     link: "#faq",
     id: "faq",
-    icon: <CircleHelp size={40} />,
+    icon: <CircleHelp />,
   },
 ];

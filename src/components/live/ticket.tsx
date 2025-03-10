@@ -12,7 +12,6 @@ type TicketProps = {
 };
 
 export default function Ticket({ title, link }: TicketProps) {
-  // const [isHovered, setIsHovered] = useState(false);
   return (
     <Link href={link} className="w-full md:w-5/6">
       <motion.div
@@ -30,11 +29,8 @@ export default function Ticket({ title, link }: TicketProps) {
         whileHover={{
           scale: 1.05,
           y: -10,
-          boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.1)",
           transition: { duration: 0.3, ease: "easeOut" },
         }}
-        // onHoverStart={() => setIsHovered(true)}
-        // onHoverEnd={() => setIsHovered(false)}
       >
         <Image
           src={TicketComp}
@@ -45,17 +41,6 @@ export default function Ticket({ title, link }: TicketProps) {
           className={`absolute inset-0 flex items-center justify-center font-kumar text-sm text-[#232323] md:text-lg lg:text-2xl`}
         >
           {title}
-          {/* {isHovered && (
-              <motion.div 
-                className="absolute top-0 left-0 w-full h-96 bg-white opacity-0"
-                initial={{ opacity: 0, x: "-80%" }}
-                animate={{ 
-                  opacity: [0, 0.3, 0],
-                  x: ["-100%", "100%", "100%"],
-                }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-              />
-            )} */}
         </div>
       </motion.div>
     </Link>

@@ -65,7 +65,7 @@ const Form = ({
           {header}
         </p>
 
-        <div className="relative z-20 rounded-b bg-transparent p-8 font-kumar text-white backdrop-blur-md">
+        <div className="relative z-20 rounded-b bg-transparent p-8 font-kumar text-white backdrop-blur-3xl">
           <div className="grid grid-cols-1 gap-3">
             {state === 0 ? (
               <Status object={object} statuses={statuses} setState={setState} />

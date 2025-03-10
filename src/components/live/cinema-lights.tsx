@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 
 const CinemaLights = () => {
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0,
-  );
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -19,19 +19,19 @@ const CinemaLights = () => {
 
   const getResponsiveCounts = () => {
     if (windowWidth < 480) {
-      return { topLightCount: 8, sideLightCount: 12 };
+      return { topLightCount: 8, sideLightCount: 12, offset: 96.5 };
     } else if (windowWidth < 768) {
-      return { topLightCount: 8, sideLightCount: 8 };
+      return { topLightCount: 8, sideLightCount: 8, offset: 98.5 };
     } else {
-      return { topLightCount: 12, sideLightCount: 8 };
+      return { topLightCount: 12, sideLightCount: 8, offset: 98.5 };
     }
   };
   const generateLights = () => {
     const lights = [];
-    const { topLightCount, sideLightCount } = getResponsiveCounts();
+    const { topLightCount, sideLightCount, offset } = getResponsiveCounts();
 
     for (let i = 0; i < topLightCount; i++) {
-      const leftPosition = `${(i / (topLightCount - 1)) * 98.5}%`;
+      const leftPosition = `${(i / (topLightCount - 1)) * offset}%`;
       lights.push(
         <div
           key={`top-${i}`}
@@ -47,7 +47,7 @@ const CinemaLights = () => {
     }
 
     for (let i = 0; i < topLightCount; i++) {
-      const leftPosition = `${(i / (topLightCount - 1)) * 98.5}%`;
+      const leftPosition = `${(i / (topLightCount - 1)) * offset}%`;
       lights.push(
         <div
           key={`bottom-${i}`}
@@ -72,7 +72,7 @@ const CinemaLights = () => {
             left: 0,
             top: topPosition,
             boxShadow: "0 0 10px 2px rgba(255, 204, 0, 0.7)",
-            animationDelay: `${i * 0.06}s`,
+            animationDelay: `${-i * 0.06}s`,
           }}
         />,
       );
@@ -88,7 +88,7 @@ const CinemaLights = () => {
             right: 0,
             top: topPosition,
             boxShadow: "0 0 10px 2px rgba(255, 204, 0, 0.7)",
-            animationDelay: `${-i * 0.06}s`,
+            animationDelay: `${i * 0.06}s`,
           }}
         />,
       );
