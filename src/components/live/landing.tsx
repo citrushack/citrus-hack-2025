@@ -7,7 +7,7 @@ import Ticket from "./ticket";
 const Landing = () => {
   return (
     <div
-      className="flex w-full flex-col items-center justify-center py-12 font-lily md:py-[3%]"
+      className="flex w-full flex-col items-center justify-center py-16 font-lily md:py-[3%]"
       id="home"
     >
       <div className="relative z-0 flex w-11/12 flex-col items-center gap-4 rounded-2xl border-[11px] border-black bg-citrus-beige px-5 py-10 font-lily md:w-2/3 md:border-[22px] md:py-14">
@@ -29,7 +29,7 @@ const Landing = () => {
           subColor="text-center text-2xl text-citrus-yellow md:text-4xl"
         />
 
-        <div className="bg-beige text-outline-yellow w-11/12 rounded-2xl border-[6px] border-citrus-red-100 py-2 text-center text-6xl text-citrus-red-100 shadow-md md:w-3/4 md:text-8xl">
+        <div className="bg-beige text-outline-yellow w-11/12 rounded-2xl border-[6px] border-citrus-red-100 py-2 text-center text-5xl text-citrus-red-100 shadow-md md:w-3/4 md:text-8xl">
           Citrus Hack
         </div>
         <div className="mt-0 flex flex-col gap-1 text-center text-2xl md:mt-2 md:gap-4 md:text-4xl">

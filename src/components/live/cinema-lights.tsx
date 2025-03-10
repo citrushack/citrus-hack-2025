@@ -5,7 +5,7 @@ const CinemaLights = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth); // Set width after client mounts
+    setWindowWidth(window.innerWidth);
 
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
