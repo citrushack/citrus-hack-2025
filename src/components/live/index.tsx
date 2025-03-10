@@ -1,5 +1,5 @@
 import Landing from "./landing";
-// import About from "./about";
+import About from "./about";
 // import Navigation from "./navigation";
 // import Cursor from "./custom/cursor";
 // import Schedule from "./schedule";
@@ -18,7 +18,7 @@ const Live = () => {
       <div className="z-0 bg-citrus-gray">
         {/* <Navigation /> */}
         <Landing />
-        {/* <About /> */}
+        <About />
         <Tracks />
         {/* 
       <Schedule />
