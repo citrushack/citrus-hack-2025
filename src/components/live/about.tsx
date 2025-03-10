@@ -27,12 +27,13 @@ const About = () => {
             initial={{ rotate: 0 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="grid grid-cols-2 gap-6 p-2 text-center">
+            <div className="grid grid-cols-3 gap-5 p-2 text-center lg:grid-cols-2">
               <Card text={"400 \n Hackers"} />
               <Card text={"50+ \n Projects"} />
               <Card text={"10 \n Years"} />
               <Card text={"2k+ \n Prizes"} />
-              <Card text={"2025"} />
+              <Card text={"15+ \n Workshops"} />
+              <Card text={"36 \n Hours"} />
             </div>
           </motion.div>
         </motion.div>
@@ -42,18 +43,30 @@ const About = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="relative hidden aspect-square w-full items-center justify-center p-4 md:flex">
+          <div className="relative hidden aspect-square w-full items-center p-4 md:flex">
+            <motion.div
+              initial={{ opacity: 0.4, scale: 1 }}
+              animate={{ opacity: 0.7, scale: 1.1 }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+                ease: "easeInOut",
+                repeatType: "reverse",
+              }}
+              className="absolute -top-[40%] left-[80%] z-0 h-[150%] w-[150%] -translate-x-1/2 bg-gradient-to-b from-citrus-yellow/20 to-transparent opacity-50 blur-lg"
+            />
+
             <motion.p
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute left-[27%] top-6 w-[16%]"
+              className="absolute left-[8%] top-6 w-[16%]"
             >
               <Image src={film2} alt="film 2" />
             </motion.p>
             <motion.p
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute right-1/3 top-2 w-[19%]"
+              className="absolute right-[52%] top-2 w-[19%]"
             >
               <Image src={film1} alt="film 1" />
             </motion.p>
@@ -61,7 +74,7 @@ const About = () => {
           </div>
         </motion.div>
         <motion.div
-          className="w-full overflow-hidden rounded-lg border-2 border-citrus-yellow bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-citrus-yellow/20 md:w-1/3"
+          className="z-50 w-full overflow-hidden rounded-lg border-2 border-citrus-yellow bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-citrus-yellow/20 md:w-1/3"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}

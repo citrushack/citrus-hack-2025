@@ -39,7 +39,7 @@ const RootLayout = async ({ children }: Props) => {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${lily.variable} ${kumarOne.variable} ${kameron.variable} ${rubiks.variable} flex h-full flex-col lg:flex-row`}
+        className={`${lily.variable} ${kumarOne.variable} ${kameron.variable} ${rubiks.variable} flex h-full flex-col bg-citrus-gray lg:flex-row`}
       >
         <div className="flex h-full w-full">{children}</div>
       </body>
