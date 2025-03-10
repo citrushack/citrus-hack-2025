@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 
 const CinemaLights = () => {
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0,
-  );
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -72,7 +72,7 @@ const CinemaLights = () => {
             left: 0,
             top: topPosition,
             boxShadow: "0 0 10px 2px rgba(255, 204, 0, 0.7)",
-            animationDelay: `${i * 0.06}s`,
+            animationDelay: `${-i * 0.06}s`,
           }}
         />,
       );
@@ -88,7 +88,7 @@ const CinemaLights = () => {
             right: 0,
             top: topPosition,
             boxShadow: "0 0 10px 2px rgba(255, 204, 0, 0.7)",
-            animationDelay: `${-i * 0.06}s`,
+            animationDelay: `${i * 0.06}s`,
           }}
         />,
       );
