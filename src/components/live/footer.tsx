@@ -6,7 +6,8 @@ import smallRoller from "@/public/assets/smallRoller.svg";
 import chair from "@/public/assets/chair.svg";
 import bigRoller from "@/public/assets/bigRoller.svg";
 import popChair from "@/public/assets/popChair.svg";
-import rollerCorner from "@/public/assets/cornerRoller.svg";
+// import rollerCorner from "@/public/assets/cornerRoller.svg";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -34,9 +35,21 @@ const Footer = () => {
           <Image src={chair} alt="Chair" className="w-full" />
         </div>
         <div className="absolute right-1/2 top-2/3 z-20 flex rotate-[-40deg] space-x-5 max-sm:hidden">
-          <Instagram size={45} />
-          <Linkedin size={45} />
-          <Mail size={45} />
+          <Link
+            target="_blank"
+            href="https://www.instagram.com/citrushack_ucr/"
+          >
+            <Instagram className="h-6 w-6 duration-300 hover:scale-105 sm:h-8 sm:w-8 md:h-10 md:w-10" />
+          </Link>
+          <Link target="_blank" href="https://www.linkedin.com/in/citrushack/">
+            <Linkedin className="h-6 w-6 duration-300 hover:scale-105 sm:h-8 sm:w-8 md:h-10 md:w-10" />
+          </Link>
+          <Link
+            target="_blank"
+            href="https://mail.google.com/mail/?view=cm&to=citrushack@gmail.com"
+          >
+            <Mail className="h-6 w-6 duration-300 hover:scale-105 sm:h-8 sm:w-8 md:h-10 md:w-10" />
+          </Link>
         </div>
 
         <div className="absolute bottom-0 w-fit translate-x-9 py-1 text-center text-xs md:translate-x-1/2 md:text-2xl">

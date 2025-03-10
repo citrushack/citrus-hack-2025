@@ -18,6 +18,9 @@ module.exports = {
         kameron: ["var(--font-kameron)"],
         rubiks: ["var(--font-rubiks)"],
       },
+      fontSize: {
+        xxs: "0.625rem",
+      },
       colors: {
         citrus: {
           red: "#bf4a3f",
