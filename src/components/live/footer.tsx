@@ -66,7 +66,7 @@ const Footer = () => {
         <Image
           src={rollerCorner}
           alt="Corner Roller"
-          className="absolute -bottom-0 right-0 w-1/6 md:w-fit"
+          className="absolute -bottom-0 right-0 w-1/6 md:w-1/6"
         />
       </div>
     </div>
