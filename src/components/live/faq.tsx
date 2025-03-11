@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import TextStroke from "./text-stroke";
 import { QUESTIONS } from "@/data/faq";
 // import Title from "@/components/ui/title";
 import Pop from "@/public/assets/poppiece.svg";
@@ -27,8 +28,14 @@ const FAQ = () => {
                   <div>
                     <Image src={Pop} alt="Popcorn Piece" className="size-3/4" />
                   </div>
-                  <div className="absolute pl-16 text-3xl text-white">
-                    {question}
+                  <div className="absolute md:pl-16">
+                    <TextStroke
+                      title={question}
+                      color={
+                        "text-outline-red text-center text-white text-xl md:text-3xl"
+                      }
+                      subColor="text-center text-white text-xl md:text-3xl"
+                    />
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="p-2 text-black">
