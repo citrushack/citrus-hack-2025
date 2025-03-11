@@ -22,7 +22,7 @@ const Navigation = () => {
       >
         <div className="flex w-full items-center justify-center py-1">
           {!isOpen ? (
-            <Menu size={28} className="text-white" />
+            <Menu size={32} className="text-white" />
           ) : (
             <motion.p
               className="overflow-hidden whitespace-nowrap font-semibold text-red-500"
@@ -42,7 +42,7 @@ const Navigation = () => {
               smooth={true}
               duration={500}
               spy={true}
-              activeClass="bg-red-800"
+              activeClass="bg-red-800 rounded-lg"
               className="w-full"
             >
               <motion.div
