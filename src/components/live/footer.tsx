@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { Instagram, Mail, Linkedin } from "lucide-react";
-import { motion } from "framer-motion";
 
 import smallRoller from "@/public/assets/smallRoller.svg";
 import chair from "@/public/assets/chair.svg";
@@ -67,7 +66,7 @@ const Footer = () => {
         <Image
           src={rollerCorner}
           alt="Corner Roller"
-          className="absolute -bottom-0 right-0 w-1/6 md:w-fit"
+          className="absolute -bottom-0 right-0 w-1/6 md:w-1/6"
         />
       </div>
     </div>

@@ -7,56 +7,78 @@ import { Link as Scroll } from "react-scroll";
 import { motion } from "framer-motion";
 
 const Navigation = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <>
-      <div
-        className={`transition-width fixed left-3 top-1/2 z-[1000] hidden w-14 -translate-y-1/2 list-none flex-col items-center justify-center gap-y-4 rounded-md bg-white p-2 font-rubiks text-citrus-red-200 shadow duration-200 hover:w-44 md:flex`}
+      <motion.div
+        className="left-4 top-1/2 z-[1000] hidden -translate-y-1/2 flex-col items-center justify-center gap-y-3 rounded-xl bg-black/80 p-3 font-medium text-white shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out md:fixed md:flex"
+        animate={{ width: isOpen ? "180px" : "60px" }}
+        initial={{ width: "60px" }}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
       >
-        <li>
-          <Menu size={32} />
-        </li>
-        {ITEMS.map(({ name, id, icon }, index) => (
-          <Scroll
-            to={id}
-            key={index}
-            smooth={true}
-            duration={500}
-            spy={true}
-            activeClass="bg-citrus-red"
-            className={`flex w-full items-center rounded-md p-1`}
-          >
-            <motion.div
-              className="relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-md p-1 duration-300 hover:scale-105 hover:bg-citrus-red hover:px-2"
-              onHoverStart={() => setIsHovered(true)}
-              onHoverEnd={() => setIsHovered(false)}
+        <div className="flex w-full items-center justify-center py-1">
+          {!isOpen ? (
+            <Menu size={32} className="text-white" />
+          ) : (
+            <motion.p
+              className="overflow-hidden whitespace-nowrap font-semibold text-red-500"
+              animate={{ opacity: isOpen ? 1 : 0 }}
+              initial={{ opacity: 0 }}
             >
-              <span className="mx-4 flex-shrink-0">{icon}</span>
-              <span
-                className={`w-full overflow-hidden whitespace-nowrap text-xl transition-all duration-300 ${isOpen ? "max-w-xs opacity-100" : "max-w-0 opacity-0"}`}
+              SHOWTIME
+            </motion.p>
+          )}
+        </div>
+        <div className="h-px w-full bg-citrus-lightgray" />
+        <div className="mr-1 flex w-full flex-col items-center">
+          {ITEMS.map(({ name, id, icon }, index) => (
+            <Scroll
+              to={id}
+              key={index}
+              smooth={true}
+              duration={500}
+              spy={true}
+              activeClass="bg-red-800 rounded-lg"
+              className="w-full"
+            >
+              <motion.div
+                className="relative flex w-full cursor-pointer items-center overflow-hidden rounded-md p-2 transition-colors duration-300 hover:bg-citrus-darkred"
+                onHoverStart={() => setIsHovered(index)}
+                onHoverEnd={() => setIsHovered(null)}
+                whileHover={{ scale: 1.05 }}
               >
-                {name}
-                {isHovered && (
+                <span className="flex-shrink-0 text-white">{icon}</span>
+                <motion.span
+                  className="ml-3 overflow-hidden whitespace-nowrap text-lg"
+                  animate={{
+                    maxWidth: isOpen ? "120px" : "0px",
+                    opacity: isOpen ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {name}
+                </motion.span>
+
+                {isHovered === index && isOpen && (
                   <motion.div
-                    className="absolute left-0 top-0 h-full w-full bg-white opacity-0"
-                    initial={{ opacity: 0, x: "100%" }}
+                    className="pointer-events-none absolute left-0 top-0 h-full w-full bg-white opacity-0"
+                    initial={{ opacity: 0, x: "-100%" }}
                     animate={{
-                      opacity: [0, 0.3, 0],
+                      opacity: [0, 0.2, 0],
                       x: ["-100%", "100%", "100%"],
                     }}
                     transition={{ duration: 1, ease: "easeInOut" }}
                   />
                 )}
-              </span>
-            </motion.div>
-          </Scroll>
-        ))}
-      </div>
+              </motion.div>
+            </Scroll>
+          ))}
+        </div>
+      </motion.div>
 
       <div
         className={`fixed top-2 z-50 m-3 cursor-pointer rounded-lg bg-white px-3 py-2 text-black drop-shadow-xl transition-all duration-300 ease-in-out md:hidden ${
