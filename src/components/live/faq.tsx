@@ -14,7 +14,10 @@ import Image from "next/image";
 
 const FAQ = () => {
   return (
-    <div className="mb-[10%] flex min-h-screen w-full flex-col items-center">
+    <div
+      id="faq"
+      className="mb-[10%] flex min-h-screen w-full flex-col items-center"
+    >
       <Image src={film} alt="nice" className="w-full" />
       <div className="relative mt-[7%] w-full max-w-3xl p-4 md:p-0">
         <Image src={FAQt} alt="FAQ Title" className="w-fit" />
@@ -38,7 +41,7 @@ const FAQ = () => {
                     />
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="p-2 font-kameron text-xl text-black">
+                <AccordionContent className="p-2 font-kameron text-sm text-black md:text-xl">
                   {answer}
                 </AccordionContent>
               </AccordionItem>
