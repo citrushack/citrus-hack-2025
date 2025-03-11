@@ -27,7 +27,7 @@ const About = () => {
             initial={{ rotate: 0 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="grid grid-cols-3 gap-5 p-2 text-center lg:grid-cols-2">
+            <div className="grid grid-cols-3 gap-3 p-2 text-center md:gap-5 lg:grid-cols-2">
               <Card
                 text={
                   <>
