@@ -8,7 +8,7 @@ import About from "./about";
 // import Team from "./team";
 // import Committees from "./committees";
 // import Judges from "./judges";
-// import FAQ from "./faq";
+import FAQ from "./faq";
 import Footer from "./footer";
 
 const Live = () => {
@@ -26,8 +26,8 @@ const Live = () => {
       <Team />
       <Committees />
       <Judges />
-      <FAQ />
       */}
+        <FAQ />
         <Footer />
       </div>
     </>

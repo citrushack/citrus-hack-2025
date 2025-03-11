@@ -22,26 +22,12 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="mb-6 overflow-visible rounded-lg border-4 border-white p-1 shadow-lg shadow-white/30"
+            className="mb-6 overflow-visible rounded-lg border-4 border-citrus-yellow p-1 shadow-lg shadow-citrus-yellow/30"
             whileHover={{ rotate: 0 }}
             initial={{ rotate: 0 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="grid grid-cols-3 gap-5 p-2 text-center lg:grid-cols-2">
-              <Card
-                text={
-                  <>
-                    {400} <br /> Hackers
-                  </>
-                }
-              />
-              <Card
-                text={
-                  <>
-                    {"50+"} <br /> Hackers
-                  </>
-                }
-              />
               <Card
                 text={
                   <>
@@ -52,7 +38,28 @@ const About = () => {
               <Card
                 text={
                   <>
-                    {"2k+"} <br /> Prizes
+                    {"36"} <br /> Hours
+                  </>
+                }
+              />
+              <Card
+                text={
+                  <>
+                    {"300+"} <br /> Hackers
+                  </>
+                }
+              />
+              <Card
+                text={
+                  <>
+                    {"20+"} <br /> Organizers
+                  </>
+                }
+              />
+              <Card
+                text={
+                  <>
+                    {"1.5k"} <br /> Prizes
                   </>
                 }
               />
@@ -60,13 +67,6 @@ const About = () => {
                 text={
                   <>
                     {"15+"} <br /> Workshops
-                  </>
-                }
-              />
-              <Card
-                text={
-                  <>
-                    {36} <br /> Hours
                   </>
                 }
               />
@@ -95,7 +95,7 @@ const About = () => {
             <motion.p
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute left-[28%] top-6 w-[16%]"
+              className="absolute left-[28%] top-6 w-[14%]"
             >
               <Image src={film2} alt="film 2" />
             </motion.p>
@@ -111,7 +111,7 @@ const About = () => {
           </div>
         </motion.div>
         <motion.div
-          className="border-citrus-white z-40 w-full overflow-hidden rounded-lg border-2 bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-white/20 md:w-1/3"
+          className="z-40 w-full overflow-hidden rounded-lg border-2 border-citrus-yellow bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-citrus-yellow/20 md:w-1/3"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}

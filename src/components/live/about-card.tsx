@@ -11,7 +11,7 @@ const AboutCard = ({ text }: { text: ReactNode }) => {
       transition={{ type: "spring", stiffness: 400 }}
     >
       <motion.div
-        className="flex h-full items-center justify-center text-base font-bold text-white md:text-3xl"
+        className="flex h-full items-center justify-center text-base font-bold text-citrus-yellow md:text-3xl"
         animate={{
           scale: [1, 1.1, 1],
           textShadow: [

@@ -39,7 +39,7 @@ export const QUESTIONS: QuestionAnswer[] = [
       "Absolutely not!! While we encourage everyone to make a project anyone is welcome to come for the free food and shirt! ",
   },
   {
-    question: "What if I've never been to a hackathon?",
+    question: "What if  I've never been to a hackathon?",
     answer:
       "All the more reason to come and experience a hackathon! You can learn from the various workshops, speakers, and mentors, and they can help guide a personal project of your choice if you want!",
   },
