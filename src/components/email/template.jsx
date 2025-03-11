@@ -20,7 +20,7 @@ const Template = ({ children, name, preview }) => {
       <Preview>{preview}</Preview>
       <Tailwind>
         <Body className="mx-auto my-auto bg-white px-2 font-sans">
-          <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] p-[20px]">
+          <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] bg-[#72231C] p-[20px] text-[#FFEBD2]">
             <Section className="mt-[32px]">
               <Img
                 src="https://www.bearhack.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.473367c8.webp&w=3840&q=75"
@@ -30,11 +30,11 @@ const Template = ({ children, name, preview }) => {
                 className="mx-auto my-0"
               />
             </Section>
-            <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-black">
+            <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-[#FFEBD2]">
               Thank you for applying!
             </Heading>
-            <Text className="text-[14px] leading-[24px] text-black">
-              Hello <strong>{name}</strong>,
+            <Text className="text-[14px] leading-[24px] text-[#FFEBD2]">
+              Hello <strong className="text-white">{name}</strong>,
             </Text>
             {children}
             <Text>
@@ -46,9 +46,9 @@ const Template = ({ children, name, preview }) => {
               follow us on {data.instagram} and {data.linkedin} for up to date
               information and announcements.
             </Text>
-            <Text className="text-xs leading-[24px] text-[#666666]">
+            <Text className="text-xs leading-[24px] text-[#e7d5d5]">
               This invitation was intended for{" "}
-              <span className="text-black">{name}</span>. If you were not
+              <span className="text-white">{name}</span>. If you were not
               expecting this email, you can ignore this email. If you are
               concerned about your account&apos;s safety, please contact{" "}
               {data.email} to get in touch with us.
