@@ -65,7 +65,7 @@ const Navigation = () => {
 
                 {isHovered === index && isOpen && (
                   <motion.div
-                    className="pointer-events-none absolute left-1/2 top-0 h-full w-full bg-white opacity-0"
+                    className="pointer-events-none absolute left-0 top-0 h-full w-full bg-white opacity-0"
                     initial={{ opacity: 0, x: "-100%" }}
                     animate={{
                       opacity: [0, 0.2, 0],
@@ -143,7 +143,7 @@ const Navigation = () => {
                       </motion.span>
                       {isHovered === index && isDropdownOpen && (
                         <motion.div
-                          className="pointer-events-none absolute left-1/2 top-0 h-full w-full bg-white opacity-0"
+                          className="pointer-events-none absolute left-0 top-0 h-full w-full bg-white opacity-0"
                           initial={{ opacity: 0, x: "-100%" }}
                           animate={{
                             opacity: [0, 0.2, 0],
