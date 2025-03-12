@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className="absolute bottom-0 w-fit translate-x-9 py-1 text-center text-xs md:translate-x-1/2 md:text-2xl">
-          🍊 <br />A CitrusHack Original Production
+          🍊 <br />A Citrus Hack Original Production
         </div>
 
         <div className="absolute right-[1%] top-[78%] flex w-fit text-xs sm:top-[70%] md:left-[70%] md:top-[82%] md:text-2xl lg:left-[70%] lg:top-[80%]">
