@@ -15,8 +15,8 @@ const Navigation = () => {
     <>
       <motion.div
         className="left-4 top-1/2 z-[1000] hidden -translate-y-1/2 flex-col items-center justify-center gap-y-3 rounded-xl bg-black/80 p-3 font-medium text-white shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out md:fixed md:flex"
-        animate={{ width: isOpen ? "180px" : "60px" }}
-        initial={{ width: "60px" }}
+        animate={{ width: isOpen ? "180px" : "65px" }}
+        initial={{ width: "65px" }}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
       >
@@ -33,7 +33,7 @@ const Navigation = () => {
             </motion.p>
           )}
         </div>
-        <div className="h-px w-full bg-citrus-lightgray" />
+        <div className="h-px w-full bg-gray-600" />
         <div className="mr-1 flex w-full flex-col items-center">
           {ITEMS.map(({ name, id, icon }, index) => (
             <Scroll
@@ -43,17 +43,19 @@ const Navigation = () => {
               duration={500}
               spy={true}
               activeClass="bg-red-800 rounded-lg"
-              className="w-full"
+              className="my-1 w-full"
             >
               <motion.div
-                className="relative flex w-full cursor-pointer items-center overflow-hidden rounded-md p-2 transition-colors duration-300 hover:bg-citrus-darkred"
+                className="relative flex w-full cursor-pointer items-center justify-start overflow-hidden rounded-md p-2 transition-colors duration-300 hover:bg-red-800"
                 onHoverStart={() => setIsHovered(index)}
                 onHoverEnd={() => setIsHovered(null)}
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="flex-shrink-0 text-white">{icon}</span>
+                <div className="flex-shrink-0 overflow-visible text-white">
+                  {icon}
+                </div>
                 <motion.span
-                  className="ml-3 overflow-hidden whitespace-nowrap text-lg"
+                  className="ml-3 overflow-hidden whitespace-nowrap text-base"
                   animate={{
                     maxWidth: isOpen ? "120px" : "0px",
                     opacity: isOpen ? 1 : 0,
@@ -62,7 +64,6 @@ const Navigation = () => {
                 >
                   {name}
                 </motion.span>
-
                 {isHovered === index && isOpen && (
                   <motion.div
                     className="pointer-events-none absolute left-0 top-0 h-full w-full bg-white opacity-0"
@@ -94,9 +95,9 @@ const Navigation = () => {
         >
           <div className="flex items-center justify-between">
             {isDropdownOpen ? (
-              <X className="cursor-pointer text-white transition-colors duration-200" />
+              <X className="cursor-pointer text-white transition-colors duration-1000" />
             ) : (
-              <Menu className="cursor-pointer text-white transition-colors duration-200" />
+              <Menu className="cursor-pointer text-white transition-colors duration-1000" />
             )}
           </div>
 
@@ -119,11 +120,11 @@ const Navigation = () => {
                     smooth={true}
                     duration={500}
                     spy={true}
-                    activeClass="bg-citrus-red"
+                    activeClass="bg-red-800 rounded-lg"
                     className="flex w-full items-center rounded-md duration-300"
                   >
                     <motion.div
-                      className="relative flex w-full cursor-pointer items-center overflow-hidden rounded-md p-2 transition-colors duration-300 hover:bg-citrus-darkred"
+                      className="relative flex w-full cursor-pointer items-center overflow-hidden rounded-md p-2 transition-colors duration-300"
                       onHoverStart={() => setIsHovered(index)}
                       onHoverEnd={() => setIsHovered(null)}
                       whileHover={{ scale: 1.05 }}

@@ -1,4 +1,4 @@
-import { CircleHelp, House, Info, Waypoints } from "lucide-react";
+import { CircleHelp, House } from "lucide-react";
 
 export const ITEMS = [
   {
@@ -7,18 +7,48 @@ export const ITEMS = [
     id: "home",
     icon: <House />,
   },
-  {
-    name: "About",
-    link: "#about",
-    id: "about",
-    icon: <Info />,
-  },
-  {
-    name: "Tracks",
-    link: "#tracks",
-    id: "tracks",
-    icon: <Waypoints />,
-  },
+  // {
+  //   name: "About",
+  //   link: "#about",
+  //   id: "about",
+  //   icon: <Info />,
+  // },
+  // {
+  //   name: "Tracks",
+  //   link: "#tracks",
+  //   id: "tracks",
+  //   icon: <Waypoints />,
+  // },
+  // {
+  //   name: "Keynote",
+  //   link: "#about",
+  //   id: "about",
+  //   icon: <Info />,
+  // },
+  // {
+  //   name: "Schedule",
+  //   link: "#about",
+  //   id: "about",
+  //   icon: <Info />,
+  // },
+  // {
+  //   name: "Team",
+  //   link: "#about",
+  //   id: "about",
+  //   icon: <Info />,
+  // },
+  // {
+  //   name: "Judges",
+  //   link: "#about",
+  //   id: "about",
+  //   icon: <Info />,
+  // },
+  // {
+  //   name: "Sponsors",
+  //   link: "#about",
+  //   id: "about",
+  //   icon: <Info />,
+  // },
   {
     name: "FAQ",
     link: "#faq",
