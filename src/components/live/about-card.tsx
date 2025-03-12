@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 const AboutCard = ({ text }: { text: ReactNode }) => {
   return (
     <motion.div
-      className="relative h-24 w-24 rounded border-2 border-gray-700 bg-gray-900 md:w-30 md:h-30 lg:h-48 lg:w-48"
+      className="md:w-30 md:h-30 relative h-24 w-24 rounded border-2 border-gray-700 bg-gray-900 lg:h-48 lg:w-48"
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400 }}
     >
