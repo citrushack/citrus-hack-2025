@@ -31,12 +31,12 @@ export const ITEMS = [
   //   id: "about",
   //   icon: <Info />,
   // },
-  // {
-  //   name: "Team",
-  //   link: "#about",
-  //   id: "about",
-  //   icon: <Info />,
-  // },
+  {
+    name: "Team",
+    link: "#team",
+    id: "team",
+    icon: <Info />,
+  },
   // {
   //   name: "Judges",
   //   link: "#about",
