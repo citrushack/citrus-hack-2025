@@ -4,6 +4,7 @@
 import { motion } from "framer-motion";
 import { boardmembers } from "@/data/board";
 import Image from "next/image";
+import filmSlate from "@/public/assets/filmSlate.svg";
 
 const Team = () => {
   return (
@@ -37,11 +38,11 @@ const Team = () => {
         className="mx-auto grid w-5/6 place-content-center justify-center gap-x-32 sm:gap-x-28"
         id="team"
       >
-        <div className="col-span-2 my-4 mt-12 grid grid-cols-2 gap-x-32 sm:col-span-4 sm:gap-x-28 lg:col-span-6">
+        <div className="relative col-span-2 mt-12 grid grid-cols-1 gap-x-32 sm:col-span-4 sm:grid-cols-2 sm:gap-x-28 lg:col-span-6">
           {boardmembers.slice(0, 2).map(({ name, role, img }) => (
             <motion.div
               key={name}
-              className="text-center font-rubiks text-white"
+              className="my-3 text-center font-rubiks text-white"
               whileHover={{ scale: 1.05 }}
             >
               <Image
@@ -56,9 +57,16 @@ const Team = () => {
               <div></div>
             </motion.div>
           ))}
+          <Image
+            src={filmSlate}
+            width={128}
+            height={128}
+            alt="film slate"
+            className="absolute -right-16 hidden md:flex"
+          />
         </div>
 
-        <div className="col-span-2 my-6 grid grid-cols-2 gap-x-32 sm:col-span-4 sm:grid-cols-4 sm:gap-x-28 lg:col-span-6">
+        <div className="col-span-2 my-6 grid grid-cols-2 gap-x-32 sm:col-span-4 sm:grid-cols-3 sm:gap-x-28 md:grid-cols-4 lg:col-span-6">
           {boardmembers.slice(2).map(({ name, role, img }) => (
             <motion.div
               key={name}
