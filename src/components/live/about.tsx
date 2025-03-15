@@ -1,6 +1,6 @@
 "use client";
 import camera1 from "@/public/assets/camera1.svg";
-import film1 from "@/public/assets/bigwheel.svg";
+// import film1 from "@/public/assets/bigwheel.svg";
 import film2 from "@/public/assets/wheel2.svg";
 import board from "@/public/assets/board.svg";
 import boxes from "@/public/assets/boxes.svg";
