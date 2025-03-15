@@ -1,4 +1,4 @@
-import { CircleHelp, House, Info, CircleUser } from "lucide-react";
+import { CircleHelp, House, Info } from "lucide-react";
 
 export const ITEMS = [
   {
@@ -31,12 +31,12 @@ export const ITEMS = [
   //   id: "about",
   //   icon: <Info />,
   // },
-  {
-    name: "Team",
-    link: "#team",
-    id: "team",
-    icon: <CircleUser />,
-  },
+  // {
+  //   name: "Team",
+  //   link: "#team",
+  //   id: "team",
+  //   icon: <CircleUser />,
+  // },
   // {
   //   name: "Judges",
   //   link: "#about",
