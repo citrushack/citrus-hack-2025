@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Landing from "./landing";
 import About from "./about";
 import Navigation from "./navigation";
@@ -10,25 +13,35 @@ import Navigation from "./navigation";
 // import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
+import CurtainReveal from "./reveal";
 
 const Live = () => {
+  const [complete, setComplete] = useState(false);
   return (
     <>
       {/* <Cursor /> */}
-      <div className="z-0 bg-citrus-gray">
-        <Navigation />
-        <Landing />
-        <About />
-        {/* <Team /> */}
-        {/* <Tracks /> */}
-        {/* 
-      <Schedule />
-      <Sponsors />
-      <Committees />
-      <Judges />
-      */}
-        <FAQ />
-        <Footer />
+      <div className="z-0 bg-gradient-to-r from-black via-red-900 to-black">
+        {!complete && <Landing complete={complete} />}
+        <div className="absolute inset-0 z-20 flex h-full w-full items-center justify-center">
+          <CurtainReveal onComplete={() => setComplete(true)} />
+        </div>
+        {complete && (
+          <>
+            <Navigation />
+            <Landing complete />
+            <About />
+            {/* <Team /> */}
+            {/* <Tracks /> */}
+            {/* 
+    <Schedule />
+    <Sponsors />
+    <Committees />
+    <Judges />
+    */}
+            <FAQ />
+            <Footer />
+          </>
+        )}
       </div>
     </>
   );
