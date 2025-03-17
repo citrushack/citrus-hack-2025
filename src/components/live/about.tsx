@@ -1,12 +1,11 @@
 "use client";
 import camera1 from "@/public/assets/camera1.svg";
-// import film1 from "@/public/assets/bigwheel.svg";
+import film1 from "@/public/assets/bigwheel.svg";
 import film2 from "@/public/assets/wheel2.svg";
 import board from "@/public/assets/board.svg";
 import boxes from "@/public/assets/boxes.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import taaha from "@/public/assets/taaha.png";
 import Card from "./about-card";
 
 const About = () => {
@@ -105,7 +104,7 @@ const About = () => {
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
               className="absolute right-[32%] top-2 w-[19%]"
             >
-              <Image src={taaha} alt="film 1" />
+              <Image src={film1} alt="film 1" />
             </motion.p>
             <Image src={camera1} alt="camera" className="w-[55%]" />
             <div className="absolute bottom-12 h-10 w-60 rounded bg-white opacity-70 blur-lg" />
