@@ -35,20 +35,20 @@ const Team = () => {
       </div>
 
       <div
-        className="mx-auto grid w-5/6 place-content-center justify-center gap-x-32 sm:gap-x-28"
+        className="relative mx-auto grid w-5/6 place-content-center justify-center gap-x-32 sm:gap-x-28"
         id="team"
       >
         <div className="relative col-span-2 mt-12 grid grid-cols-1 gap-x-32 sm:col-span-4 sm:grid-cols-2 sm:gap-x-28 lg:col-span-6">
           {boardmembers.slice(0, 2).map(({ name, role, img }) => (
             <Profile key={name} name={name} role={role} image={img} />
           ))}
-          <Image
-            src={filmSlate}
-            width={128}
-            height={128}
-            alt="film slate"
-            className="absolute -right-16 hidden md:flex"
-          />
+          <motion.div
+            animate={{ rotate: [0, 5, -5, 0] }}
+            transition={{ repeat: Infinity, duration: 5 }}
+            className="absolute -right-16 top-4 hidden md:flex lg:-right-24 xl:-right-32 2xl:-right-40"
+          >
+            <Image src={filmSlate} width={128} height={128} alt="film slate" />
+          </motion.div>
         </div>
 
         <div className="col-span-2 my-6 grid grid-cols-2 gap-x-32 sm:col-span-4 sm:grid-cols-3 sm:gap-x-28 md:grid-cols-4 lg:col-span-6">
