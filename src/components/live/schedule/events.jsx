@@ -13,12 +13,14 @@ const Events = ({ events, totalDays }) => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="mx-auto grid w-10/12 grid-cols-7 items-center justify-between rounded border-2 border-black text-base">
+      <div className="mx-auto grid w-10/12 grid-cols-7 items-center justify-between bg-citrus-beige text-base">
         {totalDays.map((day) => (
           <button
             key={day}
-            className={`flex justify-center rounded p-2 text-black focus:outline-none ${
-              selectedDay === day ? "bg-hackathon-blue-100" : "bg-transparent"
+            className={`m-2 flex justify-center p-2 font-bebas text-2xl focus:outline-none ${
+              selectedDay === day
+                ? "bg-citrus-darkred text-white"
+                : "bg-transparent text-black"
             }`}
             onClick={() => setSelectedDay(day)}
           >
@@ -26,9 +28,9 @@ const Events = ({ events, totalDays }) => {
           </button>
         ))}
       </div>
-      <div className="mt-6 h-full w-10/12">
+      <div className="mt-6 h-full w-10/12 bg-citrus-darkred/50 font-kumar text-white">
         {events.filter(({ day }) => day === selectedDay).length == 0 ? (
-          <div className="flex flex-row justify-center text-lg font-semibold">
+          <div className="flex flex-row justify-center p-5 text-lg font-semibold">
             No events Available
           </div>
         ) : (
@@ -38,7 +40,7 @@ const Events = ({ events, totalDays }) => {
               .map(({ start, summary, description, location }, index) => (
                 <div
                   key={index}
-                  className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-3 text-lg font-semibold"
+                  className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-8 text-lg font-semibold"
                 >
                   <p>
                     {new Date(start).toLocaleTimeString("en-US", {
