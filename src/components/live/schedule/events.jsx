@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Events = ({ events, totalDays }) => {
   const [selectedDay, setSelectedDay] = useState(
@@ -11,13 +11,34 @@ const Events = ({ events, totalDays }) => {
       : "Monday",
   );
 
+  const [currentHour, setCurrentHour] = useState(
+    new Date().toLocaleTimeString("en-US", {
+      timeZone: "America/Los_Angeles",
+      hour: "2-digit",
+      hour12: false,
+    }),
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHour(
+        new Date().toLocaleTimeString("en-US", {
+          timeZone: "America/Los_Angeles",
+          hour: "2-digit",
+          hour12: false,
+        }),
+      );
+    }, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="mx-auto grid w-11/12 grid-cols-7 items-center justify-between bg-citrus-beige text-base lg:w-10/12">
         {totalDays.map((day) => (
           <button
             key={day}
-            className={`m-2 flex justify-center p-2 font-bebas text-lg focus:outline-none lg:text-2xl ${
+            className={`m-2 flex justify-center p-2 font-bebas text-lg duration-300 hover:bg-citrus-darkred hover:text-white focus:outline-none lg:text-2xl ${
               selectedDay === day
                 ? "bg-citrus-darkred text-white"
                 : "bg-transparent text-black"
@@ -30,9 +51,9 @@ const Events = ({ events, totalDays }) => {
         ))}
       </div>
       <div className="mt-6 h-full w-11/12 font-kumar text-white lg:w-10/12">
-        {events.filter(({ day }) => day === selectedDay).length == 0 ? (
+        {events.filter(({ day }) => day === selectedDay).length === 0 ? (
           <div className="flex flex-row justify-center p-5 text-lg font-semibold">
-            No events Available
+            No events available
           </div>
         ) : (
           <>
@@ -44,29 +65,51 @@ const Events = ({ events, totalDays }) => {
             </div>
             {events
               .filter(({ day }) => day === selectedDay)
-              .map(({ start, summary, description, location }, index) => (
-                <div
-                  key={index}
-                  className="font-workSans grid h-24 w-full grid-cols-4 items-center justify-center bg-citrus-darkred/50 px-4 text-xs font-semibold 2xl:text-2xl"
-                >
-                  <p>
-                    {new Date(start).toLocaleTimeString("en-US", {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                      timeZone: "America/Los_Angeles",
-                    })}
-                  </p>
-                  <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
-                    {summary}
-                  </p>
-                  <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
-                    {description.split("\n")[0].substr(1)}
-                  </p>
-                  <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
-                    {location}
-                  </p>
-                </div>
-              ))}
+              .map(({ start, summary, description, location }, index) => {
+                const eventHour = new Date(start).toLocaleTimeString("en-US", {
+                  timeZone: "America/Los_Angeles",
+                  hour: "2-digit",
+                  hour12: false,
+                });
+                return (
+                  <div
+                    key={index}
+                    className={`font-workSans grid h-24 w-full grid-cols-4 items-center justify-center bg-citrus-darkred/50 px-4 text-xs font-semibold md:text-xl 2xl:text-2xl ${
+                      selectedDay ===
+                        new Date().toLocaleString("en-US", {
+                          timeZone: "America/Los_Angeles",
+                          weekday: "long",
+                        }) && currentHour === eventHour
+                        ? "text-citrus-yellow"
+                        : ""
+                    }`}
+                  >
+                    <div className="flex w-full items-center justify-center pr-8">
+                      <div className="mr-2 flex w-4 justify-center">
+                        {currentHour === eventHour && (
+                          <span className="h-3 w-3 rounded-full bg-citrus-yellow" />
+                        )}
+                      </div>
+                      <p className="text-center">
+                        {new Date(start).toLocaleTimeString("en-US", {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                          timeZone: "America/Los_Angeles",
+                        })}
+                      </p>
+                    </div>
+                    <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
+                      {summary}
+                    </p>
+                    <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
+                      {description?.split("\n")[0]?.substring(1) || "N/A"}
+                    </p>
+                    <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
+                      {location}
+                    </p>
+                  </div>
+                );
+              })}
           </>
         )}
       </div>
