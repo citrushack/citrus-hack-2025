@@ -28,16 +28,16 @@ const Schedule = async () => {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col">
       <div className="flex w-full flex-col items-center">
-        <div className="w-1/3 rounded-lg border-4 border-black bg-citrus-beige p-5 font-lily">
+        <div className="w-3/4 rounded-lg border-4 border-black bg-citrus-beige p-5 font-lily md:w-1/3">
           <TextStroke
             title="Schedule"
-            color="text-outline-red text-center text-2xl text-citrus-yellow md:text-9xl"
-            subColor="text-center text-2xl text-citrus-yellow md:text-9xl"
+            color="text-outline-red text-center text-5xl text-citrus-yellow md:text-9xl"
+            subColor="text-center text-5xl text-citrus-yellow md:text-9xl"
           />
         </div>
-        <div className="p-4 font-kameron text-4xl text-white">
+        <div className="p-4 text-center font-kameron text-xl text-white md:text-4xl">
           Pacific Standard Time (PST)
         </div>
 
@@ -48,7 +48,7 @@ const Schedule = async () => {
         </div>
       </div>
       <Events events={items} totalDays={totalDays} />
-      <div className="my-[5%] flex w-11/12 flex-col">
+      <div className="my-[5%] flex w-11/12 flex-col self-center">
         <span className="my-1 h-0.5 w-full bg-white" />
         <span className="my-1 h-0.5 w-full bg-white" />
         <span className="my-1 h-1 w-full bg-white" />
