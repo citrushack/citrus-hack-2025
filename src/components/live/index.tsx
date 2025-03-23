@@ -23,9 +23,7 @@ const Live = () => {
         <About />
         {/* <Keynote/> */}
         {/* <Tracks /> */}
-
         <Schedule />
-
         {/* <Team /> */}
         {/* <Sponsors />
       <Committees />
