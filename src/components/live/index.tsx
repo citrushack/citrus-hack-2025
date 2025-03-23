@@ -11,6 +11,8 @@ import Team from "./team/team";
 import FAQ from "./faq";
 import Footer from "./footer";
 import Schedule from "./schedule";
+// import Keynote from "./keynote";
+
 const Live = () => {
   return (
     <>
@@ -19,10 +21,12 @@ const Live = () => {
         <Navigation />
         <Landing />
         <About />
+        {/* <Keynote/> */}
         {/* <Tracks /> */}
 
         <Schedule />
-        <Team />
+
+        {/* <Team /> */}
         {/* <Sponsors />
       <Committees />
       <Judges /> */}

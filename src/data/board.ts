@@ -65,11 +65,6 @@ export const boardmembers: boardmembers[] = [
     role: "Marketing",
     img: "/assets/grayEllipse.svg",
   },
-  {
-    name: "Hannah Hwang",
-    role: "Marketing",
-    img: "/assets/grayEllipse.svg",
-  },
 
   {
     name: "Ananya Dharanikota",
@@ -88,52 +83,17 @@ export const boardmembers: boardmembers[] = [
   },
   {
     name: "Amir Shanti",
-    role: "SWE",
+    role: "Software Engineering",
     img: "/assets/grayEllipse.svg",
   },
   {
     name: "Brandon Sun",
-    role: "SWE",
+    role: "Software Engineering",
     img: "/assets/grayEllipse.svg",
   },
   {
     name: "Taaha Sayed",
-    role: "SWE",
-    img: "/assets/grayEllipse.svg",
-  },
-  {
-    name: "NAME",
-    role: "DIRECTOR",
-    img: "/assets/grayEllipse.svg",
-  },
-  {
-    name: "NAME",
-    role: "DIRECTOR",
-    img: "/assets/grayEllipse.svg",
-  },
-  {
-    name: "NAME",
-    role: "DIRECTOR",
-    img: "/assets/grayEllipse.svg",
-  },
-  {
-    name: "NAME",
-    role: "DIRECTOR",
-    img: "/assets/grayEllipse.svg",
-  },
-  {
-    name: "NAME",
-    role: "DIRECTOR",
-    img: "/assets/grayEllipse.svg",
-  },
-  {
-    name: "NAME",
-    role: "DIRECTOR",
-    img: "/assets/grayEllipse.svg",
-  },
-  {
-    name: "NAME",
-    role: "DIRECTOR",
+    role: "Software Engineering",
     img: "/assets/grayEllipse.svg",
   },
 ];

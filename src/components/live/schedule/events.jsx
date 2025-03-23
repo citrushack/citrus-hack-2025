@@ -50,7 +50,10 @@ const Events = ({ events, totalDays }) => {
           </button>
         ))}
       </div>
-      <div className="mt-6 h-full w-11/12 font-kumar text-white lg:w-10/12">
+      <div
+        id="schedule"
+        className="mt-6 h-full w-11/12 font-kumar text-white lg:w-10/12"
+      >
         {events.filter(({ day }) => day === selectedDay).length === 0 ? (
           <div className="flex flex-row justify-center p-5 text-lg font-semibold">
             No events available
