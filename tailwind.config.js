@@ -17,6 +17,7 @@ module.exports = {
         kumar: ["var(--font-kumarOne)"],
         kameron: ["var(--font-kameron)"],
         rubiks: ["var(--font-rubiks)"],
+        bebas: ["var(--font-bebas)"],
       },
       fontSize: {
         xxs: "0.625rem",

@@ -10,7 +10,7 @@ import Team from "./team/team";
 // import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
-
+import Schedule from "./schedule";
 const Live = () => {
   return (
     <>
@@ -19,14 +19,14 @@ const Live = () => {
         <Navigation />
         <Landing />
         <About />
-        <Team />
         {/* <Tracks /> */}
-        {/* 
-      <Schedule />
-      <Sponsors />
+
+        <Schedule />
+        <Team />
+        {/* <Sponsors />
       <Committees />
-      <Judges />
-      */}
+      <Judges /> */}
+
         <FAQ />
         <Footer />
       </div>
