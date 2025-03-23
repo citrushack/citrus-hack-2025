@@ -1,6 +1,6 @@
 import { api } from "@/utils/api";
 import Events from "./events";
-import Title from "@/components/ui/title";
+import TextStroke from "../text-stroke";
 
 const Schedule = async () => {
   const { items } = await api({
@@ -28,9 +28,31 @@ const Schedule = async () => {
   ];
 
   return (
-    <div>
-      {" "}
-      <Title text="Schedule" /> <Events events={items} totalDays={totalDays} />
+    <div className="my-[10%] flex flex-col">
+      <div className="flex w-full flex-col items-center">
+        <div className="w-3/4 rounded-lg border-4 border-black bg-citrus-beige p-5 pl-0 text-center font-lily md:w-2/5 md:pl-2">
+          <TextStroke
+            title="Schedule"
+            color="text-outline-red text-center text-5xl text-citrus-yellow md:text-9xl"
+            subColor="text-center text-5xl text-citrus-yellow md:text-9xl"
+          />
+        </div>
+        <div className="p-4 text-center font-kameron text-xl text-white md:text-4xl">
+          Pacific Standard Time (PST)
+        </div>
+
+        <div className="my-[3%] flex w-11/12 flex-col">
+          <span className="my-1 h-0.5 w-full bg-white" />
+          <span className="my-1 h-0.5 w-full bg-white" />
+          <span className="my-1 h-1 w-full bg-white" />
+        </div>
+      </div>
+      <Events events={items} totalDays={totalDays} />
+      <div className="my-[5%] flex w-11/12 flex-col self-center">
+        <span className="my-1 h-0.5 w-full bg-white" />
+        <span className="my-1 h-0.5 w-full bg-white" />
+        <span className="my-1 h-1 w-full bg-white" />
+      </div>
     </div>
   );
 };
