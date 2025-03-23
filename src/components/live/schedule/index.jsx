@@ -30,7 +30,7 @@ const Schedule = async () => {
   return (
     <div>
       {" "}
-      <Title text="Schedule" /> <Events events={items} totalDays={totalDays} />
+      <Title>Schedule</Title> <Events events={items} totalDays={totalDays} />
     </div>
   );
 };

@@ -28,32 +28,42 @@ const Events = ({ events, totalDays }) => {
           </button>
         ))}
       </div>
-      <div className="mt-6 h-full w-10/12 bg-citrus-darkred/50 font-kumar text-white">
+      <div className="mt-6 h-full w-10/12 font-kumar text-white">
         {events.filter(({ day }) => day === selectedDay).length == 0 ? (
           <div className="flex flex-row justify-center p-5 text-lg font-semibold">
             No events Available
           </div>
         ) : (
           <>
+            <div className="my-8 grid w-full grid-cols-8 border-b border-white py-4 text-4xl">
+              <p className="col-span-1 flex w-full justify-center">Time</p>
+              <p className="col-span-3 flex w-full justify-center">Event</p>
+              <p className="col-span-2 flex w-full justify-center">Type</p>
+              <p className="col-span-2 flex w-full justify-center">Location</p>
+            </div>
             {events
               .filter(({ day }) => day === selectedDay)
               .map(({ start, summary, description, location }, index) => (
                 <div
                   key={index}
-                  className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-8 text-lg font-semibold"
+                  className="font-workSans grid h-24 w-full grid-cols-8 items-center justify-center bg-citrus-darkred/50 px-4 text-2xl font-semibold"
                 >
-                  <p>
+                  <p className="cols-span-1 w-1/2">
                     {new Date(start).toLocaleTimeString("en-US", {
                       hour: "2-digit",
                       minute: "2-digit",
                       timeZone: "America/Los_Angeles",
                     })}
                   </p>
-                  <p className="flex w-full justify-center">{summary}</p>
-                  <p className="flex justify-center">
+                  <p className="col-span-3 flex h-full w-full items-center border-l border-white px-8">
+                    {summary}
+                  </p>
+                  <p className="col-span-2 flex h-full w-full items-center border-l border-white px-8">
                     {description.split("\n")[0].substr(1)}
                   </p>
-                  <p className="flex justify-center">{location}</p>
+                  <p className="col-span-2 flex h-full w-full items-center border-l border-white px-8">
+                    {location}
+                  </p>
                 </div>
               ))}
           </>
