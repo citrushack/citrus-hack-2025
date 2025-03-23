@@ -13,32 +13,41 @@ const Events = ({ events, totalDays }) => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="mx-auto grid w-10/12 grid-cols-7 items-center justify-between rounded border-2 border-black text-base">
+      <div className="mx-auto grid w-11/12 grid-cols-7 items-center justify-between bg-citrus-beige text-base lg:w-10/12">
         {totalDays.map((day) => (
           <button
             key={day}
-            className={`flex justify-center rounded p-2 text-black focus:outline-none ${
-              selectedDay === day ? "bg-hackathon-blue-100" : "bg-transparent"
+            className={`m-2 flex justify-center p-2 font-bebas text-lg focus:outline-none lg:text-2xl ${
+              selectedDay === day
+                ? "bg-citrus-darkred text-white"
+                : "bg-transparent text-black"
             }`}
             onClick={() => setSelectedDay(day)}
           >
-            {day}
+            <span className="hidden sm:block">{day}</span>
+            <span className="block sm:hidden">{day.slice(0, 3)}</span>
           </button>
         ))}
       </div>
-      <div className="mt-6 h-full w-10/12">
+      <div className="mt-6 h-full w-11/12 font-kumar text-white lg:w-10/12">
         {events.filter(({ day }) => day === selectedDay).length == 0 ? (
-          <div className="flex flex-row justify-center text-lg font-semibold">
+          <div className="flex flex-row justify-center p-5 text-lg font-semibold">
             No events Available
           </div>
         ) : (
           <>
+            <div className="my-8 grid w-full grid-cols-4 border-b border-white py-4 lg:text-4xl">
+              <p className="flex w-full justify-center">Time</p>
+              <p className="flex w-full justify-center">Event</p>
+              <p className="flex w-full justify-center">Type</p>
+              <p className="flex w-full justify-center">Location</p>
+            </div>
             {events
               .filter(({ day }) => day === selectedDay)
               .map(({ start, summary, description, location }, index) => (
                 <div
                   key={index}
-                  className="font-workSans grid w-full grid-cols-4 items-center justify-center px-4 py-3 text-lg font-semibold"
+                  className="font-workSans grid h-24 w-full grid-cols-4 items-center justify-center bg-citrus-darkred/50 px-4 text-xs font-semibold 2xl:text-2xl"
                 >
                   <p>
                     {new Date(start).toLocaleTimeString("en-US", {
@@ -47,11 +56,15 @@ const Events = ({ events, totalDays }) => {
                       timeZone: "America/Los_Angeles",
                     })}
                   </p>
-                  <p className="flex w-full justify-center">{summary}</p>
-                  <p className="flex justify-center">
+                  <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
+                    {summary}
+                  </p>
+                  <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
                     {description.split("\n")[0].substr(1)}
                   </p>
-                  <p className="flex justify-center">{location}</p>
+                  <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
+                    {location}
+                  </p>
                 </div>
               ))}
           </>
