@@ -5,7 +5,7 @@ import Navigation from "./navigation";
 // import Schedule from "./schedule";
 // import Tracks from "./tracks";
 // import Sponsors from "./sponsors";
-import Team from "./team/team";
+// import Team from "./team/team";
 // import Committees from "./committees";
 // import Judges from "./judges";
 import FAQ from "./faq";
