@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { boardmembers } from "@/data/board";
+import { boardmembers } from "@/data/live/board";
 import Image from "next/image";
 import filmSlate from "@/public/assets/filmSlate.svg";
 import Profile from "./profile";
