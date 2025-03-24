@@ -3,9 +3,7 @@
 import { motion } from "framer-motion";
 import TextStroke from "./text-stroke";
 import Image from "next/image";
-import filmSlate from "@/public/assets/filmSlate.svg";
 import { KEYNOTE } from "@/data/live/keynote";
-import Profile from "./team/profile";
 
 const Keynote = () => {
   return (
