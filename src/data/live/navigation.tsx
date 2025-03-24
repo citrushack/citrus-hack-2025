@@ -1,4 +1,4 @@
-import { Calendar, CircleHelp, House, Info } from "lucide-react";
+import { Calendar, CircleHelp, House, Info, Mic } from "lucide-react";
 
 export const ITEMS = [
   {
@@ -19,12 +19,12 @@ export const ITEMS = [
   //   id: "tracks",
   //   icon: <Waypoints />,
   // },
-  // {
-  //   name: "Keynote",
-  //   link: "#about",
-  //   id: "about",
-  //   icon: <Info />,
-  // },
+  {
+    name: "Keynote",
+    link: "#keynote",
+    id: "keynote",
+    icon: <Mic />,
+  },
   {
     name: "Schedule",
     link: "#schedule",
