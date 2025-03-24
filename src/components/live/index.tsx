@@ -11,7 +11,7 @@ import Navigation from "./navigation";
 import FAQ from "./faq";
 import Footer from "./footer";
 import Schedule from "./schedule";
-// import Keynote from "./keynote";
+import Keynote from "./keynote";
 
 const Live = () => {
   return (
@@ -21,7 +21,7 @@ const Live = () => {
         <Navigation />
         <Landing />
         <About />
-        {/* <Keynote/> */}
+        <Keynote />
         {/* <Tracks /> */}
         <Schedule />
         {/* <Team /> */}
