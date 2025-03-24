@@ -32,13 +32,18 @@ const Events = ({ events, totalDays }) => {
     return () => clearInterval(interval);
   }, []);
 
+  const currentDay = new Date().toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles",
+    weekday: "long",
+  });
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="mx-auto grid w-11/12 grid-cols-7 items-center justify-between bg-citrus-beige text-base lg:w-10/12">
         {totalDays.map((day) => (
           <button
             key={day}
-            className={`m-2 flex justify-center p-2 font-bebas text-lg duration-300 hover:bg-citrus-darkred hover:text-white focus:outline-none lg:text-2xl ${
+            className={`m-2 mx-1 flex justify-center p-2 font-bebas text-lg duration-300 hover:bg-citrus-darkred hover:text-white focus:outline-none lg:text-2xl ${
               selectedDay === day
                 ? "bg-citrus-darkred text-white"
                 : "bg-transparent text-black"
@@ -78,20 +83,22 @@ const Events = ({ events, totalDays }) => {
                   <div
                     key={index}
                     className={`font-workSans grid h-24 w-full grid-cols-4 items-center justify-center bg-citrus-darkred/50 px-4 text-xs font-semibold md:text-xl 2xl:text-2xl ${
-                      selectedDay ===
-                        new Date().toLocaleString("en-US", {
-                          timeZone: "America/Los_Angeles",
-                          weekday: "long",
-                        }) && currentHour === eventHour
+                      selectedDay === currentDay &&
+                      new Date().toLocaleString("en-US", {
+                        timeZone: "America/Los_Angeles",
+                        weekday: "long",
+                      }) &&
+                      currentHour === eventHour
                         ? "text-citrus-yellow"
                         : ""
                     }`}
                   >
                     <div className="flex w-full items-center justify-center pr-8">
                       <div className="mr-2 flex w-4 justify-center">
-                        {currentHour === eventHour && (
-                          <span className="h-3 w-3 rounded-full bg-citrus-yellow" />
-                        )}
+                        {currentHour === eventHour &&
+                          selectedDay === currentDay && (
+                            <span className="h-3 w-3 rounded-full bg-citrus-yellow" />
+                          )}
                       </div>
                       <p className="text-center">
                         {new Date(start).toLocaleTimeString("en-US", {
@@ -105,7 +112,7 @@ const Events = ({ events, totalDays }) => {
                       {summary}
                     </p>
                     <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
-                      {description?.split("\n")[0]?.substring(1) || "N/A"}
+                      {description}
                     </p>
                     <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
                       {location}
