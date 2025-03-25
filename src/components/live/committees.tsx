@@ -1,9 +1,23 @@
 import Title from "@/components/ui/title";
+import { COMMITTEES } from "@/data/live/committees";
 
 const Committees = () => {
   return (
-    <div className="flex items-center justify-center">
-      <Title>Committees</Title>
+    <div className="flex flex-col items-center gap-10 py-10">
+      <Title>COMMITTEES</Title>
+
+      <div className="flex font-bold text-white sm:text-xl lg:text-3xl">
+        {COMMITTEES.map(({ name, members }, index) => (
+          <div key={index} className="px-5">
+            {name}
+            <div className="grid grid-rows-4 justify-items-center font-normal sm:text-xs md:text-xl lg:text-xl">
+              {members.map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
