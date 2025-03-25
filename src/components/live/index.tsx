@@ -14,7 +14,7 @@ import Committees from "./committees";
 import FAQ from "./faq";
 import Footer from "./footer";
 import CurtainReveal from "./reveal";
-// import Schedule from "./schedule";
+import Schedule from "./schedule";
 import Keynote from "./keynote";
 
 const Live = () => {
@@ -34,7 +34,7 @@ const Live = () => {
             <About />
             {/* <Tracks /> */}
             <Keynote />
-            {/* <Schedule /> */}
+            <Schedule />
             <Sponsors />
             <Team />
             <Committees />
