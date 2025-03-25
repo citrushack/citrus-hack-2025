@@ -21,7 +21,7 @@ const CurtainReveal = ({ onComplete }: { onComplete: () => void }) => {
   }, [onComplete]);
 
   return (
-    <div className="hidden md:block relative h-screen w-full overflow-hidden">
+    <div className="relative hidden h-screen w-full overflow-hidden md:block">
       <motion.div
         className="absolute left-60 top-0 h-full w-1/3"
         initial={{ x: 0 }}

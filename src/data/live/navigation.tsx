@@ -1,4 +1,12 @@
-import { Calendar, CircleHelp, HandHeartIcon, House, Info, Mic, Users } from "lucide-react";
+import {
+  Calendar,
+  CircleHelp,
+  HandHeartIcon,
+  House,
+  Info,
+  Mic,
+  Users,
+} from "lucide-react";
 
 export const ITEMS = [
   {
