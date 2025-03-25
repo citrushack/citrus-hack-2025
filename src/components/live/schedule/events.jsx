@@ -65,7 +65,7 @@ const Events = ({ events, totalDays }) => {
           </div>
         ) : (
           <>
-            <div className="my-8 grid w-full grid-cols-4 border-b border-white py-4 lg:text-4xl">
+            <div className="my-4 grid w-full grid-cols-4 border-b border-white py-4 md:my-8 lg:text-4xl">
               <p className="flex w-full justify-center">Time</p>
               <p className="flex w-full justify-center">Event</p>
               <p className="flex w-full justify-center">Type</p>
@@ -93,11 +93,11 @@ const Events = ({ events, totalDays }) => {
                         : ""
                     }`}
                   >
-                    <div className="flex w-full items-center justify-center pr-8">
-                      <div className="mr-2 flex w-4 justify-center">
+                    <div className="flex w-11/12 items-center justify-center pr-8 md:w-full">
+                      <div className="mr-2 flex w-2 justify-center md:w-4">
                         {currentHour === eventHour &&
                           selectedDay === currentDay && (
-                            <span className="h-3 w-3 rounded-full bg-citrus-yellow" />
+                            <span className="mb-1 h-1.5 w-1.5 rounded-full bg-citrus-yellow md:h-3 md:w-3" />
                           )}
                       </div>
                       <p className="text-center">
@@ -108,13 +108,13 @@ const Events = ({ events, totalDays }) => {
                         })}
                       </p>
                     </div>
-                    <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
+                    <p className="flex h-full w-full items-center justify-center border-white px-3 md:border-l md:px-8 lg:justify-center">
                       {summary}
                     </p>
-                    <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
+                    <p className="flex h-full w-full items-center justify-center border-white px-6 md:border-l md:px-8 lg:justify-center">
                       {description}
                     </p>
-                    <p className="flex h-full w-full items-center justify-center border-white md:border-l md:px-8 lg:justify-start">
+                    <p className="flex h-full w-full items-center justify-start border-white px-6 md:border-l md:px-8 lg:justify-center">
                       {location}
                     </p>
                   </div>
