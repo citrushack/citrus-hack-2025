@@ -1,39 +1,29 @@
-const ITEMS = [
+export const COMMITTEES = [
   {
     name: "OPERATIONS",
-    members: [
-      { name: "Billy" },
-      { name: "Bob" },
-      { name: "Billy" },
-      { name: "Bob" },
-    ],
+    members: ["Billy", "Bob", "Billy", "Bob"],
   },
   {
     name: "SPONSORSHIP",
-    members: [
-      { name: "Billy" },
-      { name: "Bob" },
-      { name: "Billy" },
-      { name: "Bob" },
-    ],
+    members: ["Billy", "Bob", "Billy", "Bob"],
+  },
+  {
+    name: "MARKETING",
+    members: ["Billy", "Bob", "Billy", "Bob"],
   },
   {
     name: "UI/UX",
-    members: [
-      { name: "Billy" },
-      { name: "Jimmy" },
-      { name: "Billy" },
-      { name: "Bob" },
-    ],
+    members: ["Billy", "Bob", "Billy", "Bob"],
   },
   {
     name: "SOFTWARE",
     members: [
-      { name: "Billy" },
-      { name: "Bob" },
-      { name: "Billy" },
-      { name: "Bob" },
+      "Howard Zhu",
+      "Sean Quiambao",
+      "Kevin Loritsch",
+      "Theo Fernandez",
+      "Kavin Phabiani",
+      "Sangha Jeon",
     ],
   },
 ];
-export default ITEMS;
