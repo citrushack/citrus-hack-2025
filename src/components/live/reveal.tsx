@@ -25,7 +25,7 @@ const CurtainReveal = ({ onComplete }: { onComplete: () => void }) => {
       <motion.div
         className="absolute left-60 top-0 h-full w-1/3"
         initial={{ x: 0 }}
-        animate={{ x: revealComplete ? "0%" : "-100%" }}
+        animate={{ x: revealComplete ? "-150%" : "-150%" }}
         transition={{
           duration: 2,
           ease: "easeInOut",
@@ -76,7 +76,7 @@ const CurtainReveal = ({ onComplete }: { onComplete: () => void }) => {
       <motion.div
         className="absolute right-60 top-0 z-0 h-full w-1/3"
         initial={{ x: 0 }}
-        animate={{ x: revealComplete ? "0%" : "100%" }}
+        animate={{ x: revealComplete ? "150%" : "150%" }}
         transition={{
           duration: 2,
           ease: "easeInOut",

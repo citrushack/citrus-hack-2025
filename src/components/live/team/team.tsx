@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { boardmembers } from "@/data/board";
+import { boardmembers } from "@/data/live/board";
 import Image from "next/image";
 import filmSlate from "@/public/assets/filmSlate.svg";
 import Profile from "./profile";
 
 const Team = () => {
   return (
-    <div className="mt-20 overflow-hidden">
+    <div className="mt-20 w-full overflow-hidden">
       <motion.div
         initial={{ x: "0%" }}
         animate={{ x: "-100%" }}
@@ -35,23 +35,23 @@ const Team = () => {
       </div>
 
       <div
-        className="mx-auto grid w-5/6 place-content-center justify-center gap-x-32 sm:gap-x-28"
+        className="relative mx-auto flex w-full flex-col items-center"
         id="team"
       >
-        <div className="relative col-span-2 mt-12 grid grid-cols-1 gap-x-32 sm:col-span-4 sm:grid-cols-2 sm:gap-x-28 lg:col-span-6">
+        <div className="relative mt-5 grid w-full grid-cols-2 gap-6 md:w-1/2 md:grid-cols-2 md:gap-10">
           {boardmembers.slice(0, 2).map(({ name, role, img }) => (
             <Profile key={name} name={name} role={role} image={img} />
           ))}
-          <Image
-            src={filmSlate}
-            width={128}
-            height={128}
-            alt="film slate"
-            className="absolute -right-16 hidden md:flex"
-          />
+          <motion.div
+            animate={{ rotate: [0, 5, -5, 0] }}
+            transition={{ repeat: Infinity, duration: 5 }}
+            className="absolute -right-16 top-4 hidden md:flex lg:-right-24 xl:-right-32 2xl:-right-40"
+          >
+            <Image src={filmSlate} width={128} height={128} alt="film slate" />
+          </motion.div>
         </div>
 
-        <div className="col-span-2 my-6 grid grid-cols-2 gap-x-32 sm:col-span-4 sm:grid-cols-3 sm:gap-x-28 md:grid-cols-4 lg:col-span-6">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-10">
           {boardmembers.slice(2).map(({ name, role, img }) => (
             <Profile key={name} name={name} role={role} image={img} />
           ))}

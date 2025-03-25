@@ -14,6 +14,8 @@ import Sponsors from "./sponsors";
 import FAQ from "./faq";
 import Footer from "./footer";
 import CurtainReveal from "./reveal";
+// import Schedule from "./schedule";
+import Keynote from "./keynote";
 
 const Live = () => {
   const [complete, setComplete] = useState(false);
@@ -30,11 +32,12 @@ const Live = () => {
             <Navigation />
             <Landing complete />
             <About />
+            <Keynote />
+            {/* <Schedule /> */}
             <Sponsors />
             {/* <Team /> */}
             {/* <Tracks /> */}
             {/* 
-    <Schedule />
     <Committees />
     <Judges />
     */}
