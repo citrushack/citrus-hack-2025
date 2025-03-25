@@ -7,7 +7,6 @@ import TextStroke from "../text-stroke";
 
 const Schedule = () => {
   const [events, setEvents] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -26,10 +25,8 @@ const Schedule = () => {
         });
 
         setEvents(items);
-        setIsLoading(false);
       } catch (error) {
         console.error("Failed to fetch events", error);
-        setIsLoading(false);
       }
     };
 
