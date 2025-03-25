@@ -7,7 +7,10 @@ import left from "@/public/assets/sponsors/lspotlight.svg";
 
 const Sponsors = () => {
   return (
-    <div className="relative mb-[13%] flex h-full flex-col items-center justify-center">
+    <div
+      id="sponsors"
+      className="relative mb-[13%] flex h-full flex-col items-center justify-center"
+    >
       <div className="relative w-full">
         <Image
           src={curtain}
@@ -23,12 +26,12 @@ const Sponsors = () => {
           <Image
             src={left}
             alt="left spotlight"
-            className="absolute -left-12 -top-12 w-1/4 -rotate-12 transform opacity-70"
+            className="absolute -left-12 -top-12 hidden w-1/4 -rotate-12 transform opacity-70 md:block"
           />
           <Image
             src={right}
             alt="right spotlight"
-            className="absolute -right-12 -top-6 w-1/4 rotate-12 transform opacity-70"
+            className="absolute -right-12 -top-6 hidden w-1/4 rotate-12 transform opacity-70 md:block"
           />
         </div>
       </div>

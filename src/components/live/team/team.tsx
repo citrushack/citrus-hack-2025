@@ -8,7 +8,7 @@ import Profile from "./profile";
 
 const Team = () => {
   return (
-    <div className="mt-20 w-full overflow-hidden">
+    <div id="team" className="mt-20 w-full overflow-hidden">
       <motion.div
         initial={{ x: "0%" }}
         animate={{ x: "-100%" }}
@@ -34,10 +34,7 @@ const Team = () => {
         </div>
       </div>
 
-      <div
-        className="relative mx-auto flex w-full flex-col items-center"
-        id="team"
-      >
+      <div className="relative mx-auto flex w-full flex-col items-center">
         <div className="relative mt-5 grid w-full grid-cols-2 gap-6 md:w-1/2 md:grid-cols-2 md:gap-10">
           {boardmembers.slice(0, 2).map(({ name, role, img }) => (
             <Profile key={name} name={name} role={role} image={img} />

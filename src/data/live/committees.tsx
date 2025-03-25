@@ -1,19 +1,47 @@
 export const COMMITTEES = [
   {
     name: "OPERATIONS",
-    members: ["Billy", "Bob", "Billy", "Bob"],
+    members: [
+      "Howard Zhu",
+      "Sean Quiambao",
+      "Kevin Loritsch",
+      "Theo Fernandez",
+      "Kavin Phabiani",
+      "Sangha Jeon",
+    ],
   },
   {
     name: "SPONSORSHIP",
-    members: ["Billy", "Bob", "Billy", "Bob"],
+    members: [
+      "Howard Zhu",
+      "Sean Quiambao",
+      "Kevin Loritsch",
+      "Theo Fernandez",
+      "Kavin Phabiani",
+      "Sangha Jeon",
+    ],
   },
   {
     name: "MARKETING",
-    members: ["Billy", "Bob", "Billy", "Bob"],
+    members: [
+      "Howard Zhu",
+      "Sean Quiambao",
+      "Kevin Loritsch",
+      "Theo Fernandez",
+      "Kavin Phabiani",
+      "Sangha Jeon",
+    ],
   },
   {
     name: "UI/UX",
-    members: ["Billy", "Bob", "Billy", "Bob"],
+    members: [
+      "Howard Zhu",
+      "Sean Quiambao",
+      "Kevin Loritsch",
+      "Theo Fernandez",
+      "Kavin Phabiani",
+      "Sangha Jeon",
+    ],
   },
   {
     name: "SOFTWARE",
