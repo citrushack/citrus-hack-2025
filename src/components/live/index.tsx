@@ -5,11 +5,13 @@ import Navigation from "./navigation";
 // import Schedule from "./schedule";
 // import Tracks from "./tracks";
 // import Sponsors from "./sponsors";
-// import Team from "./team";
-import Committees from "./committees";
+// import Team from "./team/team";
+// import Committees from "./committees";
 // import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
+import Schedule from "./schedule";
+import Keynote from "./keynote";
 
 const Live = () => {
   return (
@@ -19,14 +21,14 @@ const Live = () => {
         <Navigation />
         <Landing />
         <About />
-        <Committees />
+        <Keynote />
         {/* <Tracks /> */}
-        {/* 
-      <Schedule />
-      <Sponsors />
-      <Team />
-      <Judges />
-      */}
+        <Schedule />
+        {/* <Team /> */}
+        {/* <Committees /> */}
+        {/* <Sponsors />
+      <Judges /> */}
+
         <FAQ />
         <Footer />
       </div>
