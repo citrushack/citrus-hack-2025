@@ -6,7 +6,7 @@ import Questions from "./questions";
 import Confirmation from "./confirmation";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
-import LOGO from "@/app/favicon.ico";
+import LOGO from "@/public/assets/logo/citrushack.svg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import filmTop from "@/public/assets/filmroll1.svg";
@@ -60,7 +60,7 @@ const Form = ({
         />
       </div>
       <div className="flex w-10/12 flex-col items-center justify-start pb-12 pt-5 md:w-1/2 xl:w-1/3">
-        <Image src={LOGO} className="z-20 m-4 w-1/4" alt="Logo" />
+        <Image src={LOGO} className="z-20 m-0 w-1/2" alt="Logo" />
         <p className="z-20 m-0 w-full rounded-t bg-citrus-darkred px-4 py-4 text-xl font-semibold text-white">
           {header}
         </p>
