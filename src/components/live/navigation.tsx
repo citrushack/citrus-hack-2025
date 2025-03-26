@@ -125,16 +125,16 @@ const Navigation = () => {
                     className="flex w-full items-center rounded-md duration-300"
                   >
                     <motion.div
-                      className="relative flex w-full cursor-pointer items-center overflow-hidden rounded-md p-2 transition-colors duration-300"
+                      className="relative flex w-full cursor-pointer items-center overflow-hidden rounded-md p-1 transition-colors duration-300"
                       onHoverStart={() => setIsHovered(index)}
                       onHoverEnd={() => setIsHovered(null)}
                       whileHover={{ scale: 1.05 }}
                     >
-                      <span className="flex-shrink-0 text-xs text-white">
+                      <span className="ml-1 flex-shrink-0 text-xs text-white">
                         {icon}
                       </span>
                       <motion.span
-                        className="ml-3 overflow-hidden whitespace-nowrap text-xs"
+                        className="mr-0 overflow-hidden whitespace-nowrap text-xs"
                         animate={{
                           maxWidth: isDropdownOpen ? "120px" : "0px",
                           opacity: isDropdownOpen ? 1 : 0,
