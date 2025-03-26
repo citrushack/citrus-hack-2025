@@ -9,7 +9,7 @@ import Image from "next/image";
 const Landing = ({ complete }: { complete: boolean }) => {
   return (
     <div
-      className="flex w-full flex-col items-center justify-center pt-8 font-lily md:py-[4%]"
+      className="flex w-full flex-col items-center justify-center pt-8 font-lily md:py-[2%]"
       id="home"
     >
       <div className="relative flex h-1/5 w-32 flex-col items-center justify-center text-white md:h-1/5 md:w-56">
