@@ -3,23 +3,19 @@ import LandingAssets from "./landing-assets";
 import TextStroke from "./text-stroke";
 import CinemaLights from "./cinema-lights";
 import Ticket from "./ticket";
-import LOGO from "@/public/assets/logo/logo.svg";
+import LOGO from "@/public/assets/logo/citrushack.svg";
 import Image from "next/image";
 
 const Landing = ({ complete }: { complete: boolean }) => {
   return (
     <div
-      className="flex w-full flex-col items-center justify-center pt-20 font-lily md:py-[7%]"
+      className="flex w-full flex-col items-center justify-center pt-8 font-lily md:py-[4%]"
       id="home"
     >
+      <div className="relative flex h-1/5 w-32 flex-col items-center justify-center text-white md:h-1/5 md:w-56">
+        <Image src={LOGO} alt="Citrus Hack Logo" className="relative w-full" />
+      </div>
       <div className="relative z-0 flex w-11/12 flex-col items-center gap-4 rounded-2xl border-[11px] border-black bg-citrus-beige px-5 py-10 font-lily md:w-2/3 md:border-[22px] md:py-14">
-        <div className="absolute -top-[5.625%] z-50 sm:-top-[6.625%] md:-top-[10%] lg:-top-[11.45%]">
-          <div className="relative flex h-16 w-16 flex-col items-center justify-center rounded-full bg-citrus-red-200 text-white md:h-32 md:w-32">
-            <span className="absolute -left-4 h-1 w-1 rounded-full bg-gray-300 md:h-2 md:w-2" />
-            <Image src={LOGO} alt="Citrus Hack Logo" />
-            <span className="absolute -right-4 h-1 w-1 rounded-full bg-gray-300 md:h-2 md:w-2" />
-          </div>
-        </div>
         <CinemaLights />
         <TextStroke
           title="The Golden Age of"
