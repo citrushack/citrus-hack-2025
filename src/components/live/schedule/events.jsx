@@ -1,14 +1,11 @@
-"use client";
 import { useState, useEffect } from "react";
 
 const Events = ({ events, totalDays }) => {
-  const [selectedDay, setSelectedDay] = useState(
-    new Date() > new Date(events[0].start)
-      ? new Date().toLocaleString("en-US", {
-          timeZone: "America/Los_Angeles",
-          weekday: "long",
-        })
-      : "Monday",
+  const [selectedDay, setSelectedDay] = useState(() =>
+    new Date().toLocaleString("en-US", {
+      timeZone: "America/Los_Angeles",
+      weekday: "long",
+    }),
   );
 
   const [currentHour, setCurrentHour] = useState(
@@ -108,7 +105,7 @@ const Events = ({ events, totalDays }) => {
                         })}
                       </p>
                     </div>
-                    <p className="flex h-full w-full items-center justify-center border-white px-3 md:border-l md:px-8 lg:justify-center">
+                    <p className="flex h-full w-full items-center justify-center border-white px-3 text-center md:border-l md:px-8 lg:justify-center">
                       {summary}
                     </p>
                     <p className="flex h-full w-full items-center justify-center border-white px-6 md:border-l md:px-8 lg:justify-center">

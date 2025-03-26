@@ -59,7 +59,7 @@ const About = () => {
               <Card
                 text={
                   <>
-                    {"1.5k"} <br /> Prizes
+                    {"1.5k+"} <br /> Prizes
                   </>
                 }
               />

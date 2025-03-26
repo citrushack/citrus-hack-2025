@@ -41,7 +41,7 @@ const Navigation = () => {
               key={index}
               smooth={true}
               duration={800}
-              offset={-300}
+              offset={0}
               spy={true}
               activeClass="bg-red-800 rounded-lg"
               className="my-1 w-full"
