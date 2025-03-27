@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import TrackBlue from "./TrackBlue";
+import TrackCard from "./TrackCard";
 import oscarTrophy from "@/public/assets/tracks/oscarTrophy.svg";
 import wavyLine from "@/public/assets/tracks/wavyLine.svg";
 import star from "@/public/assets/tracks/star.svg";
 import prizeGold from "@/public/assets/tracks/prizeGold.svg";
 import prizeSilver from "@/public/assets/tracks/prizeSilver.svg";
 import prizeBronze from "@/public/assets/tracks/prizeBronze.svg";
+import prizeBlue from "@/public/assets/tracks/prizeBlue.svg";
 import megaphone from "@/public/assets/tracks/megaphone.svg";
 
 const Tracks = () => {
@@ -59,76 +60,22 @@ const Tracks = () => {
       </div>
 
       <div className="flex w-full max-w-screen-lg gap-4">
-        <div className="flex w-full items-center justify-center gap-2">
-          <Image
-            src={prizeGold}
-            width={40}
-            height={32}
-            alt="prize"
-            className="mx-2"
-          />
-          <div className="text-center font-kameron text-lg text-white sm:text-2xl">
-            1st Place
-          </div>
-          <Image
-            src={prizeGold}
-            width={40}
-            height={32}
-            alt="prize"
-            className="mx-2 scale-x-[-1]"
-          />
-        </div>
+        <TrackCard name={"1st Place"} imageSrc={prizeGold} />
 
-        <div className="flex w-full items-center justify-center gap-2">
-          <Image
-            src={prizeSilver}
-            width={40}
-            height={32}
-            alt="prize"
-            className="mx-2"
-          />
-          <div className="text-center font-kameron text-lg text-white sm:text-2xl">
-            2nd Place
-          </div>
-          <Image
-            src={prizeSilver}
-            width={40}
-            height={32}
-            alt="prize"
-            className="mx-2 scale-x-[-1]"
-          />
-        </div>
+        <TrackCard name={"2nd Place"} imageSrc={prizeSilver} />
       </div>
 
-      <div className="flex w-full items-center justify-center gap-2">
-        <Image
-          src={prizeBronze}
-          width={40}
-          height={32}
-          alt="prize"
-          className="mx-2"
-        />
-        <div className="items-center text-center font-kameron text-lg text-white sm:text-2xl">
-          3rd Place
-        </div>
-        <Image
-          src={prizeBronze}
-          width={40}
-          height={32}
-          alt="prize"
-          className="mx-2 scale-x-[-1]"
-        />
-      </div>
+      <TrackCard name={"3rd Place"} imageSrc={prizeBronze} />
 
-      <TrackBlue name={"Most Cinematic"} />
+      <TrackCard name={"Most Cinematic"} imageSrc={prizeBlue} />
 
       <div className="flex gap-4 sm:gap-16">
-        <TrackBlue name={"Most Entertaining"} />
-        <TrackBlue name={"Most Sustainable"} />
+        <TrackCard name={"Most Entertaining"} imageSrc={prizeBlue} />
+        <TrackCard name={"Most Sustainable"} imageSrc={prizeBlue} />
       </div>
 
       <div className="flex gap-4">
-        <TrackBlue name={"Best UI/UX"} />
+        <TrackCard name={"Best UI/UX"} imageSrc={prizeBlue} />
         <Image
           src={megaphone}
           width={40}
@@ -136,12 +83,12 @@ const Tracks = () => {
           alt="prize"
           className="mx-2 hidden w-1/4 sm:flex"
         />
-        <TrackBlue name={"Best Hardware"} />
+        <TrackCard name={"Best Hardware"} imageSrc={prizeBlue} />
       </div>
 
       <div className="flex gap-4 sm:gap-16">
-        <TrackBlue name={"Best Social Impact"} />
-        <TrackBlue name={"Best Community"} />
+        <TrackCard name={"Best Social Impact"} imageSrc={prizeBlue} />
+        <TrackCard name={"Best Community"} imageSrc={prizeBlue} />
       </div>
     </div>
   );

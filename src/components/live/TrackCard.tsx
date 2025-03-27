@@ -1,15 +1,15 @@
 import Image from "next/image";
-import prizeBlue from "@/public/assets/tracks/prizeBlue.svg";
 
 interface MemberProps {
   name: string;
+  imageSrc: string;
 }
 
-const TrackBlue: React.FC<MemberProps> = ({ name }) => {
+const TrackBlue: React.FC<MemberProps> = ({ name, imageSrc }) => {
   return (
-    <div className="flex w-full items-center justify-center gap-2">
+    <div className="flex w-full items-center justify-center gap-1 sm:gap-4">
       <Image
-        src={prizeBlue}
+        src={imageSrc}
         width={40}
         height={32}
         alt="prize"
@@ -19,7 +19,7 @@ const TrackBlue: React.FC<MemberProps> = ({ name }) => {
         {name}
       </div>
       <Image
-        src={prizeBlue}
+        src={imageSrc}
         width={40}
         height={32}
         alt="prize"
