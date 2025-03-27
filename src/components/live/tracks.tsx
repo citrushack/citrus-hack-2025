@@ -1,70 +1,149 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Title from "@/components/ui/title";
-import inner from "@/public/assets/inner.svg";
 import Image from "next/image";
+import TrackBlue from "./TrackBlue";
+import oscarTrophy from "@/public/assets/tracks/oscarTrophy.svg";
+import wavyLine from "@/public/assets/tracks/wavyLine.svg";
+import star from "@/public/assets/tracks/star.svg";
+import prizeGold from "@/public/assets/tracks/prizeGold.svg";
+import prizeSilver from "@/public/assets/tracks/prizeSilver.svg";
+import prizeBronze from "@/public/assets/tracks/prizeBronze.svg";
+import megaphone from "@/public/assets/tracks/megaphone.svg";
 
 const Tracks = () => {
-  const titleVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const pulseVariants = {
-    pulse: {
-      scale: [1, 1.05, 1],
-      opacity: [0.9, 1, 0.9],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <div
-      className="relative flex h-screen flex-col items-center justify-center gap-10 overflow-hidden font-lily"
-      id="about"
+      className="relative flex flex-col items-center justify-center gap-10 overflow-hidden font-lily"
+      id="tracks"
     >
-      <motion.div
-        className="absolute h-64 w-64 rounded-full bg-gradient-to-r from-citrus-yellow to-citrus-yellow/10 blur-3xl"
-        variants={pulseVariants}
-        animate="pulse"
+      <Image
+        src={oscarTrophy}
+        width={96}
+        height={96}
+        alt="film slate"
+        className="h-48 sm:h-96"
       />
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        className="z-10 text-center"
-      >
-        <motion.div variants={titleVariants}>
-          <Title>Coming Soon</Title>
-        </motion.div>
-        <motion.p
-          className="mt-6 text-lg tracking-wider text-white md:text-xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-        >
-          Something amazing is in the works
-        </motion.p>
-      </motion.div>
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-        className="flex justify-center"
-      >
-        <Image src={inner} alt="wheel" />
-      </motion.div>
+      <div className="flex w-full max-w-screen-lg items-center justify-between">
+        <Image
+          src={wavyLine}
+          width={64}
+          height={128}
+          alt="film slate"
+          className="hidden w-1/4 px-2 sm:flex"
+        />
+        <Image
+          src={star}
+          width={40}
+          height={32}
+          alt="film slate"
+          className="ml-8 sm:mr-4 sm:mt-24"
+        />
+        <div className="text-5xl text-white md:text-6xl lg:text-8xl">
+          Tracks
+        </div>
+        <Image
+          src={star}
+          width={40}
+          height={32}
+          alt="film slate"
+          className="mr-8 sm:mb-24 sm:ml-4"
+        />
+
+        <Image
+          src={wavyLine}
+          width={64}
+          height={128}
+          alt="film slate"
+          className="hidden w-1/4 scale-x-[-1] px-2 sm:flex"
+        />
+      </div>
+
+      <div className="flex w-full max-w-screen-lg gap-4">
+        <div className="flex w-full items-center justify-center gap-2">
+          <Image
+            src={prizeGold}
+            width={40}
+            height={32}
+            alt="prize"
+            className="mx-2"
+          />
+          <div className="text-center font-kameron text-lg text-white sm:text-2xl">
+            1st Place
+          </div>
+          <Image
+            src={prizeGold}
+            width={40}
+            height={32}
+            alt="prize"
+            className="mx-2 scale-x-[-1]"
+          />
+        </div>
+
+        <div className="flex w-full items-center justify-center gap-2">
+          <Image
+            src={prizeSilver}
+            width={40}
+            height={32}
+            alt="prize"
+            className="mx-2"
+          />
+          <div className="text-center font-kameron text-lg text-white sm:text-2xl">
+            2nd Place
+          </div>
+          <Image
+            src={prizeSilver}
+            width={40}
+            height={32}
+            alt="prize"
+            className="mx-2 scale-x-[-1]"
+          />
+        </div>
+      </div>
+
+      <div className="flex w-full items-center justify-center gap-2">
+        <Image
+          src={prizeBronze}
+          width={40}
+          height={32}
+          alt="prize"
+          className="mx-2"
+        />
+        <div className="items-center text-center font-kameron text-lg text-white sm:text-2xl">
+          3rd Place
+        </div>
+        <Image
+          src={prizeBronze}
+          width={40}
+          height={32}
+          alt="prize"
+          className="mx-2 scale-x-[-1]"
+        />
+      </div>
+
+      <TrackBlue name={"Most Cinematic"} />
+
+      <div className="flex gap-4 sm:gap-16">
+        <TrackBlue name={"Most Entertaining"} />
+        <TrackBlue name={"Most Sustainable"} />
+      </div>
+
+      <div className="flex gap-4">
+        <TrackBlue name={"Best UI/UX"} />
+        <Image
+          src={megaphone}
+          width={40}
+          height={32}
+          alt="prize"
+          className="mx-2 hidden w-1/4 sm:flex"
+        />
+        <TrackBlue name={"Best Hardware"} />
+      </div>
+
+      <div className="flex gap-4 sm:gap-16">
+        <TrackBlue name={"Best Social Impact"} />
+        <TrackBlue name={"Best Community"} />
+      </div>
     </div>
   );
 };

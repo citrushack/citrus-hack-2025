@@ -6,9 +6,9 @@ import About from "./about";
 import Navigation from "./navigation";
 // import Cursor from "./custom/cursor";
 // import Schedule from "./schedule";
-// import Tracks from "./tracks";
+import Tracks from "./tracks";
 import Sponsors from "./sponsors";
-// import Team from "./team/team";
+import Team from "./team/team";
 // import Committees from "./committees";
 // import Judges from "./judges";
 import FAQ from "./faq";
@@ -53,11 +53,11 @@ const Live = () => {
           <Navigation />
           <Landing complete />
           <About />
-          {/* <Tracks /> */}
+          <Tracks />
           {/* <Keynote /> */}
           <Schedule />
           <Sponsors />
-          {/* <Team /> */}
+          <Team />
           {/* <Committees /> */}
           {/* 
     <Judges />
