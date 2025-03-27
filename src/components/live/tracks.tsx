@@ -21,7 +21,7 @@ const Tracks = () => {
         src={oscarTrophy}
         width={96}
         height={96}
-        alt="film slate"
+        alt="Oscar Trophy"
         className="h-48 sm:h-96"
       />
       <div className="flex w-full max-w-screen-lg items-center justify-between">
@@ -29,14 +29,14 @@ const Tracks = () => {
           src={wavyLine}
           width={64}
           height={128}
-          alt="film slate"
+          alt="Wavy Line"
           className="hidden w-1/4 px-2 sm:flex"
         />
         <Image
           src={star}
           width={40}
           height={32}
-          alt="film slate"
+          alt="Star"
           className="ml-8 sm:mr-4 sm:mt-24"
         />
         <div className="text-5xl text-white md:text-6xl lg:text-8xl">
@@ -46,7 +46,7 @@ const Tracks = () => {
           src={star}
           width={40}
           height={32}
-          alt="film slate"
+          alt="Star"
           className="mr-8 sm:mb-24 sm:ml-4"
         />
 
@@ -54,7 +54,7 @@ const Tracks = () => {
           src={wavyLine}
           width={64}
           height={128}
-          alt="film slate"
+          alt="Wavy Line"
           className="hidden w-1/4 scale-x-[-1] px-2 sm:flex"
         />
       </div>
@@ -80,7 +80,7 @@ const Tracks = () => {
           src={megaphone}
           width={40}
           height={32}
-          alt="prize"
+          alt="Megaphone"
           className="mx-2 hidden w-1/4 sm:flex"
         />
         <TrackCard name={"Best Hardware"} imageSrc={prizeBlue} />
