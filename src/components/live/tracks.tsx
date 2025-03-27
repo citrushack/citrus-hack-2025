@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import TrackBlue from "./TrackBlue";
 import oscarTrophy from "@/public/assets/tracks/oscarTrophy.svg";
