@@ -23,7 +23,7 @@ const Template = ({ children, name, preview }) => {
           <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] bg-[#72231C] p-[20px] text-[#FFEBD2]">
             <Section className="mt-[32px]">
               <Img
-                src="https://www.bearhack.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.473367c8.webp&w=3840&q=75"
+                src="https://jezaktl1r2.ufs.sh/f/AdpLMvBHJtoLMwLOPESeHVAZTj3irIfa12CBtSq9YdN75lWD"
                 width="40"
                 height="37"
                 alt="Vercel"

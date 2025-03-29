@@ -96,4 +96,9 @@ export const boardmembers: boardmembers[] = [
     role: "Software Engineering",
     img: "/assets/grayEllipse.svg",
   },
+  {
+    name: "Howard Zhu",
+    role: "Software Engineering",
+    img: "/assets/grayEllipse.svg",
+  },
 ];

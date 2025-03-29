@@ -1,3 +1,6 @@
+// "use client";
+
+// import { useEffect, useState } from "react";
 import Landing from "./landing";
 import About from "./about";
 import Navigation from "./navigation";
@@ -10,20 +13,40 @@ import Navigation from "./navigation";
 // import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
-// import Schedule from "./schedule";
+import Schedule from "./schedule";
 import Keynote from "./keynote";
 
 const Live = () => {
+  // const [complete, setComplete] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
+
+  // useEffect(() => {
+  //   const checkMobileBreakpoint = () => {
+  //     setIsMobile(window.innerWidth <= 768);
+  //   };
+  //   checkMobileBreakpoint();
+  //   window.addEventListener("resize", checkMobileBreakpoint);
+
+  //   return () => {
+  //     window.removeEventListener("resize", checkMobileBreakpoint);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     setComplete(true);
+  //   }
+  // }, [isMobile]);
   return (
     <>
       {/* <Cursor /> */}
       <div className="z-0 bg-citrus-gray">
         <Navigation />
-        <Landing />
+        <Landing complete />
         <About />
         <Keynote />
         {/* <Tracks /> */}
-        {/* <Schedule /> */}
+        <Schedule />
         {/* <Team /> */}
         {/* <Committees /> */}
         {/* <Sponsors />

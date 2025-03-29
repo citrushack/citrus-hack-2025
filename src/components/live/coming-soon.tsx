@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const ComingSoon = () => {
   return (
-    <div className="relative flex h-full w-full flex-col items-center justify-center gap-6">
+    <div className="relative flex h-full w-full flex-col items-center justify-center gap-6 py-16 md:py-5">
       <motion.div
         animate={{ rotate: -360 }}
         transition={{ repeat: Infinity, duration: 10, ease: "linear" }}

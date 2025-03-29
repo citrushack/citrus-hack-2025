@@ -1,70 +1,95 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Title from "@/components/ui/title";
-import inner from "@/public/assets/inner.svg";
 import Image from "next/image";
+import TrackCard from "./TrackCard";
+import oscarTrophy from "@/public/assets/tracks/oscarTrophy.svg";
+import wavyLine from "@/public/assets/tracks/wavyLine.svg";
+import star from "@/public/assets/tracks/star.svg";
+import prizeGold from "@/public/assets/tracks/prizeGold.svg";
+import prizeSilver from "@/public/assets/tracks/prizeSilver.svg";
+import prizeBronze from "@/public/assets/tracks/prizeBronze.svg";
+import prizeBlue from "@/public/assets/tracks/prizeBlue.svg";
+import megaphone from "@/public/assets/tracks/megaphone.svg";
 
 const Tracks = () => {
-  const titleVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const pulseVariants = {
-    pulse: {
-      scale: [1, 1.05, 1],
-      opacity: [0.9, 1, 0.9],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <div
-      className="relative flex h-screen flex-col items-center justify-center gap-10 overflow-hidden font-lily"
-      id="about"
+      className="relative flex flex-col items-center justify-center gap-10 overflow-hidden font-lily"
+      id="tracks"
     >
-      <motion.div
-        className="absolute h-64 w-64 rounded-full bg-gradient-to-r from-citrus-yellow to-citrus-yellow/10 blur-3xl"
-        variants={pulseVariants}
-        animate="pulse"
+      <Image
+        src={oscarTrophy}
+        width={96}
+        height={96}
+        alt="Oscar Trophy"
+        className="h-48 sm:h-96"
       />
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        className="z-10 text-center"
-      >
-        <motion.div variants={titleVariants}>
-          <Title>Coming Soon</Title>
-        </motion.div>
-        <motion.p
-          className="mt-6 text-lg tracking-wider text-white md:text-xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-        >
-          Something amazing is in the works
-        </motion.p>
-      </motion.div>
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-        className="flex justify-center"
-      >
-        <Image src={inner} alt="wheel" />
-      </motion.div>
+      <div className="flex w-full max-w-screen-lg items-center justify-between">
+        <Image
+          src={wavyLine}
+          width={64}
+          height={128}
+          alt="Wavy Line"
+          className="hidden w-1/4 px-2 sm:flex"
+        />
+        <Image
+          src={star}
+          width={40}
+          height={32}
+          alt="Star"
+          className="ml-8 sm:mr-4 sm:mt-24"
+        />
+        <div className="text-5xl text-white md:text-6xl lg:text-8xl">
+          Tracks
+        </div>
+        <Image
+          src={star}
+          width={40}
+          height={32}
+          alt="Star"
+          className="mr-8 sm:mb-24 sm:ml-4"
+        />
+
+        <Image
+          src={wavyLine}
+          width={64}
+          height={128}
+          alt="Wavy Line"
+          className="hidden w-1/4 scale-x-[-1] px-2 sm:flex"
+        />
+      </div>
+
+      <div className="flex w-full max-w-screen-lg gap-4">
+        <TrackCard name={"1st Place"} imageSrc={prizeGold} />
+
+        <TrackCard name={"2nd Place"} imageSrc={prizeSilver} />
+      </div>
+
+      <TrackCard name={"3rd Place"} imageSrc={prizeBronze} />
+
+      <TrackCard name={"Most Cinematic"} imageSrc={prizeBlue} />
+
+      <div className="flex gap-4 sm:gap-16">
+        <TrackCard name={"Most Entertaining"} imageSrc={prizeBlue} />
+        <TrackCard name={"Most Sustainable"} imageSrc={prizeBlue} />
+      </div>
+
+      <div className="flex gap-4">
+        <TrackCard name={"Best UI/UX"} imageSrc={prizeBlue} />
+        <Image
+          src={megaphone}
+          width={40}
+          height={32}
+          alt="Megaphone"
+          className="mx-2 hidden w-1/4 sm:flex"
+        />
+        <TrackCard name={"Best Hardware"} imageSrc={prizeBlue} />
+      </div>
+
+      <div className="flex gap-4 sm:gap-16">
+        <TrackCard name={"Best Social Impact"} imageSrc={prizeBlue} />
+        <TrackCard name={"Best Community"} imageSrc={prizeBlue} />
+      </div>
     </div>
   );
 };

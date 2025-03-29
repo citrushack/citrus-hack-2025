@@ -1,4 +1,11 @@
-import { Calendar, CircleHelp, House, Info, Mic } from "lucide-react";
+import {
+  Calendar,
+  CircleHelp,
+  HandHeartIcon,
+  House,
+  Info,
+  Waypoints,
+} from "lucide-react";
 
 export const ITEMS = [
   {
@@ -13,18 +20,18 @@ export const ITEMS = [
     id: "about",
     icon: <Info />,
   },
-  // {
-  //   name: "Tracks",
-  //   link: "#tracks",
-  //   id: "tracks",
-  //   icon: <Waypoints />,
-  // },
   {
-    name: "Keynote",
-    link: "#keynote",
-    id: "keynote",
-    icon: <Mic />,
+    name: "Tracks",
+    link: "#tracks",
+    id: "tracks",
+    icon: <Waypoints />,
   },
+  // {
+  //   name: "Keynote",
+  //   link: "#keynote",
+  //   id: "keynote",
+  //   icon: <Mic />,
+  // },
   {
     name: "Schedule",
     link: "#schedule",
@@ -35,7 +42,7 @@ export const ITEMS = [
   //   name: "Team",
   //   link: "#team",
   //   id: "team",
-  //   icon: <CircleUser />,
+  //   icon: <Users />,
   // },
   // {
   //   name: "Judges",
@@ -43,12 +50,12 @@ export const ITEMS = [
   //   id: "about",
   //   icon: <Info />,
   // },
-  // {
-  //   name: "Sponsors",
-  //   link: "#about",
-  //   id: "about",
-  //   icon: <Info />,
-  // },
+  {
+    name: "Sponsors",
+    link: "#sponsors",
+    id: "sponsors",
+    icon: <HandHeartIcon />,
+  },
   {
     name: "FAQ",
     link: "#faq",

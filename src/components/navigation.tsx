@@ -1,6 +1,6 @@
 "use client";
 
-import LOGO from "@/app/favicon.ico";
+import LOGO from "@/public/assets/logo/citrushack.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { TABS } from "@/data/navigation";
@@ -35,10 +35,10 @@ const Navigation = () => {
 
   return (
     <Sidebar collapsible="icon" className="text-white">
-      <SidebarHeader className={`${open ? "py-8" : "py-4"}`}>
+      <SidebarHeader className={`${open ? "py-4" : "py-4"}`}>
         <Image
           src={LOGO}
-          className="mx-auto h-12 w-12"
+          className="mx-auto h-full w-3/4"
           alt={`${data.name} Logo`}
         />
       </SidebarHeader>
