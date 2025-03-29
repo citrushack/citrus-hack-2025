@@ -20,7 +20,6 @@ const FAQ = () => {
       className="mb-[10%] flex min-h-screen w-full flex-col items-center"
     >
       <Film imageSrc={leftFilm} />
-      <Image src={leftFilm} alt="nice" className="my-16 w-full lg:hidden" />
       <div className="relative mt-[7%] w-full max-w-3xl p-4 md:p-0">
         <Image src={FAQt} alt="FAQ Title" className="w-fit" />
         <div className="w-full border-4 border-citrus-red-100 bg-[#FFDA84] px-6 py-10 shadow-lg">
@@ -52,7 +51,6 @@ const FAQ = () => {
         </div>
       </div>
       <Film imageSrc={leftFilm} />
-      <Image src={leftFilm} alt="nice" className="my-16 w-full lg:hidden" />
     </div>
   );
 };

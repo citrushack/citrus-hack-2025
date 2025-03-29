@@ -10,7 +10,7 @@ import Navigation from "./navigation";
 // import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
-import Schedule from "./schedule";
+// import Schedule from "./schedule";
 import Keynote from "./keynote";
 
 const Live = () => {
@@ -23,7 +23,7 @@ const Live = () => {
         <About />
         <Keynote />
         {/* <Tracks /> */}
-        <Schedule />
+        {/* <Schedule /> */}
         {/* <Team /> */}
         {/* <Committees /> */}
         {/* <Sponsors />

@@ -11,11 +11,11 @@ interface FilmProps {
 
 export default function film({
   imageSrc,
-  duration = 999,
+  duration = Infinity,
   count = 100,
 }: FilmProps) {
   return (
-    <div className="relative w-full overflow-hidden max-sm:hidden">
+    <div className="relative w-full overflow-hidden">
       <motion.div
         className="flex w-max"
         initial={{ x: "0%" }}
