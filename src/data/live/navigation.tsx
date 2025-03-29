@@ -1,4 +1,11 @@
-import { Calendar, CircleHelp, HandHeartIcon, House, Info } from "lucide-react";
+import {
+  Calendar,
+  CircleHelp,
+  HandHeartIcon,
+  House,
+  Info,
+  Waypoints,
+} from "lucide-react";
 
 export const ITEMS = [
   {
@@ -13,12 +20,12 @@ export const ITEMS = [
     id: "about",
     icon: <Info />,
   },
-  // {
-  //   name: "Tracks",
-  //   link: "#tracks",
-  //   id: "tracks",
-  //   icon: <Waypoints />,
-  // },
+  {
+    name: "Tracks",
+    link: "#tracks",
+    id: "tracks",
+    icon: <Waypoints />,
+  },
   // {
   //   name: "Keynote",
   //   link: "#keynote",
