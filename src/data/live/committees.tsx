@@ -7,10 +7,10 @@ export const COMMITTEES = [
     name: "SPONSORSHIP",
     members: ["Karina Flores"],
   },
-  // {
-  //  name: "MARKETING",
-  // members: ["Simon Cun"],
-  // },
+  {
+    name: "MARKETING",
+    members: [""],
+  },
 
   {
     name: "UI/UX",
