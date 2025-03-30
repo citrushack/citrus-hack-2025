@@ -35,11 +35,11 @@ const Sponsors = () => {
           />
         </div>
       </div>
-      <div className="z-10 mt-2 flex w-3/4 flex-wrap items-center justify-between gap-4 rounded-xl p-2 md:w-2/3 md:p-6">
+      <div className="z-10 mt-2 flex w-3/5 flex-wrap items-center justify-between gap-4 rounded-xl p-2 md:w-2/3 md:p-6">
         {SPOMSORS.map(({ image, alt }, index) => (
           <div
             key={index}
-            className="w-1/4 cursor-pointer transition-transform duration-500 hover:scale-105 hover:brightness-110 md:w-fit"
+            className="w-1/3 cursor-pointer transition-transform duration-500 hover:scale-105 hover:brightness-110 md:w-fit"
           >
             <Image src={image} alt={alt} className="w-full" />
           </div>
