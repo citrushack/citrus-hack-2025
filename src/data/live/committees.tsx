@@ -1,47 +1,20 @@
 export const COMMITTEES = [
   {
     name: "OPERATIONS",
-    members: [
-      "Howard Zhu",
-      "Sean Quiambao",
-      "Kevin Loritsch",
-      "Theo Fernandez",
-      "Kavin Phabiani",
-      "Sangha Jeon",
-    ],
+    members: ["Vatsal Kumar", "Daniyal Ahmed"],
   },
   {
     name: "SPONSORSHIP",
-    members: [
-      "Howard Zhu",
-      "Sean Quiambao",
-      "Kevin Loritsch",
-      "Theo Fernandez",
-      "Kavin Phabiani",
-      "Sangha Jeon",
-    ],
+    members: ["Karina Flores"],
   },
-  {
-    name: "MARKETING",
-    members: [
-      "Howard Zhu",
-      "Sean Quiambao",
-      "Kevin Loritsch",
-      "Theo Fernandez",
-      "Kavin Phabiani",
-      "Sangha Jeon",
-    ],
-  },
+  // {
+  //  name: "MARKETING",
+  // members: ["Simon Cun"],
+  // },
+
   {
     name: "UI/UX",
-    members: [
-      "Howard Zhu",
-      "Sean Quiambao",
-      "Kevin Loritsch",
-      "Theo Fernandez",
-      "Kavin Phabiani",
-      "Sangha Jeon",
-    ],
+    members: ["Charleen Chen", "Neelesh Roy"],
   },
   {
     name: "SOFTWARE",
