@@ -89,7 +89,7 @@ const Navigation = () => {
         onMouseLeave={() => setDropdownOpen(false)}
       >
         <div
-          className={`fixed top-2 z-50 m-3 cursor-pointer rounded-lg bg-black/80 px-3 py-2 text-white shadow-lg drop-shadow backdrop-blur-sm transition-all duration-300 ease-in-out md:hidden ${
+          className={`fixed top-2 z-50 m-3 cursor-pointer rounded-lg bg-black/80 px-1 py-2 text-white shadow-lg drop-shadow backdrop-blur-sm transition-all duration-300 ease-in-out md:hidden ${
             isDropdownOpen ? "w-32" : "w-10"
           }`}
           onClick={() => setDropdownOpen(!isDropdownOpen)}
@@ -103,9 +103,9 @@ const Navigation = () => {
           </div>
 
           <div
-            className={`ml-2 overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
           >
-            <div className="mt-2 flex flex-col gap-2 p-0">
+            <div className="flex flex-col">
               {ITEMS.map(({ name, id, icon }, index) => (
                 <div
                   key={index}
@@ -125,16 +125,16 @@ const Navigation = () => {
                     className="flex w-full items-center rounded-md duration-300"
                   >
                     <motion.div
-                      className="relative flex w-full cursor-pointer items-center overflow-hidden rounded-md p-1 transition-colors duration-300"
+                      className="relative flex w-full cursor-pointer items-center overflow-hidden rounded-md px-1 transition-colors duration-300"
                       onHoverStart={() => setIsHovered(index)}
                       onHoverEnd={() => setIsHovered(null)}
                       whileHover={{ scale: 1.05 }}
                     >
-                      <span className="ml-1 flex-shrink-0 text-xs text-white">
+                      <span className="m-2 flex-shrink-0 text-xs text-white">
                         {icon}
                       </span>
                       <motion.span
-                        className="mr-0 overflow-hidden whitespace-nowrap text-xs"
+                        className="mr-0 overflow-hidden whitespace-nowrap text-xs font-semibold"
                         animate={{
                           maxWidth: isDropdownOpen ? "120px" : "0px",
                           opacity: isDropdownOpen ? 1 : 0,
