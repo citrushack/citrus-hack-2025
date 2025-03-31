@@ -29,11 +29,11 @@ export interface InputWithClearProps
 const InputWithClear = React.forwardRef<HTMLInputElement, InputWithClearProps>(
   ({ className, type, onClear, ...props }, ref) => {
     return (
-      <div className="flex w-full items-center rounded border border-slate-200 bg-white px-3 py-2">
+      <div className="flex w-full items-center rounded border border-slate-200 bg-citrus-red-100 px-3 py-2">
         <input
           type={type}
           className={cn(
-            "flex h-10 w-full rounded-md border border-slate-200 bg-citrus-lightgray px-3 py-2 text-sm font-bold text-black ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:ring-offset-slate-950 dark:placeholder:text-slate-400 dark:focus-visible:ring-slate-300",
+            "flex h-10 w-full rounded-md border border-slate-200 bg-[#DA6565] px-3 py-2 text-sm font-bold text-white ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:ring-offset-slate-950 dark:placeholder:text-slate-400 dark:focus-visible:ring-slate-300",
             className,
           )}
           ref={ref}
@@ -41,7 +41,7 @@ const InputWithClear = React.forwardRef<HTMLInputElement, InputWithClearProps>(
         />
 
         <X
-          className="text-xl text-hackathon-gray-300 hover:cursor-pointer hover:text-red-500"
+          className="text-xl text-white hover:cursor-pointer hover:text-red-500"
           onClick={onClear}
         />
       </div>

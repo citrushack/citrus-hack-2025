@@ -10,12 +10,12 @@ interface props {
 
 const Idea = ({ title, languages, description, contact }: props) => {
   return (
-    <div className="h-full w-full rounded bg-white p-3">
+    <div className="h-full w-full rounded bg-citrus-red-100 p-3 text-white">
       <p className="text-lg font-semibold">{title}</p>
       <div className="my-2 flex gap-3">
         {languages.map((language, index) => (
           <Badge key={index} className="flex gap-1">
-            <div className="text-hackathon-blue-100" data-cy="hackpack-icon">
+            <div className="text-white" data-cy="hackpack-icon">
               {TECHSTACKS[language]}
             </div>
             {language}

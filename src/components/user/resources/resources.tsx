@@ -10,7 +10,7 @@ const Resources = () => {
 
   return (
     <div className="flex h-full flex-col gap-3">
-      <div className="sticky top-0 z-20 bg-gray-100 pb-6 pt-4">
+      <div className="sticky top-0 z-20 pb-6 pt-4 text-white">
         <Label className="pr-5 text-2xl font-bold">Resources</Label>
         <Toolbar data={HACKPACKS} setSearch={setSearch} />
       </div>

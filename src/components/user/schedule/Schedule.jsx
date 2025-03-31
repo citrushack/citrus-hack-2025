@@ -28,7 +28,7 @@ const Schedule = ({ eventList }) => {
 
   return (
     <>
-      <div className="sticky top-0 z-10 flex w-full flex-col bg-gray-100 pt-4">
+      <div className="sticky top-0 z-10 flex w-full flex-col bg-citrus-black pt-4 text-white">
         <Label className="flex gap-3 py-4 pr-5 text-2xl font-bold">
           Schedule
         </Label>
@@ -39,7 +39,7 @@ const Schedule = ({ eventList }) => {
             currentDate.setDate(currentDate.getDate() + index);
             return (
               <div
-                className="font-montserrat m-5 ml-0 flex flex-grow items-center justify-start border-b-[1px] border-black text-sm font-light text-black md:text-lg"
+                className="font-montserrat m-5 ml-0 flex flex-grow items-center justify-start border-b-[1px] border-white text-sm font-light text-white md:text-lg"
                 key={index}
               >
                 {day} -{" "}

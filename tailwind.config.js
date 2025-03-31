@@ -28,6 +28,7 @@ module.exports = {
           darkred: "#460000",
           "red-100": "#72231C",
           "red-200": "#500000",
+          "red-300": "#660000",
           beige: "#FFEBD2",
           blue: "#273854",
           yellow: "#EAA54F",

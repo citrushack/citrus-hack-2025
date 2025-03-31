@@ -14,7 +14,7 @@ const Hackpack = ({ text, languages, link, description }: props) => {
   return (
     <Link
       data-cy="hackpack-link"
-      className="items-center justify-between rounded bg-white p-3 opacity-100 hover:opacity-70"
+      className="items-center justify-between rounded bg-citrus-red-100 p-3 text-white opacity-100 hover:opacity-70"
       href={link}
       target="_black"
     >
@@ -34,7 +34,7 @@ const Hackpack = ({ text, languages, link, description }: props) => {
             className="flex items-center gap-1 text-gray-400"
             data-cy="hackpack-tech"
           >
-            <div className="text-hackathon-blue-100" data-cy="hackpack-icon">
+            <div className="text-white" data-cy="hackpack-icon">
               {TECHSTACKS[language]}
             </div>
             {language}

@@ -12,12 +12,12 @@ const list: string[] = [
 
 const Packing = (): React.ReactNode => {
   return (
-    <div className="rounded-lg bg-white p-3 shadow-xl">
-      <div className="p-2 font-bold" data-cy="packing-title">
+    <div className="rounded-lg bg-citrus-red-100 p-3 text-white shadow-xl">
+      <div className="p-2 font-bebas" data-cy="packing-title">
         🎒Packing List
       </div>
 
-      <ul className="mb-2 list-disc pl-9 font-light" data-cy="packing-items">
+      <ul className="mb-2 list-disc pl-9 font-kameron" data-cy="packing-items">
         {list.map((list, index) => (
           <li key={index}>{list}</li>
         ))}

@@ -15,7 +15,7 @@ const Team = async () => {
 
   return (
     <div className="flex h-full flex-col items-center gap-3 py-4">
-      <Label className="self-start text-2xl font-bold">Team</Label>
+      <Label className="self-start text-2xl font-bold text-white">Team</Label>
       {team === "" ? <NewTeam /> : <Details team={details} />}
     </div>
   );
