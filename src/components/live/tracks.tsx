@@ -67,12 +67,13 @@ const Tracks = () => {
 
       <TrackCard name={"3rd Place"} imageSrc={prizeBronze} />
 
-      <TrackCard name={"Most Cinematic"} imageSrc={prizeBlue} />
-
-      <div className="flex gap-4 sm:gap-16">
-        <TrackCard name={"Most Entertaining"} imageSrc={prizeBlue} />
+      {/* <TrackCard name={"Most Cinematic"} imageSrc={prizeBlue} /> */}
+      <div className="mt-1 md:mt-5">
         <TrackCard name={"Most Sustainable"} imageSrc={prizeBlue} />
       </div>
+      {/* <div className="flex gap-4 sm:gap-16">
+        <TrackCard name={"Most Entertaining"} imageSrc={prizeBlue} />
+      </div> */}
 
       <div className="flex gap-4">
         <TrackCard name={"Best UI/UX"} imageSrc={prizeBlue} />
@@ -86,10 +87,10 @@ const Tracks = () => {
         <TrackCard name={"Best Hardware"} imageSrc={prizeBlue} />
       </div>
 
-      <div className="flex gap-4 sm:gap-16">
+      {/* <div className="flex gap-4 sm:gap-16">
         <TrackCard name={"Best Social Impact"} imageSrc={prizeBlue} />
         <TrackCard name={"Best Community"} imageSrc={prizeBlue} />
-      </div>
+      </div> */}
     </div>
   );
 };
