@@ -38,7 +38,7 @@ const About = () => {
               <Card
                 text={
                   <>
-                    {"36"} <br /> Hours
+                    {"24"} <br /> Hours
                   </>
                 }
               />
@@ -151,7 +151,7 @@ const About = () => {
                   Citrus Hack{" "}
                 </span>
                 is a
-                <span className="font-bold text-citrus-yellow"> 36-hour </span>
+                <span className="font-bold text-citrus-yellow"> 24-hour </span>
                 hackathon and one of UC Riverside&apos;s largest hackathons.
                 This year, we&apos;re celebrating our{" "}
                 <span className="font-bold text-citrus-yellow">
