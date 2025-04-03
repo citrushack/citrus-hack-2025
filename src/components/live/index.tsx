@@ -14,7 +14,7 @@ import Sponsors from "./sponsors";
 import FAQ from "./faq";
 import Footer from "./footer";
 import Schedule from "./schedule";
-import Keynote from "./keynote";
+// import Keynote from "./keynote";
 
 const Live = () => {
   // const [complete, setComplete] = useState(false);
