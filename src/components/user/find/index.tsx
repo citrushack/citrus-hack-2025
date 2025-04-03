@@ -49,7 +49,7 @@ const Find = () => {
 
   if (isLoading) return <Loading />;
   return (
-    <div className="flex h-full w-full flex-col">
+    <div className="flex h-full w-full flex-col p-4">
       <div className="sticky top-0 z-20 pb-6 pt-4">
         <Label className="pr-5 text-2xl font-bold text-white">
           Find a Team

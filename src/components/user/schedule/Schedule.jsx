@@ -28,7 +28,7 @@ const Schedule = ({ eventList }) => {
 
   return (
     <>
-      <div className="sticky top-0 z-10 flex w-full flex-col bg-citrus-black pt-4 text-white">
+      <div className="sticky top-0 z-10 flex w-full flex-col bg-citrus-black p-4 pt-4 text-white">
         <Label className="flex gap-3 py-4 pr-5 text-2xl font-bold">
           Schedule
         </Label>
