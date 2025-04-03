@@ -80,7 +80,7 @@ const Countdown = ({ classNames }: countdownProps) => {
           <Digits unit={unit} value={value} classNames={classNames} />
 
           {index !== array.length - 1 && (
-            <span className="absolute -right-12 bottom-4 hidden h-4 w-4 self-center rounded-full bg-white md:flex" />
+            <span className="absolute -right-12 bottom-4 hidden h-4 w-4 self-center rounded-full bg-citrus-darkred md:flex" />
           )}
         </div>
       ))}

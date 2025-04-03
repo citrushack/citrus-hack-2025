@@ -12,67 +12,9 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative mt-8 flex min-h-screen w-full justify-between overflow-hidden font-rubiks text-white md:mt-2"
+      className="relative mt-8 flex min-h-screen w-full flex-col justify-between overflow-hidden font-rubiks text-white md:mt-2"
     >
-      <div className="container mx-auto flex w-full flex-col-reverse items-center justify-center gap-8 px-4 pt-0 md:flex-row">
-        <motion.div
-          className="flex-col items-center md:flex md:w-1/3"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div
-            className="mb-6 overflow-visible rounded-lg border-4 border-citrus-yellow p-1 shadow-lg shadow-citrus-yellow/30"
-            whileHover={{ rotate: 0 }}
-            initial={{ rotate: 0 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <div className="grid grid-cols-3 gap-3 p-2 text-center md:gap-5 lg:grid-cols-2">
-              <Card
-                text={
-                  <>
-                    {10} <br /> Years
-                  </>
-                }
-              />
-              <Card
-                text={
-                  <>
-                    {"24"} <br /> Hours
-                  </>
-                }
-              />
-              <Card
-                text={
-                  <>
-                    {"300+"} <br /> Hackers
-                  </>
-                }
-              />
-              <Card
-                text={
-                  <>
-                    {"20+"} <br /> Organizers
-                  </>
-                }
-              />
-              <Card
-                text={
-                  <>
-                    {"1.5k+"} <br /> Prizes
-                  </>
-                }
-              />
-              <Card
-                text={
-                  <>
-                    {"15+"} <br /> Workshops
-                  </>
-                }
-              />
-            </div>
-          </motion.div>
-        </motion.div>
+      <div className="container mx-auto flex w-full flex-col items-center justify-center gap-8 px-0 pt-0 md:flex-row">
         <motion.div
           className="flex w-full items-center justify-center md:w-1/3"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -111,19 +53,11 @@ const About = () => {
           </div>
         </motion.div>
         <motion.div
-          className="z-40 w-full overflow-hidden rounded-lg border-2 border-citrus-yellow bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-citrus-yellow/20 md:w-1/3"
+          className="z-40 w-11/12 overflow-hidden rounded-lg border-2 border-citrus-yellow bg-gradient-to-b from-gray-900 to-black shadow-xl shadow-citrus-yellow/20 md:w-1/3"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          {/* <div className="relative h-6 bg-citrus-yellow">
-            <div className="absolute bottom-0 left-0 right-0 flex h-3 justify-between">
-              {Array.from({ length: 20 }).map((_, idx) => (
-                <div key={idx} className="h-3 w-2 bg-black"></div>
-              ))}
-            </div>
-          </div> */}
-
           <div className="p-6 md:p-8">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="font-kumar text-3xl text-white md:text-5xl">
@@ -168,6 +102,64 @@ const About = () => {
           </div>
         </motion.div>
       </div>
+      <motion.div
+        className="flex w-11/12 items-center justify-center md:w-full"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.div
+          className="flex w-full justify-center md:w-1/2"
+          whileHover={{ rotate: 0 }}
+          initial={{ rotate: 0 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <div className="grid w-full grid-cols-3 gap-5 p-0 text-center md:grid-cols-3 md:gap-10 md:p-2">
+            <Card
+              text={
+                <>
+                  {10} <br /> Years
+                </>
+              }
+            />
+            <Card
+              text={
+                <>
+                  {"24"} <br /> Hours
+                </>
+              }
+            />
+            <Card
+              text={
+                <>
+                  {"300+"} <br /> Hackers
+                </>
+              }
+            />
+            <Card
+              text={
+                <>
+                  {"20+"} <br /> Organizers
+                </>
+              }
+            />
+            <Card
+              text={
+                <>
+                  {"1.5k+"} <br /> Prizes
+                </>
+              }
+            />
+            <Card
+              text={
+                <>
+                  {"15+"} <br /> Workshops
+                </>
+              }
+            />
+          </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
