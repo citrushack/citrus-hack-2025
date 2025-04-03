@@ -67,7 +67,6 @@ const Tracks = () => {
 
       <TrackCard name={"3rd Place"} imageSrc={prizeBronze} />
 
-      {/* <TrackCard name={"Most Cinematic"} imageSrc={prizeBlue} /> */}
       <div className="mt-1 md:mt-5">
         <TrackCard name={"Most Sustainable"} imageSrc={prizeBlue} />
       </div>
@@ -86,7 +85,7 @@ const Tracks = () => {
         />
         <TrackCard name={"Best Hardware"} imageSrc={prizeBlue} />
       </div>
-
+      <TrackCard name={"Most Cinematic"} imageSrc={prizeBlue} />
       {/* <div className="flex gap-4 sm:gap-16">
         <TrackCard name={"Best Social Impact"} imageSrc={prizeBlue} />
         <TrackCard name={"Best Community"} imageSrc={prizeBlue} />
