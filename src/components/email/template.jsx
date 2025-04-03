@@ -20,7 +20,7 @@ const Template = ({ children, name, preview }) => {
       <Preview>{preview}</Preview>
       <Tailwind>
         <Body className="mx-auto my-auto bg-white px-2 font-sans">
-          <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] bg-[#72231C] p-[20px] text-[#FFEBD2]">
+          <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] bg-citrus-red-100 p-[20px] text-[#FFEBD2]">
             <Section className="mt-[32px]">
               <Img
                 src="https://jezaktl1r2.ufs.sh/f/AdpLMvBHJtoLMwLOPESeHVAZTj3irIfa12CBtSq9YdN75lWD"

@@ -4,11 +4,11 @@ const rooms: string[] = ["WCH 127", "WCH 110", "WCH 130", "Byte", "WCH 129"];
 
 const Rooms = (): React.ReactNode => {
   return (
-    <div className="rounded-lg bg-white p-3 font-bold shadow-xl">
-      <div className="p-2" data-cy="rooms-title">
-        🚪Hackrooms
+    <div className="flex flex-col rounded-lg bg-citrus-red-100 p-4 text-white shadow-xl">
+      <div className="pb-3 font-bebas" data-cy="rooms-title">
+        🚪HACKROOMS
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 text-center">
         {rooms.map((room: string, index: number) => (
           <Badge key={index}>{room}</Badge>
         ))}

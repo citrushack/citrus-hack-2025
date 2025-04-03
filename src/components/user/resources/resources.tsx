@@ -9,8 +9,8 @@ const Resources = () => {
   const [search, setSearch] = useState(HACKPACKS);
 
   return (
-    <div className="flex h-full flex-col gap-3">
-      <div className="sticky top-0 z-20 bg-gray-100 pb-6 pt-4">
+    <div className="flex h-full flex-col gap-3 p-4">
+      <div className="sticky top-0 z-20 bg-citrus-black pb-6 pt-4 text-white">
         <Label className="pr-5 text-2xl font-bold">Resources</Label>
         <Toolbar data={HACKPACKS} setSearch={setSearch} />
       </div>
