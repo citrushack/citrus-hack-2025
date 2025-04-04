@@ -4,6 +4,7 @@ import screen from "@/public/assets/sponsors/screen.svg";
 import curtain from "@/public/assets/sponsors/sponsorcurtain.svg";
 import right from "@/public/assets/sponsors/rspotlight.svg";
 import left from "@/public/assets/sponsors/lspotlight.svg";
+import acm from "@/public/assets/sponsors/ACM.svg";
 
 const Sponsors = () => {
   return (
@@ -35,15 +36,25 @@ const Sponsors = () => {
           />
         </div>
       </div>
-      <div className="z-10 mt-2 flex w-3/5 flex-wrap items-center justify-between gap-4 rounded-xl p-2 md:w-2/3 md:p-6">
+      <div className="z-10 mt-2 flex w-3/5 flex-wrap items-center justify-between gap-6 rounded-xl p-2 md:w-2/3 md:p-6">
         {SPOMSORS.map(({ image, alt }, index) => (
           <div
             key={index}
-            className="w-1/3 cursor-pointer transition-transform duration-500 hover:scale-105 hover:brightness-110 md:w-fit"
+            className="w-1/3 transition-transform duration-500 hover:scale-105 hover:brightness-110 md:w-fit"
           >
-            <Image src={image} alt={alt} className="w-full" />
+            <Image src={image} alt={alt} className="w-fit" />
           </div>
         ))}
+      </div>
+      <div className="flex w-full items-center justify-center gap-2">
+        <p className="font-bebas text-lg text-white md:text-4xl">
+          PRESENTED BY{" "}
+        </p>
+        <Image
+          src={acm}
+          alt="cinema curtain"
+          className="w-1/4 transition-transform duration-500 hover:scale-105 hover:brightness-110 md:w-fit"
+        />
       </div>
     </div>
   );
