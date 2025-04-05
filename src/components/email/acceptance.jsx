@@ -5,7 +5,7 @@ import { Button, Section, Text } from "@react-email/components";
 const Acceptance = ({ name, position, preview }) => {
   return (
     <Template name={name} preview={preview}>
-      <Text>
+      <Text className="text-[#FFEBD2]">
         🎉 Congratulations 🎉 You have been accepted into {data.name} as a{" "}
         <strong>{position}</strong>
       </Text>
