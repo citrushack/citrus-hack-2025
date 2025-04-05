@@ -174,7 +174,7 @@ const Toolbar = ({
         ))}
       </div>
 
-      <div className="flex w-full items-center gap-2 lg:flex-row">
+      <div className="flex w-full items-center gap-2 text-white lg:flex-row">
         <div className="z-10 w-2/12">
           <Select
             items={searchableItems}
@@ -199,13 +199,13 @@ const Toolbar = ({
         <RotateCcw
           size={30}
           onClick={handleReload}
-          className="text-hackathon-gray-300 duration-150 hover:cursor-pointer hover:opacity-70"
+          className="text-white duration-150 hover:cursor-pointer hover:opacity-70"
         />
         <Trash2
           data-cy="delete"
           onClick={confirmDelete}
           size={30}
-          className="mx-2 text-hackathon-gray-300 duration-150 hover:cursor-pointer hover:opacity-70"
+          className="mx-2 text-white duration-150 hover:cursor-pointer hover:opacity-70"
         />
       </div>
 
