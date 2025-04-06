@@ -60,7 +60,7 @@ const Dashboard = ({
   return (
     <div className="w-full">
       <div className="my-2 flex items-center">
-        <Label className="pr-5 text-2xl font-bold">{title}</Label>
+        <Label className="pr-5 text-2xl font-bold text-white">{title}</Label>
 
         <Filters
           statuses={statuses}

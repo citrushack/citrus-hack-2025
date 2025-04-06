@@ -34,9 +34,9 @@ const Table = ({
 
   return (
     <>
-      <div className="flex h-[75vh] flex-col justify-between overflow-y-scroll bg-white">
+      <div className="flex h-[75vh] flex-col justify-between overflow-y-scroll bg-citrus-red text-white">
         <Datatable>
-          <TableHeader className="rounded-t bg-hackathon-blue-200 text-white">
+          <TableHeader className="rounded-t bg-citrus-red-100 text-white">
             {getHeaderGroups().map(({ headers, id }) => (
               <TableRow key={id}>
                 {headers.map(({ id, column, getContext }) => (
@@ -82,7 +82,7 @@ const Table = ({
             ) : (
               <>
                 {getRowModel().rows.length === 0 && (
-                  <TableRow className="w-full bg-white py-8 text-center">
+                  <TableRow className="w-full bg-citrus-red-100 py-8 text-center">
                     <TableCell
                       className="h-[70vh] items-center justify-center"
                       colSpan={12}
@@ -96,7 +96,7 @@ const Table = ({
                     <>
                       <TableRow
                         key={id}
-                        className={`${getIsSelected() && "bg-hackathon-green-100"}`}
+                        className={`${getIsSelected() && "bg-citrus-red-100"}`}
                       >
                         {getVisibleCells().map(({ id, column, getContext }) => (
                           <TableCell key={id}>
@@ -111,7 +111,7 @@ const Table = ({
                             {subcolumns?.map(({ header }, index) => (
                               <TableHead
                                 key={index}
-                                className="bg-hackathon-gray-100 text-xs"
+                                className="bg-citrus-red-100 text-xs text-white"
                               >
                                 {header}
                               </TableHead>
@@ -134,7 +134,7 @@ const Table = ({
           </TableBody>
         </Datatable>
       </div>
-      <div className="flex w-full items-center justify-end rounded-b bg-white p-4 text-lg">
+      <div className="flex w-full items-center justify-end rounded-b bg-citrus-red p-4 text-lg text-white">
         <div className="mx-2">{getRowModel().rows.length} row(s)</div>
         <Link
           href={`/admin/${page}?direction=prev&index=${
