@@ -9,7 +9,7 @@ export const COMMITTEES = [
   },
   {
     name: "MARKETING",
-    members: [""],
+    members: ["Arielle Haryanto", "Menthy Wu"],
   },
 
   {
