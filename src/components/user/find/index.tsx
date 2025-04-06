@@ -51,9 +51,7 @@ const Find = () => {
   return (
     <div className="flex h-full w-full flex-col p-4">
       <div className="sticky top-0 z-20 pb-6 pt-4">
-        <Label className="pr-5 text-2xl font-bold text-white">
-          Find a Team
-        </Label>
+        <Label className="pr-5 text-2xl font-bold">Find a Team</Label>
         <Toolbar data={data ?? []} setSearch={setSearch} />
       </div>
       <div ref={ref} className="h-full">
