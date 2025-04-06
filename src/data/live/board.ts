@@ -18,7 +18,7 @@ import { StaticImageData } from "next/image";
 interface boardmembers {
   name: string;
   role: string;
-  img: StaticImageData | string;
+  img: StaticImageData;
 }
 
 export const boardmembers: boardmembers[] = [
@@ -113,9 +113,9 @@ export const boardmembers: boardmembers[] = [
     role: "Software Engineering",
     img: bsun,
   },
-  {
-    name: "Howard Zhu",
-    role: "Software Engineering",
-    img: bsun,
-  },
+  // {
+  //   name: "Howard Zhu",
+  //   role: "Software Engineering",
+  //   img: bsun,
+  // },
 ];

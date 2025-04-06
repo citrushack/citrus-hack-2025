@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
 type props = {
-  image: string;
+  image: StaticImageData;
   name: string;
   role: string;
 };
