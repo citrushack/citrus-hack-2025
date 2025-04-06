@@ -13,11 +13,12 @@ import liam from "@/public/assets/team/liam.webp";
 import rhea from "@/public/assets/team/rhea.webp";
 import soumya from "@/public/assets/team/soumya.webp";
 import vishra from "@/public/assets/team/vishra.webp";
+import { StaticImageData } from "next/image";
 
 interface boardmembers {
   name: string;
   role: string;
-  img: string;
+  img: StaticImageData | string;
 }
 
 export const boardmembers: boardmembers[] = [
