@@ -1,18 +1,18 @@
-import amir from "@/public/assets/team/Amir.JPG";
-import ananya from "@/public/assets/team/Ananya.JPG";
-import bsun from "@/public/assets/team/Brandon.JPG";
-import chandrahass from "@/public/assets/team/Chandrahass.JPG";
-import charlette from "@/public/assets/team/Charlette.JPG";
-import chris from "@/public/assets/team/Chris.JPG";
-import delaney from "@/public/assets/team/Delenany.JPG";
-import kavin from "@/public/assets/team/Kavin.JPG";
-import allison from "@/public/assets/team/allison.JPG";
-import karan from "@/public/assets/team/karan.JPG";
-import karina from "@/public/assets/team/karina.JPG";
-import liam from "@/public/assets/team/liam.JPG";
-import rhea from "@/public/assets/team/rhea.JPG";
-import soumya from "@/public/assets/team/soumya.JPG";
-import vishra from "@/public/assets/team/vishra.JPG";
+import amir from "@/public/assets/team/Amir.jpg";
+import ananya from "@/public/assets/team/Ananya.jpg";
+import bsun from "@/public/assets/team/Brandon.jpg";
+import chandrahass from "@/public/assets/team/Chandrahass.jpg";
+import charlette from "@/public/assets/team/Charlette.jpg";
+import chris from "@/public/assets/team/Chris.jpg";
+import delaney from "@/public/assets/team/Delenany.jpg";
+import kavin from "@/public/assets/team/Kavin.jpg";
+import allison from "@/public/assets/team/allison.jpg";
+import karan from "@/public/assets/team/karan.jpg";
+import karina from "@/public/assets/team/karina.jpg";
+import liam from "@/public/assets/team/liam.jpg";
+import rhea from "@/public/assets/team/rhea.jpg";
+import soumya from "@/public/assets/team/soumya.jpg";
+import vishra from "@/public/assets/team/vishra.jpg";
 
 interface boardmembers {
   name: string;
