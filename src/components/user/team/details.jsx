@@ -1,18 +1,10 @@
 "use client";
 import { useState } from "react";
 import toaster from "@/utils/toaster";
-import { Copy, Link } from "lucide-react";
+import { Copy, Link as LinkIcon } from "lucide-react";
 import { api } from "@/utils/api";
 import { SiDiscord as Discord } from "@icons-pack/react-simple-icons";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -21,7 +13,7 @@ const Details = ({ team }) => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(details.id);
-    toaster("Successfully copied team id!", "success");
+    toaster("Successfully copied team ID!", "success");
   };
 
   const handleCopyLink = () => {
@@ -36,7 +28,6 @@ const Details = ({ team }) => {
       method: "DELETE",
       url: "/api/members",
     });
-
     toaster("Successfully left team!", "success");
   };
 
@@ -73,63 +64,57 @@ const Details = ({ team }) => {
       url: "/api/team",
       body: details,
     });
-
     toaster("Successfully Updated!", "success");
   };
 
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <CardTitle>Team Details</CardTitle>
-        <CardDescription>Customize your team</CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="space-y-1.5">
-          <Label htmlFor="name">Team Name</Label>
-          <Input
-            id="name"
-            value={details.name}
-            onChange={(e) =>
-              setDetails({
-                ...details,
-                name: e.target.value,
-              })
-            }
-          />
+    <div className="mt-4 w-full rounded-md bg-white shadow-md">
+      <div className="flex items-center gap-4 border-b p-6">
+        <div className="flex flex-col">
+          <h2 className="text-2xl font-bold">{details.name}</h2>
+          <p className="text-sm text-gray-500">Team Details</p>
         </div>
-        <div className="space-y-1.5">
-          <Label htmlFor="team">Team ID</Label>
-          <div className="flex items-center gap-4">
-            <Input id="team" placeholder={details.id} disabled />
-            <Copy
-              onClick={handleCopy}
-              className="hover:cursor-pointer hover:opacity-50"
-            />
-            <Link
-              onClick={handleCopyLink}
-              className="hover:cursor-pointer hover:opacity-50"
-            />
-          </div>
-        </div>
+      </div>
 
-        <div className="space-y-1.5">
-          <Label htmlFor="team">Team Members</Label>
-          <div className="flex flex-wrap gap-4 pt-3">
-            {details.members.length === 0 &&
-              "No Team Members. Invite others to join your team."}
-
-            {details.members.map(({ name, discord }, index) => (
-              <div key={index} className="space-y-1 rounded-lg bg-gray-100 p-4">
-                <p className="text-sm font-medium leading-none">{name}</p>
-                <div className="flex items-center space-x-2 text-sm text-gray-600">
-                  <Discord size={20} />
+      <div className="border-b px-6 py-4">
+        <h3 className="mb-2 text-xl font-semibold">Members</h3>
+        <div className="flex flex-wrap gap-4">
+          {details.members.length === 0 ? (
+            <p className="text-gray-500">
+              No team members yet. Invite others to join your team.
+            </p>
+          ) : (
+            details.members.map(({ name, discord }, index) => (
+              <div key={index} className="w-52 rounded-md border p-4">
+                <p className="text-sm font-medium">{name}</p>
+                <div className="mt-1 flex items-center space-x-2 text-sm text-gray-600">
+                  <Discord size={18} />
                   <span>{discord}</span>
                 </div>
               </div>
-            ))}
-          </div>
+            ))
+          )}
         </div>
+      </div>
 
+      <div className="border-b px-6 py-4">
+        <Label htmlFor="teamId" className="mb-1 block font-semibold">
+          Team ID
+        </Label>
+        <div className="flex max-w-sm items-center gap-2">
+          <Input id="teamId" className="w-full" value={details.id} disabled />
+          <Copy
+            onClick={handleCopy}
+            className="h-5 w-5 cursor-pointer text-gray-600 hover:opacity-75"
+          />
+          <LinkIcon
+            onClick={handleCopyLink}
+            className="h-5 w-5 cursor-pointer text-gray-600 hover:opacity-75"
+          />
+        </div>
+      </div>
+
+      <div className="space-y-4 border-b px-6 py-4">
         <div className="space-y-1.5">
           <Label htmlFor="devpost">Devpost</Label>
           <Input
@@ -174,16 +159,17 @@ const Details = ({ team }) => {
             }
           />
         </div>
-      </CardContent>
-      <CardFooter className="flex justify-between">
+      </div>
+
+      <div className="flex items-center justify-between px-6 py-4">
         <Button variant="destructive" onClick={handleLeave}>
           Leave Team
         </Button>
         <Button onClick={handleSave} className="bg-hackathon-green-400">
           Save Team
         </Button>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 };
 

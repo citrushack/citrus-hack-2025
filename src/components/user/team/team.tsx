@@ -2,21 +2,19 @@ import Details from "./details";
 import NewTeam from "./new";
 import { getSession } from "@/utils/auth";
 import { fetchTeam } from "@/actions/join";
-import { Label } from "@/components/ui/label";
 
 const Team = async () => {
   const session = await getSession();
 
   if (!session?.user) return <></>;
 
-  const team = session.user.team;
-
-  const details = await fetchTeam(team);
+  const teamId = session.user.team;
+  const details = teamId ? await fetchTeam(teamId) : null;
 
   return (
-    <div className="flex h-full flex-col items-center gap-3 py-4">
-      <Label className="self-start text-2xl font-bold text-white">Team</Label>
-      {team === "" ? <NewTeam /> : <Details team={details} />}
+    <div className="flex h-full w-full flex-col items-start gap-3 bg-white px-8 py-6">
+      <h1 className="text-3xl font-bold text-black">My Organization</h1>
+      {teamId === "" ? <NewTeam /> : <Details team={details} />}
     </div>
   );
 };
