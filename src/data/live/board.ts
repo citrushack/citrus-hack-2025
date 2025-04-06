@@ -1,18 +1,18 @@
-import amir from "@/public/assets/team/Amir.jpg";
-import ananya from "@/public/assets/team/Ananya.jpg";
-import bsun from "@/public/assets/team/Brandon.jpg";
-import chandrahass from "@/public/assets/team/Chandrahass.jpg";
-import charlette from "@/public/assets/team/Charlette.jpg";
-import chris from "@/public/assets/team/Chris.jpg";
-import delaney from "@/public/assets/team/Delenany.jpg";
-import kavin from "@/public/assets/team/Kavin.jpg";
-import allison from "@/public/assets/team/allison.jpg";
-import karan from "@/public/assets/team/karan.jpg";
-import karina from "@/public/assets/team/karina.jpg";
-import liam from "@/public/assets/team/liam.jpg";
-import rhea from "@/public/assets/team/rhea.jpg";
-import soumya from "@/public/assets/team/soumya.jpg";
-import vishra from "@/public/assets/team/vishra.jpg";
+import amir from "@/public/assets/team/Amir.webp";
+import ananya from "@/public/assets/team/Ananya.webp";
+import bsun from "@/public/assets/team/Brandon.webp";
+import chandrahass from "@/public/assets/team/Chandrahass.webp";
+import charlette from "@/public/assets/team/Charlette.webp";
+import chris from "@/public/assets/team/Chris.webp";
+import delaney from "@/public/assets/team/Delenany.webp";
+import kavin from "@/public/assets/team/Kavin.webp";
+import allison from "@/public/assets/team/allison.webp";
+import karan from "@/public/assets/team/karan.webp";
+import karina from "@/public/assets/team/karina.webp";
+import liam from "@/public/assets/team/liam.webp";
+import rhea from "@/public/assets/team/rhea.webp";
+import soumya from "@/public/assets/team/soumya.webp";
+import vishra from "@/public/assets/team/vishra.webp";
 
 interface boardmembers {
   name: string;
