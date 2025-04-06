@@ -41,7 +41,7 @@ const Timer = () => {
       </div>
       <div className="flex h-full flex-col overflow-y-scroll p-4">
         {timers.length === 0 ? (
-          <div className="flex h-full items-center justify-center text-2xl font-bold">
+          <div className="flex h-full items-center justify-center text-2xl font-bold text-white">
             No Timers
           </div>
         ) : (

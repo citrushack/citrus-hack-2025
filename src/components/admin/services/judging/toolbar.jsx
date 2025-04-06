@@ -234,7 +234,7 @@ const Toolbar = ({
         className="flex w-full flex-col justify-between gap-2 sm:flex-row sm:items-center"
         onSubmit={generate}
       >
-        <div className="flex flex-row items-center gap-2 pb-3 pl-2">
+        <div className="flex flex-row items-center gap-2 pb-3 pl-2 text-white">
           <InputOTP
             maxLength={2}
             value={input.rotations}
