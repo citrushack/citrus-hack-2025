@@ -29,15 +29,15 @@ const CustomToolbar = ({ onView, onNavigate, date, setTag }) => {
         <div className="flex items-center justify-center">
           <ChevronLeft
             onClick={() => onNavigate("PREV")}
-            className="mx-2 hover:cursor-pointer"
+            className="mx-2 text-white hover:cursor-pointer"
           />
-          <p className="mb-0 text-3xl font-semibold">
+          <p className="mb-0 text-3xl font-semibold text-white">
             {date.toLocaleString("default", { month: "short" })}{" "}
             {date.getFullYear()}
           </p>
           <ChevronRight
             onClick={() => onNavigate("NEXT")}
-            className="mx-2 hover:cursor-pointer"
+            className="mx-2 text-white hover:cursor-pointer"
           />
         </div>
         <div className="flex items-center justify-center gap-x-2">
