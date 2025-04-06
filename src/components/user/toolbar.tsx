@@ -29,6 +29,7 @@ const Toolbar = ({ data, setSearch }: props) => {
 
   return (
     <InputWithClear
+      className="border-2 border-amber-900 bg-zinc-800 text-amber-100 shadow-inner shadow-black/30 placeholder:text-amber-200/70 focus:border-amber-700 focus:outline-none focus:ring-1 focus:ring-amber-700"
       id="search"
       placeholder="Search"
       onClear={() => onChange("")}

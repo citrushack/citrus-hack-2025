@@ -12,8 +12,8 @@ const Team = async () => {
   const details = teamId ? await fetchTeam(teamId) : null;
 
   return (
-    <div className="flex h-full w-full flex-col items-start gap-3 bg-white px-8 py-6">
-      <h1 className="text-3xl font-bold text-black">My Organization</h1>
+    <div className="flex h-full w-full flex-col items-start gap-3 bg-citrus-red-200 px-8 py-6">
+      <h1 className="text-3xl font-bold text-white">My Team</h1>
       {teamId === "" ? <NewTeam /> : <Details team={details} />}
     </div>
   );
