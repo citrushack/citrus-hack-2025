@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
 type props = {
-  image: string;
+  image: StaticImageData;
   name: string;
   role: string;
 };
@@ -16,7 +16,7 @@ const Profile = ({ image, name, role }: props) => {
       whileHover="hover"
     >
       <motion.div
-        className="relative mx-auto h-32 w-32"
+        className="relative mx-auto h-40 w-40"
         variants={{
           hover: {
             scale: 1.05,
@@ -41,8 +41,6 @@ const Profile = ({ image, name, role }: props) => {
         />
         <Image
           src={image}
-          width={128}
-          height={128}
           alt={name}
           className="h-full w-full rounded-full border-2 border-citrus-yellow object-cover"
         />
