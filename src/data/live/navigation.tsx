@@ -4,6 +4,7 @@ import {
   HandHeartIcon,
   House,
   Info,
+  Users,
   Waypoints,
 } from "lucide-react";
 
@@ -38,12 +39,12 @@ export const ITEMS = [
     id: "schedule",
     icon: <Calendar />,
   },
-  // {
-  //   name: "Team",
-  //   link: "#team",
-  //   id: "team",
-  //   icon: <Users />,
-  // },
+  {
+    name: "Team",
+    link: "#team",
+    id: "team",
+    icon: <Users />,
+  },
   // {
   //   name: "Judges",
   //   link: "#about",
