@@ -6,10 +6,13 @@ import charlette from "@/public/assets/team/Charlette.webp";
 import chris from "@/public/assets/team/Chris.webp";
 import delaney from "@/public/assets/team/Delenany.webp";
 import kavin from "@/public/assets/team/Kavin.webp";
+import taaha from "@/public/assets/team/Taaha.jpg";
 import allison from "@/public/assets/team/allison.webp";
+import jonathan from "@/public/assets/team/jonathan.jpg";
 import karan from "@/public/assets/team/karan.webp";
 import karina from "@/public/assets/team/karina.webp";
 import liam from "@/public/assets/team/liam.webp";
+import minnoli from "@/public/assets/team/minnoli-2.jpg";
 import rhea from "@/public/assets/team/rhea.webp";
 import soumya from "@/public/assets/team/soumya.webp";
 import vishra from "@/public/assets/team/vishra.webp";
@@ -25,12 +28,12 @@ export const boardmembers: boardmembers[] = [
   {
     name: "Jonathan Trujillo",
     role: "DIRECTOR",
-    img: allison,
+    img: jonathan,
   },
   {
     name: "Minnoli Nori",
     role: "DIRECTOR",
-    img: allison,
+    img: minnoli,
   },
   {
     name: "Allison Pham",
@@ -111,7 +114,7 @@ export const boardmembers: boardmembers[] = [
   {
     name: "Taaha Sayed",
     role: "Software Engineering",
-    img: bsun,
+    img: taaha,
   },
   {
     name: "Howard Zhu",
