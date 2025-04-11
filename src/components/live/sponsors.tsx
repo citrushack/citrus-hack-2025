@@ -42,7 +42,7 @@ const Sponsors = () => {
             key={index}
             className="w-1/3 transition-transform duration-500 hover:scale-105 hover:brightness-110 md:w-fit"
           >
-            <Image src={image} alt={alt} className="w-fit" />
+            <Image src={image} alt={alt} className="w-full md:w-fit" />
           </div>
         ))}
       </div>

@@ -3,10 +3,10 @@ export const COMMITTEES = [
     name: "OPERATIONS",
     members: ["Vatsal Kumar", "Daniyal Ahmed"],
   },
-  {
-    name: "SPONSORSHIP",
-    members: ["Karina Flores"],
-  },
+  // {
+  //   name: "SPONSORSHIP",
+  //   members: ["Karina Flores"],
+  // },
   {
     name: "MARKETING",
     members: ["Arielle Haryanto", "Menthy Wu"],

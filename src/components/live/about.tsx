@@ -103,13 +103,13 @@ const About = () => {
         </motion.div>
       </div>
       <motion.div
-        className="flex w-11/12 items-center justify-center md:w-full"
+        className="flex w-full items-center justify-center md:w-full"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
         <motion.div
-          className="flex w-full justify-center md:w-1/2"
+          className="flex w-11/12 justify-center md:w-1/2"
           whileHover={{ rotate: 0 }}
           initial={{ rotate: 0 }}
           transition={{ type: "spring", stiffness: 300 }}
