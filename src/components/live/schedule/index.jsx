@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { api } from "@/utils/api";
 import Events from "./events";
 import TextStroke from "../text-stroke";
-import ComingSoon from "../coming-soon";
 
 const Schedule = () => {
   const [events, setEvents] = useState([]);
@@ -69,7 +68,6 @@ const Schedule = () => {
         </div>
       </div>
       <Events events={events} totalDays={totalDays} />
-      <ComingSoon />
       <div className="my-[5%] flex w-11/12 flex-col self-center">
         <span className="my-1 h-0.5 w-full bg-white" />
         <span className="my-1 h-0.5 w-full bg-white" />

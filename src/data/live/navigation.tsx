@@ -40,6 +40,12 @@ export const ITEMS = [
     icon: <Calendar />,
   },
   {
+    name: "Sponsors",
+    link: "#sponsors",
+    id: "sponsors",
+    icon: <HandHeartIcon />,
+  },
+  {
     name: "Team",
     link: "#team",
     id: "team",
@@ -51,12 +57,6 @@ export const ITEMS = [
   //   id: "about",
   //   icon: <Info />,
   // },
-  {
-    name: "Sponsors",
-    link: "#sponsors",
-    id: "sponsors",
-    icon: <HandHeartIcon />,
-  },
   {
     name: "FAQ",
     link: "#faq",
