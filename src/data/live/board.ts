@@ -1,104 +1,124 @@
+import amir from "@/public/assets/team/Amir.webp";
+import ananya from "@/public/assets/team/Ananya.webp";
+import bsun from "@/public/assets/team/Brandon.webp";
+import chandrahass from "@/public/assets/team/Chandrahass.webp";
+import charlette from "@/public/assets/team/Charlette.webp";
+import chris from "@/public/assets/team/Chris.webp";
+import delaney from "@/public/assets/team/Delenany.webp";
+import kavin from "@/public/assets/team/Kavin.webp";
+import taaha from "@/public/assets/team/Taaha.jpg";
+import allison from "@/public/assets/team/allison.webp";
+import jonathan from "@/public/assets/team/jonathan.jpg";
+import karan from "@/public/assets/team/karan.webp";
+import karina from "@/public/assets/team/karina.webp";
+import liam from "@/public/assets/team/liam.webp";
+import minnoli from "@/public/assets/team/minnoli-2.jpg";
+import rhea from "@/public/assets/team/rhea.webp";
+import soumya from "@/public/assets/team/soumya.webp";
+import vishra from "@/public/assets/team/vishra.webp";
+import { StaticImageData } from "next/image";
+
 interface boardmembers {
   name: string;
   role: string;
-  img: string;
+  img: StaticImageData;
 }
 
 export const boardmembers: boardmembers[] = [
   {
     name: "Jonathan Trujillo",
     role: "DIRECTOR",
-    img: "/assets/grayEllipse.svg",
+    img: jonathan,
   },
   {
     name: "Minnoli Nori",
     role: "DIRECTOR",
-    img: "/assets/grayEllipse.svg",
+    img: minnoli,
   },
   {
     name: "Allison Pham",
     role: "Operations & UI/UX",
-    img: "/assets/grayEllipse.svg",
+    img: allison,
   },
   {
     name: "Delaney Ong",
     role: "Operations",
-    img: "/assets/grayEllipse.svg",
+    img: delaney,
   },
   {
     name: "Kavin Phabiani",
     role: "Operations",
-    img: "/assets/grayEllipse.svg",
+    img: kavin,
   },
   {
     name: "Liam Regina",
     role: "Operations",
-    img: "/assets/grayEllipse.svg",
+    img: liam,
   },
   {
     name: "Vishra Thakkar",
     role: "Operations",
-    img: "/assets/grayEllipse.svg",
+    img: vishra,
   },
   {
     name: "Charlette O'Connor",
     role: "Sponsorship",
-    img: "/assets/grayEllipse.svg",
+    img: charlette,
   },
   {
     name: "Cristian Roberts",
     role: "Sponsorship",
-    img: "/assets/grayEllipse.svg",
+    img: chris,
   },
   {
     name: "Karina Flores",
     role: "Sponsorship",
-    img: "/assets/grayEllipse.svg",
+    img: karina,
   },
   {
     name: "Rhea Verma",
     role: "Sponsorship",
-    img: "/assets/grayEllipse.svg",
+    img: rhea,
   },
   {
     name: "Chandrahaas Mariserla",
     role: "Marketing",
-    img: "/assets/grayEllipse.svg",
+    img: chandrahass,
   },
 
   {
     name: "Ananya Dharanikota",
     role: "UI/UX",
-    img: "/assets/grayEllipse.svg",
+    img: ananya,
   },
   {
     name: "Karan Dhawan",
     role: "UI/UX",
-    img: "/assets/grayEllipse.svg",
+    img: karan,
   },
   {
     name: "Soumya Agarwal",
     role: "UI/UX",
-    img: "/assets/grayEllipse.svg",
+    img: soumya,
   },
   {
     name: "Amir Shanti",
     role: "Software Engineering",
-    img: "/assets/grayEllipse.svg",
+    img: amir,
   },
   {
     name: "Brandon Sun",
     role: "Software Engineering",
-    img: "/assets/grayEllipse.svg",
+    img: bsun,
   },
   {
     name: "Taaha Sayed",
     role: "Software Engineering",
-    img: "/assets/grayEllipse.svg",
+    img: taaha,
   },
-  {
-    name: "Howard Zhu",
-    role: "Software Engineering",
-    img: "/assets/grayEllipse.svg",
-  },
+  // {
+  //   name: "Howard Zhu",
+  //   role: "Software Engineering",
+  //   img: bsun,
+  // },
 ];
