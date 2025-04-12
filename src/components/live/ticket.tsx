@@ -13,7 +13,7 @@ type TicketProps = {
 
 export default function Ticket({ title, link }: TicketProps) {
   return (
-    <Link href={link} className="w-full md:w-5/6">
+    <Link href={link} className="w-fit">
       <motion.div
         className="relative flex cursor-pointer items-center justify-center overflow-hidden"
         initial={{ y: 0 }}
@@ -32,11 +32,7 @@ export default function Ticket({ title, link }: TicketProps) {
           transition: { duration: 0.3, ease: "easeOut" },
         }}
       >
-        <Image
-          src={TicketComp}
-          alt="Picture of the Ticket"
-          className="w-full md:w-5/6"
-        />
+        <Image src={TicketComp} alt="Picture of the Ticket" className="w-fit" />
         <div
           className={`absolute inset-0 flex items-center justify-center font-kumar text-sm text-[#232323] md:text-lg lg:text-2xl`}
         >

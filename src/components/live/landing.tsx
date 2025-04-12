@@ -50,11 +50,10 @@ const Landing = ({ complete }: { complete: boolean }) => {
       </div>
       {complete && (
         <>
-          <div className="my-10 grid w-10/12 grid-cols-2 justify-items-center gap-5 md:my-16 md:w-3/5 md:gap-y-14">
-            <Ticket title="Participants" link="form/participant" />
+          <div className="my-10 flex w-1/2 flex-wrap-reverse justify-center gap-5 md:my-16 md:w-3/5 md:gap-20 md:gap-y-14">
             <Ticket title="Volunteers" link="form/volunteer" />
             <Ticket title="Mentors" link="form/mentor" />
-            <Ticket title="Sponsors" link="form/sponsor" />
+            <Ticket title="Apply Now" link="form/participant" />
           </div>
 
           <LandingAssets />

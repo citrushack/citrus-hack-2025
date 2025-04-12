@@ -109,7 +109,7 @@ const About = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.div
-          className="flex w-11/12 justify-center md:w-1/2"
+          className="flex w-full justify-center md:w-1/2"
           whileHover={{ rotate: 0 }}
           initial={{ rotate: 0 }}
           transition={{ type: "spring", stiffness: 300 }}
