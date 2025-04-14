@@ -1,7 +1,17 @@
 export const COMMITTEES = [
   {
     name: "OPERATIONS",
-    members: ["Vatsal Kumar", "Daniyal Ahmed"],
+    members: [
+      "Vatsal Kumar",
+      "Daniyal Ahmed",
+      "Ahad Hassan",
+      "Henry Wang",
+      "Jordan Dove",
+      "Justin Pun",
+      " Kevin Loritsch",
+      "Vatsal Kumar",
+      " Wesley Wu",
+    ],
   },
   // {
   //   name: "SPONSORSHIP",
@@ -9,7 +19,7 @@ export const COMMITTEES = [
   // },
   {
     name: "MARKETING",
-    members: ["Arielle Haryanto", "Menthy Wu"],
+    members: ["Arielle Haryanto", "Menthy Wu", "Joaquin Gonzalez"],
   },
 
   {
