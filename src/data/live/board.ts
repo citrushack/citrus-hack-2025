@@ -8,7 +8,7 @@ import delaney from "@/public/assets/team/Delenany.webp";
 import kavin from "@/public/assets/team/Kavin.webp";
 import taaha from "@/public/assets/team/Taaha.webp";
 import allison from "@/public/assets/team/allison.webp";
-import jonathan from "@/public/assets/team/jonathan.jpg";
+import jonathan from "@/public/assets/team/jonathan.webp";
 import karan from "@/public/assets/team/karan.webp";
 import karina from "@/public/assets/team/karina.webp";
 import liam from "@/public/assets/team/liam.webp";
