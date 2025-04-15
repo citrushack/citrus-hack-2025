@@ -31,7 +31,7 @@ export const QUESTIONS: QuestionAnswer[] = [
   },
   {
     question: "How long do I have to hack?",
-    answer: "For Citrus you will have 36 hours!",
+    answer: "For Citrus you will have 24 hours!",
   },
   {
     question: "Do I have to hack or make a project?",

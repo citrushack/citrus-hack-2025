@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 
-const rooms: string[] = ["WCH 127", "WCH 110", "WCH 130", "Byte", "WCH 129"];
+const rooms: string[] = ["WCH 127", "WCH 110", "UNLH 1000", "Bytes", "WCH 129"];
 
 const Rooms = (): React.ReactNode => {
   return (
