@@ -37,7 +37,7 @@ const FAQ = () => {
                       color={
                         "text-outline-red text-center text-white text-xl md:text-3xl"
                       }
-                      subColor="text-center text-gray-100 text-xl md:text-3xl"
+                      subColor="text-center text-citrus-yellow text-xl md:text-3xl"
                     />
                   </div>
                 </AccordionTrigger>

@@ -12,12 +12,12 @@ export const QUESTIONS: QuestionAnswer[] = [
   {
     question: "When does Citrus Hack start?",
     answer:
-      "Citrus Hack will start Saturday Morning on April 19. Stay tuned to the schedule for updated times",
+      "Citrus Hack will start Saturday Noon at 12pm on April 19. Stay tuned to the schedule for updated times",
   },
   {
     question: "Where is the hackathon?",
     answer:
-      "It will take place in your favorite engineering buildings! It will be held throughout Winston Chung Hall and certain BCOE buildings and classrooms. There will be a comprehensive list of activities and their locations in the final itinerary!",
+      "It will take at UCR!! In our favorite engineering buildings! It will be held throughout Winston Chung Hall and certain BCOE buildings and classrooms. There will be a comprehensive list of activities and their locations in the final itinerary!",
   },
   {
     question: "Who can come to Citrus Hack?",
@@ -31,7 +31,7 @@ export const QUESTIONS: QuestionAnswer[] = [
   },
   {
     question: "How long do I have to hack?",
-    answer: "For Citrus you will have 36 hours!",
+    answer: "For Citrus you will have 24 hours!",
   },
   {
     question: "Do I have to hack or make a project?",
