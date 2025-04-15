@@ -19,7 +19,13 @@ export const COMMITTEES = [
   // },
   {
     name: "MARKETING",
-    members: ["Arielle Haryanto", "Menthy Wu", "Joaquin Gonzalez"],
+    members: [
+      "Arielle Haryanto",
+      "Menthy Wu",
+      "Joaquin Gonzalez",
+      "Angel Avalos",
+      "Rebecca Jennings",
+    ],
   },
 
   {
