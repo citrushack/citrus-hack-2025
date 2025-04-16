@@ -20,7 +20,7 @@ const data: config = {
   short_name: "Citrus Hack Site",
   email: "citrushack@gmail.com",
   description: "A 24 hour hackathon in UC Riverside",
-  length: 36,
+  length: 24,
   date: new Date("2025-04-19T08:00:00"),
   end: new Date("2025-04-20T20:00:00"),
   packet: "",
