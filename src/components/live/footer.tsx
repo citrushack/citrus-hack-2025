@@ -5,9 +5,9 @@ import { Instagram, Mail, Linkedin } from "lucide-react";
 import smallRoller from "@/public/assets/smallRoller.svg";
 import chair from "@/public/assets/chair.svg";
 import bigRoller from "@/public/assets/bigRoller.svg";
-import popChair from "@/public/assets/popChair.svg";
 import rollerCorner from "@/public/assets/cornerRoller.svg";
 import Link from "next/link";
+import popChair from "@/public/assets/popChair.svg";
 
 const Footer = () => {
   return (
@@ -27,10 +27,9 @@ const Footer = () => {
       </div>
 
       <div className="relative w-full">
-        <div className="absolute max-lg:bottom-[80%] max-lg:left-[40%] max-lg:w-1/3 lg:bottom-[75%] lg:left-[40%] lg:w-1/3">
+        <div className="absolute bottom-3/4 left-[40%] w-[40%]">
           <Image src={popChair} alt="Pop Chair" className="" />
         </div>
-
         <div className="relative">
           <Image src={chair} alt="Chair" className="w-full" />
         </div>
@@ -56,7 +55,7 @@ const Footer = () => {
           🍊 <br />A Citrus Hack Original Production
         </div>
 
-        <div className="absolute right-[1%] top-[78%] flex w-fit text-xs sm:top-[70%] md:left-[70%] md:top-[82%] md:text-2xl lg:left-[70%] lg:top-[80%]">
+        <div className="absolute right-[1%] top-[78%] flex w-fit text-xs sm:top-[70%] md:left-[70%] md:top-[82%] md:text-2xl lg:left-[75%] lg:top-[80%]">
           <div className="rotate-[-40deg] text-center">
             Made with <span className="text-orange-500">🧡</span>
             <div className="text-center">By the Citrus Hack Team</div>
