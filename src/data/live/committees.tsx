@@ -8,8 +8,6 @@ export const COMMITTEES = [
       "Henry Wang",
       "Jordan Dove",
       "Justin Pun",
-      " Kevin Loritsch",
-      "Vatsal Kumar",
       " Wesley Wu",
     ],
   },
