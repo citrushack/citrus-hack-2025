@@ -2,14 +2,20 @@
 import { TAGS, COLUMNS } from "@/data/admin/interests";
 import { STATUSES } from "@/data/statuses";
 import Table from "./dashboard/dashboard";
+import { SearchParams } from "@/types/dashboard";
 
-const Interests = ({ searchParams }) => {
+type props = {
+  searchParams: SearchParams;
+};
+
+const Interests = ({ searchParams }: props) => {
   return (
     <div className="font-poppins flex h-full flex-col gap-3 py-4">
       <Table
         searchParams={searchParams}
         title="Interests"
         columns={COLUMNS}
+        subcolumns={[]}
         tags={TAGS}
         statuses={STATUSES}
       />

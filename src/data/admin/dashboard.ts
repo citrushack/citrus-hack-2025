@@ -1,34 +1,21 @@
-interface attributes {
-  admins: string[];
-  committees: string[];
-  judges: string[];
-  mentors: string[];
-  volunteers: string[];
-  interests: string[];
-  participants: string[];
-  sponsors: string[];
-  panels: string[];
-  feedback: string[];
-  leads: string[];
-}
+type keys =
+  | "admins"
+  | "committees"
+  | "judges"
+  | "mentors"
+  | "volunteers"
+  | "interests"
+  | "participants"
+  | "resumes"
+  | "sponsors"
+  | "panels"
+  | "feedback"
+  | "leads";
 
-interface auth {
-  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-  POST: {};
-  GET: {
-    admins: number[];
-  };
-  PUT: {
-    admins: number[];
-  };
-  DELETE: {
-    admins: number[];
-  };
-}
-
-export const ATTRIBUTES: attributes = {
+export const ATTRIBUTES: Record<keys, string[]> = {
   admins: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "age",
     "diet",
@@ -40,7 +27,8 @@ export const ATTRIBUTES: attributes = {
     "shirt",
   ],
   committees: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "age",
     "affiliation",
@@ -52,7 +40,8 @@ export const ATTRIBUTES: attributes = {
     "diet",
   ],
   judges: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "phone",
     "age",
@@ -64,7 +53,8 @@ export const ATTRIBUTES: attributes = {
     "photo",
   ],
   mentors: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "discord",
     "availability",
@@ -73,7 +63,8 @@ export const ATTRIBUTES: attributes = {
     "diet",
   ],
   volunteers: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "discord",
     "availability",
@@ -81,7 +72,15 @@ export const ATTRIBUTES: attributes = {
     "age",
     "diet",
   ],
-  interests: ["name", "email", "age", "diet", "gender", "shirt"],
+  interests: [
+    "firstName",
+    "lastName",
+    "email",
+    "age",
+    "diet",
+    "gender",
+    "shirt",
+  ],
   participants: [
     "phone",
     "major",
@@ -92,15 +91,25 @@ export const ATTRIBUTES: attributes = {
     "gender",
     "shirt",
     "diet",
-    "resume",
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "roles",
     "discord",
     "team",
   ],
+  resumes: [
+    "firstName",
+    "lastName",
+    "email",
+    "school",
+    "grade",
+    "resume",
+    "status",
+  ],
   sponsors: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "phone",
     "company",
@@ -109,7 +118,8 @@ export const ATTRIBUTES: attributes = {
     "comments",
   ],
   panels: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "title",
     "gender",
@@ -128,7 +138,8 @@ export const ATTRIBUTES: attributes = {
     "status",
   ],
   leads: [
-    "name",
+    "firstName",
+    "lastName",
     "email",
     "grade",
     "gender",
@@ -143,6 +154,20 @@ export const ATTRIBUTES: attributes = {
     "diet",
   ],
 };
+
+interface auth {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  POST: {};
+  GET: {
+    admins: number[];
+  };
+  PUT: {
+    admins: number[];
+  };
+  DELETE: {
+    admins: number[];
+  };
+}
 
 export const AUTH: auth = {
   POST: {},

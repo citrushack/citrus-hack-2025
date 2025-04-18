@@ -89,7 +89,9 @@ const Toolbar = ({
         if (round === parseInt(input.rotations)) continue;
         if (
           teams[i].rounds.some((judges) =>
-            judges.some((individual) => individual.name === judges[judge].name),
+            judges.some(
+              (individual) => individual.name === judges[judge]?.name,
+            ),
           )
         )
           continue;
@@ -113,12 +115,13 @@ const Toolbar = ({
       });
     }
 
+    const judgesCopy = handleJudge(teams);
     setData(teams);
-
+    setJudgesView(judgesCopy);
     api({
       method: "PUT",
       url: "/api/judging",
-      body: { teams },
+      body: { teams, judges: judgesCopy },
     }).then(() => toaster("Rounds Saved!", "success"));
 
     setInput({
@@ -147,8 +150,7 @@ const Toolbar = ({
     }).then(() => toaster("Successfully Reset", "success"));
   };
 
-  const handleView = () => {
-    setView(!view);
+  const handleJudge = (data) => {
     const totalJudges = [...judges];
 
     totalJudges.forEach((judge) => {
@@ -160,12 +162,20 @@ const Toolbar = ({
           : team.name;
         team.rounds.forEach((round, index) => {
           if (round.some((individual) => individual.name === judge.name))
-            judge.rounds[index] = [{ name: name, affiliation: "student" }];
+            judge.rounds[index] = [
+              { name: name, affiliation: "student", uid: team.uid },
+            ];
         });
       });
     });
 
     setJudgesView(totalJudges);
+    return totalJudges;
+  };
+
+  const handleView = () => {
+    setView(!view);
+    handleJudge(data);
   };
 
   const handleInput = (e) => {
@@ -234,7 +244,7 @@ const Toolbar = ({
         className="flex w-full flex-col justify-between gap-2 sm:flex-row sm:items-center"
         onSubmit={generate}
       >
-        <div className="flex flex-row items-center gap-2 pb-3 pl-2 text-white">
+        <div className="flex flex-row items-center gap-2 pb-3 pl-2">
           <InputOTP
             maxLength={2}
             value={input.rotations}

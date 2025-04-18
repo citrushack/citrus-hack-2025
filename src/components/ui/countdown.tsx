@@ -71,18 +71,9 @@ const Countdown = ({ classNames }: countdownProps) => {
   }, []);
 
   return (
-    <div className="flex flex-row items-center justify-center gap-5 md:gap-20">
-      {Object.entries(countdown).map(([unit, value], index, array) => (
-        <div
-          key={index}
-          className="relative flex flex-row items-end last:hidden sm:last:flex"
-        >
-          <Digits unit={unit} value={value} classNames={classNames} />
-
-          {index !== array.length - 1 && (
-            <span className="absolute -right-12 bottom-4 hidden h-4 w-4 self-center rounded-full bg-citrus-darkred md:flex" />
-          )}
-        </div>
+    <div className="flex items-center justify-center font-bold">
+      {Object.entries(countdown).map(([unit, value], index) => (
+        <Digits key={index} unit={unit} value={value} classNames={classNames} />
       ))}
     </div>
   );

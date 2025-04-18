@@ -1,11 +1,12 @@
 import { generateAffiliation, generateSelect, generateStatus } from "./columns";
 import { AFFILIATIONS } from "../form/information";
 import { STATUSES } from "../statuses";
-import { CellContext, ColumnDef } from "@tanstack/react-table";
-import { Tags } from "@/types/dashboard";
+import { ColumnDef } from "@tanstack/react-table";
+import { Column, Tags } from "@/types/dashboard";
 
 type Admin = {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   affiliation: string;
   discord: string;
@@ -28,22 +29,25 @@ export const TAGS: Tags[] = [
   },
 ];
 
-export const COLUMNS: (ColumnDef<Admin, string> & {
-  searchable?: boolean;
-})[] = [
+export const COLUMNS: (ColumnDef<Admin> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
+    id: "fullName",
     accessorKey: "name",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["name"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("fullName")}
       </div>
     ),
   },
@@ -53,12 +57,15 @@ export const COLUMNS: (ColumnDef<Admin, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["email"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("email")}
       </div>
     ),
   },
@@ -68,12 +75,15 @@ export const COLUMNS: (ColumnDef<Admin, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["discord"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("discord")}
       </div>
     ),
   },
@@ -83,12 +93,15 @@ export const COLUMNS: (ColumnDef<Admin, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["shirt"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("shirt")}
       </div>
     ),
   },
@@ -98,12 +111,15 @@ export const COLUMNS: (ColumnDef<Admin, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["gender"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("gender")}
       </div>
     ),
   },
@@ -111,7 +127,7 @@ export const COLUMNS: (ColumnDef<Admin, string> & {
   generateStatus(STATUSES),
 ];
 
-export const SUBCOLUMNS = [
+export const SUBCOLUMNS: (ColumnDef<Admin> & Column)[] = [
   generateSelect(),
   {
     accessorKey: "grade",
@@ -119,12 +135,15 @@ export const SUBCOLUMNS = [
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["grade"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("grade")}
       </div>
     ),
   },
@@ -134,12 +153,15 @@ export const SUBCOLUMNS = [
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["major"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("major")}
       </div>
     ),
   },
@@ -149,12 +171,15 @@ export const SUBCOLUMNS = [
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["diet"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("diet")}
       </div>
     ),
   },
@@ -164,12 +189,15 @@ export const SUBCOLUMNS = [
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Admin, Admin["age"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={(e) => {
+          row.getToggleSelectedHandler()(e);
+          row.getToggleExpandedHandler()();
+        }}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("age")}
       </div>
     ),
   },

@@ -4,10 +4,10 @@ import { useSession } from "next-auth/react";
 const Header = () => {
   const { data: session } = useSession();
   return (
-    <div className="z-40 flex items-center justify-center font-kameron text-white">
+    <div className="flex items-center justify-between">
       <div>
         <p className="font-medium">Welcome</p>
-        <p className="mb-0 text-2xl font-bold">{session?.user?.name}</p>
+        <p className="mb-0 text-2xl font-bold">{session?.user?.firstName}</p>
       </div>
     </div>
   );

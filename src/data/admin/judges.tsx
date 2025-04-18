@@ -6,11 +6,12 @@ import JSZip from "jszip";
 import { save } from "@/utils/download";
 import { Download } from "lucide-react";
 import data from "../config";
-import { Tags } from "@/types/dashboard";
-import { ColumnDef, CellContext } from "@tanstack/react-table";
+import { Column, Tags } from "@/types/dashboard";
+import { ColumnDef } from "@tanstack/react-table";
 
 type Judge = {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
   gender: string;
@@ -31,22 +32,22 @@ export const TAGS: Tags[] = [
   },
 ];
 
-export const COLUMNS: (ColumnDef<Judge, string> & {
-  searchable?: boolean;
-})[] = [
+export const COLUMNS: (ColumnDef<Judge> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
     accessorKey: "name",
+    id: "fullName",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Judge, Judge["name"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("fullName")}
       </div>
     ),
   },
@@ -56,12 +57,12 @@ export const COLUMNS: (ColumnDef<Judge, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Judge, Judge["email"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("email")}
       </div>
     ),
   },
@@ -71,12 +72,12 @@ export const COLUMNS: (ColumnDef<Judge, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Judge, Judge["shirt"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("shirt")}
       </div>
     ),
   },
@@ -87,12 +88,12 @@ export const COLUMNS: (ColumnDef<Judge, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Judge, Judge["title"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("title")}
       </div>
     ),
   },
@@ -100,13 +101,16 @@ export const COLUMNS: (ColumnDef<Judge, string> & {
   generateStatus(STATUSES),
   {
     accessorKey: "photo",
+    searchable: false,
     header: ({ table }) => {
       const downloadZip = () => {
         const { rows } = table.getRowModel();
-        const photos = rows.map(({ original: { name, photo } }) => ({
-          photo,
-          name,
-        }));
+        const photos = rows.map(
+          ({ original: { firstName, lastName, photo } }) => ({
+            photo,
+            name: `${firstName} ${lastName}`,
+          }),
+        );
 
         const zip = new JSZip();
         const folder = zip.folder("photos");
@@ -130,13 +134,21 @@ export const COLUMNS: (ColumnDef<Judge, string> & {
 
       return (
         <div className="flex">
-          Photo <Download onClick={downloadZip} />
+          Photo
+          <Download
+            onClick={downloadZip}
+            className="text-hackathon-gray-200 hover:cursor-pointer hover:opacity-50"
+          />
         </div>
       );
     },
     enableSorting: false,
-    cell: (props: CellContext<Judge, Judge["photo"]>) => (
-      <View src={props.getValue()} title={props.row.getValue("name")} />
+    cell: ({ row }) => (
+      <View
+        src={row.getValue("photo")}
+        title={row.getValue("name")}
+        type="photo"
+      />
     ),
   },
 ];

@@ -1,5 +1,5 @@
-type countries = string[];
-export const COUNTRIES: countries = [
+export const COUNTRIES: string[] = [
+  "United States of America",
   "Afghanistan",
   "Albania",
   "Algeria",
@@ -185,7 +185,6 @@ export const COUNTRIES: countries = [
   "Ukraine",
   "United Arab Emirates",
   "United Kingdom",
-  "United States of America",
   "Uruguay",
   "Uzbekistan",
   "Vanuatu",

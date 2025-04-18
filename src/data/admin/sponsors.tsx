@@ -1,11 +1,12 @@
 import { TIERS } from "@/data/form/sponsors";
 import { generateSelect, generateStatus, generateTiers } from "./columns";
 import { STATUSES } from "@/data/statuses";
-import { ColumnDef, CellContext } from "@tanstack/react-table";
-import { Tags } from "@/types/dashboard";
+import { ColumnDef } from "@tanstack/react-table";
+import { Column, Tags } from "@/types/dashboard";
 
 type Sponsor = {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   company: string;
   position: string;
@@ -24,22 +25,22 @@ export const TAGS: Tags[] = [
   },
 ];
 
-export const COLUMNS: (ColumnDef<Sponsor, string> & {
-  searchable?: boolean;
-})[] = [
+export const COLUMNS: (ColumnDef<Sponsor> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
     accessorKey: "name",
+    id: "fullName",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Sponsor, Sponsor["name"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("fullName")}
       </div>
     ),
   },
@@ -49,12 +50,12 @@ export const COLUMNS: (ColumnDef<Sponsor, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Sponsor, Sponsor["email"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("email")}
       </div>
     ),
   },
@@ -64,12 +65,12 @@ export const COLUMNS: (ColumnDef<Sponsor, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Sponsor, Sponsor["company"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("company")}
       </div>
     ),
   },
@@ -79,12 +80,12 @@ export const COLUMNS: (ColumnDef<Sponsor, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Sponsor, Sponsor["position"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("position")}
       </div>
     ),
   },

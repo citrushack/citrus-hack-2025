@@ -1,10 +1,11 @@
 import { generateSelect, generateStatus } from "./columns";
 import { STATUSES } from "@/data/statuses";
-import { Tags } from "@/types/dashboard";
-import { ColumnDef, CellContext } from "@tanstack/react-table";
+import { Column, Tags } from "@/types/dashboard";
+import { ColumnDef } from "@tanstack/react-table";
 
 type Volunteer = {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
   discord: string;
@@ -26,22 +27,22 @@ export const TAGS: Tags[] = [
   },
 ];
 
-export const COLUMNS: (ColumnDef<Volunteer, string> & {
-  searchable?: boolean;
-})[] = [
+export const COLUMNS: (ColumnDef<Volunteer> & Column)[] = [
   generateSelect(),
   {
+    accessorFn: (row) => `${row.firstName} ${row.lastName}`,
     accessorKey: "name",
+    id: "fullName",
     header: "Name",
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Volunteer, Volunteer["name"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("fullName")}
       </div>
     ),
   },
@@ -51,12 +52,12 @@ export const COLUMNS: (ColumnDef<Volunteer, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Volunteer, Volunteer["email"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("email")}
       </div>
     ),
   },
@@ -66,12 +67,12 @@ export const COLUMNS: (ColumnDef<Volunteer, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Volunteer, Volunteer["discord"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("discord")}
       </div>
     ),
   },
@@ -81,12 +82,12 @@ export const COLUMNS: (ColumnDef<Volunteer, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Volunteer, Volunteer["shirt"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("shirt")}
       </div>
     ),
   },
@@ -96,12 +97,12 @@ export const COLUMNS: (ColumnDef<Volunteer, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Volunteer, Volunteer["gender"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("gender")}
       </div>
     ),
   },
@@ -111,12 +112,12 @@ export const COLUMNS: (ColumnDef<Volunteer, string> & {
     enableColumnFilter: true,
     filterFn: "includesString",
     searchable: true,
-    cell: (props: CellContext<Volunteer, Volunteer["grade"]>) => (
+    cell: ({ row }) => (
       <div
-        onClick={props.row.getToggleSelectedHandler()}
+        onClick={row.getToggleSelectedHandler()}
         className="hover:cursor-pointer"
       >
-        {props.getValue()}
+        {row.getValue("grade")}
       </div>
     ),
   },

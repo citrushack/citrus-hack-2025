@@ -1,10 +1,10 @@
 import { useZxing } from "react-zxing";
 
-type props = {
+type Props = {
   setResult: (value: string) => void;
 };
 
-const ScanQRCode = ({ setResult }: props) => {
+const ScanQRCode = ({ setResult }: Props) => {
   const { ref } = useZxing({
     onDecodeResult(result) {
       setResult(result.getText());

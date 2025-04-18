@@ -22,7 +22,7 @@ const getType = (types) => "." + types.join(",.");
 const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
   const [file, setFile] = useState(
     user[field] && user[field].startsWith("data:image")
-      ? { src: user[field], type: "image", title: `${user.name}.png` }
+      ? { src: user[field], type: "image", title: `${user.firstName}.png` }
       : null,
   );
   const [uploading, setUploading] = useState(false);
@@ -51,19 +51,19 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
         {text}
         {required && <span className="text-red-500">*</span>}
       </p>
-      <div className="flex w-full flex-col items-center" data-cy="upload">
+      <div className="flex w-full flex-col items-center">
         {!file && (
           <label
             htmlFor="dropzone-file"
-            className="flex h-fit w-full cursor-pointer flex-col items-center justify-center rounded border border-slate-200 bg-citrus-lightgray hover:bg-slate-100"
+            className="flex h-fit w-full cursor-pointer flex-col items-center justify-center rounded border border-slate-200 bg-white hover:bg-slate-100"
           >
             <div className="flex flex-col items-center justify-center py-4">
-              <LucideUpload className="mb-2 text-3xl text-black" />
-              <p className="text-sm font-semibold text-black">
+              <LucideUpload className="mb-2 text-3xl text-hackathon-gray-200" />
+              <p className="text-sm font-semibold text-hackathon-gray-200">
                 Upload from my computer
               </p>
             </div>
-            <div className="w-full" data-cy="upload-input">
+            <div className="w-full">
               <input
                 id="dropzone-file"
                 onChange={handleInput}
@@ -75,10 +75,7 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
           </label>
         )}
         {file && (
-          <div
-            className="my-2 flex w-full items-center justify-between bg-gray-200 px-2 py-2"
-            data-cy="upload-success"
-          >
+          <div className="my-2 flex w-full items-center justify-between bg-gray-200 px-2 py-2">
             <div className="flex items-center">
               {file.type.split("/")[0] === "image" ? (
                 <LucideImage className="mr-2 text-xl" />
@@ -98,7 +95,6 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
               <X
                 className="text-gray-500 hover:cursor-pointer hover:text-red-600"
                 onClick={() => setFile(null)}
-                data-cy="upload-cancel"
               />
             </div>
           </div>
@@ -111,14 +107,13 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
           >
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>{user.name}&apos;s Picture</DialogTitle>
+                <DialogTitle>{user.firstName}&apos;s Picture</DialogTitle>
               </DialogHeader>
               <embed
                 fill={true}
                 className="h-full w-full object-cover"
                 src={file.src}
                 alt="Photo of the Judge"
-                data-cy="modal-image"
               />
             </DialogContent>
           </Dialog>

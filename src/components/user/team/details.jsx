@@ -13,7 +13,7 @@ const Details = ({ team }) => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(details.id);
-    toaster("Successfully copied team ID!", "success");
+    toaster("Successfully copied team id!", "success");
   };
 
   const handleCopyLink = () => {

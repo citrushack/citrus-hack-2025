@@ -1,19 +1,25 @@
 "use client";
-import { TAGS, COLUMNS } from "@/data/admin/teams";
+import { TAGS, COLUMNS } from "@/data/admin/judges";
 import { STATUSES } from "@/data/statuses";
 import Table from "./dashboard/dashboard";
+import { SearchParams } from "@/types/dashboard";
 
-const Teams = ({ searchParams }) => {
+type props = {
+  searchParams: SearchParams;
+};
+
+const Judges = ({ searchParams }: props) => {
   return (
     <div className="font-poppins flex h-full flex-col gap-3 py-4">
       <Table
         searchParams={searchParams}
-        title="Teams"
+        title="Judges"
         columns={COLUMNS}
+        subcolumns={[]}
         tags={TAGS}
         statuses={STATUSES}
       />
     </div>
   );
 };
-export default Teams;
+export default Judges;
