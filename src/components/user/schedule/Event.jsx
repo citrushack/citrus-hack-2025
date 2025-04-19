@@ -11,7 +11,7 @@ const Event = ({ event }) => {
   return (
     <Dialog>
       <DialogTrigger>
-        <div className="rounded bg-citrus-black p-3 text-white shadow-sm">
+        <div className="rounded bg-citrus-red-100 p-3 text-white shadow-sm">
           <div className="text-left text-sm font-extrabold">
             {event.summary}
           </div>

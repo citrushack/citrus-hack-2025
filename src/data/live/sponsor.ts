@@ -7,6 +7,7 @@ import lspot from "@/public/assets/sponsors/incogni.svg";
 import saily from "@/public/assets/sponsors/saily.svg";
 import nordvpn from "@/public/assets/sponsors/nordvpn.svg";
 import vercel from "@/public/assets/sponsors/vercel.svg";
+import poppi from "@/public/assets/sponsors/poppi.svg";
 import desmos from "@/public/assets/sponsors/desmos.svg";
 
 export const SPOMSORS = [
@@ -14,10 +15,11 @@ export const SPOMSORS = [
   { image: gcap, alt: "GCAP Sponsor" },
   { image: asucr, alt: "ASUCR Sponsor" },
   { image: rlab, alt: "Creator Lab Sponsor" },
-  { image: nordvpn, alt: "NordVP< Sponsor" },
+  { image: nordvpn, alt: "NordVPM Sponsor" },
   { image: nordpass, alt: "NordPass Sponsor" },
   { image: lspot, alt: "incogni Sponsor" },
   { image: saily, alt: "Saily Sponsor" },
   { image: desmos, alt: "Desmos Sponsor" },
+  { image: poppi, alt: "Poppi Sponsor" },
   { image: vercel, alt: "Vercel" },
 ];

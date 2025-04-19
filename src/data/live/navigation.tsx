@@ -1,9 +1,11 @@
 import {
   Calendar,
   CircleHelp,
+  Gavel,
   HandHeartIcon,
   House,
   Info,
+  Mic,
   Users,
   Waypoints,
 } from "lucide-react";
@@ -27,12 +29,12 @@ export const ITEMS = [
     id: "tracks",
     icon: <Waypoints />,
   },
-  // {
-  //   name: "Keynote",
-  //   link: "#keynote",
-  //   id: "keynote",
-  //   icon: <Mic />,
-  // },
+  {
+    name: "Keynote",
+    link: "#keynote",
+    id: "keynote",
+    icon: <Mic />,
+  },
   {
     name: "Schedule",
     link: "#schedule",
@@ -51,12 +53,12 @@ export const ITEMS = [
     id: "team",
     icon: <Users />,
   },
-  // {
-  //   name: "Judges",
-  //   link: "#about",
-  //   id: "about",
-  //   icon: <Info />,
-  // },
+  {
+    name: "Judges",
+    link: "#judges",
+    id: "judges",
+    icon: <Gavel />,
+  },
   {
     name: "FAQ",
     link: "#faq",
