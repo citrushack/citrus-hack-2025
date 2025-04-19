@@ -13,11 +13,9 @@ import Image from "next/image";
 const Dashboard = () => {
   return (
     <div className="font-poppins relative flex h-full flex-col gap-3">
-      <Image
-        src={curtain}
-        alt={curtain}
-        className="absolute inset-0 z-10 hidden md:block"
-      />
+      <div className="absolute inset-0 z-10 flex h-full w-full items-center justify-center md:block">
+        <Image src={curtain} alt={curtain} className="m-auto scale-x-125" />
+      </div>
       <div className="absolute inset-0 top-0 z-20 grid grid-cols-1 gap-3 md:top-[20%] md:translate-x-[17%] lg:grid-cols-3">
         <div className="col-span-1 flex flex-col gap-3 p-4 md:col-span-2 md:p-0">
           <Header />

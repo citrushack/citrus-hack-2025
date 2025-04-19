@@ -1,18 +1,8 @@
-import mock from "@/public/assets/grayEllipse.svg";
+import amber from "@/public/assets/judges/Amber_Zheng.webp";
 export const KEYNOTE = [
   {
-    name: "Kavin Phabiani",
-    title: "AI Marketing",
-    img: mock,
-  },
-  {
-    name: "Kavin Phabiani",
-    title: "AI Marketing",
-    img: mock,
-  },
-  {
-    name: "Kavin Phabiani",
-    title: "AI Marketing",
-    img: mock,
+    name: "Amber Zheng",
+    title: "Product Manager @ TikTok",
+    img: amber,
   },
 ];

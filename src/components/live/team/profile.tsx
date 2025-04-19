@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 type props = {
   image: StaticImageData;
   name: string;
-  role: string;
+  role?: string;
 };
 
 const Profile = ({ image, name, role }: props) => {
@@ -46,7 +46,7 @@ const Profile = ({ image, name, role }: props) => {
         />
       </motion.div>
       <div className="mt-3 text-center">
-        <p>{role}</p>
+        {role && role !== "" && <p>{role}</p>}
         <p>{name}</p>
       </div>
     </motion.div>

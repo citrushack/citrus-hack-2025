@@ -7,6 +7,9 @@ import {
   arrayUnion,
   increment,
   setDoc,
+  getDocs,
+  collection,
+  query,
 } from "firebase/firestore";
 import { authenticate } from "@/utils/auth";
 export const GET = async (req) => {
@@ -22,17 +25,24 @@ export const GET = async (req) => {
     );
   }
 
-  const uid = req.nextUrl.searchParams.get("uid");
+  if (req.nextUrl.searchParams.has("uid")) {
+    const uid = req.nextUrl.searchParams.get("uid");
 
-  try {
-    const docSnap = await getDoc(doc(db, "users", uid));
-    const data = docSnap.data().events || [];
-    return res.json({ message: "OK", items: data }, { status: 200 });
-  } catch (err) {
-    return res.json(
-      { message: `Internal Server Error: ${err}` },
-      { status: 500 },
-    );
+    try {
+      const docSnap = await getDoc(doc(db, "users", uid));
+      const data = docSnap.data().events || [];
+      return res.json({ message: "OK", items: data }, { status: 200 });
+    } catch (err) {
+      return res.json(
+        { message: `Internal Server Error: ${err}` },
+        { status: 500 },
+      );
+    }
+  } else {
+    const snap = await getDocs(query(collection(db, "events")));
+    const output = [];
+    snap.forEach((doc) => output.push(doc.data()));
+    return res.json({ message: "OK", items: output }, { status: 200 });
   }
 };
 export const PUT = async (req) => {
