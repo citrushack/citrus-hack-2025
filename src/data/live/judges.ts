@@ -10,7 +10,7 @@ import falak from "@/public/assets/judges/Falak_Tulsi.webp";
 import isabelle from "@/public/assets/judges/Isabelle_Celo.webp";
 import jordan from "@/public/assets/judges/Jordan_Ayvazian.webp";
 import lisa from "@/public/assets/judges/Lisa_Chen.webp";
-import mohammad from "@/public/assets/judges/Mohammad_Jaminur_Islam.png";
+import mohammad from "@/public/assets/judges/Mohammad_Jaminur_Islam.webp";
 import nasser from "@/public/assets/judges/Nasser_Ben.webp";
 import nilanjan from "@/public/assets/judges/Nilanjan_Chatterjee.webp";
 import rachit from "@/public/assets/judges/Rachit_Prajapati.webp";
