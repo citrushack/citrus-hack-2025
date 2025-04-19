@@ -96,7 +96,7 @@ export const JUDGES: Judge[] = [
   },
   {
     name: "Rachit Prajapati",
-    role: "alumni",
+    role: "Alumni",
     img: rachit,
   },
   {
