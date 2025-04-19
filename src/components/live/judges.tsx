@@ -1,8 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
-import { boardmembers } from "@/data/live/board";
-import Image from "next/image";
-import filmSlate from "@/public/assets/filmSlate.svg";
 import Profile from "./team/profile";
 import { JUDGES } from "@/data/live/judges";
 const Judges = () => {
@@ -17,18 +12,8 @@ const Judges = () => {
         </div>
       </div>
 
-      <div className="relative mx-auto flex w-full flex-col items-center">
-        <div className="relative mt-5 grid w-full grid-cols-2 gap-6 md:w-1/2 md:grid-cols-2 md:gap-10">
-          <motion.div
-            animate={{ rotate: [0, 5, -5, 0] }}
-            transition={{ repeat: Infinity, duration: 5 }}
-            className="absolute -right-16 top-4 hidden md:flex lg:-right-24 xl:-right-32 2xl:-right-40"
-          >
-            <Image src={filmSlate} width={128} height={128} alt="film slate" />
-          </motion.div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-10">
+      <div className="relative mx-auto mt-10 flex w-full flex-col items-center">
+        <div className="grid w-1/2 grid-cols-2 gap-6 md:grid-cols-4 md:gap-10">
           {JUDGES.map(({ name, role, img }) => (
             <Profile key={name} name={name} role={role} image={img} />
           ))}
