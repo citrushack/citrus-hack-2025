@@ -12,7 +12,7 @@ export const COMMITTEES = [
     ],
   },
   // {
-  //   name: "SPONSORSHIP",
+  //   name: "SPONSORSHIP",S
   //   members: ["Karina Flores"],
   // },
   {
@@ -23,6 +23,7 @@ export const COMMITTEES = [
       "Joaquin Gonzalez",
       "Angel Avalos",
       "Rebecca Jennings",
+      "Simon Cun",
     ],
   },
 
