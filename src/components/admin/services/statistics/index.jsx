@@ -7,7 +7,6 @@ import { AGES, DIETS, GENDERS, SHIRTS } from "@/data/form/information";
 import { api } from "@/utils/api";
 import { STATUSES } from "@/data/statuses";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-
 const Statistics = () => {
   const { data } = useQuery({
     queryKey: ["/admin/statistics"],
@@ -59,9 +58,17 @@ const Statistics = () => {
             if (value) setValue(value);
           }}
         >
-          {Object.keys(mappings).map((value, index) => (
-            <ToggleGroupItem value={value} key={index}>
-              {value}
+          {Object.keys(mappings).map((val, index) => (
+            <ToggleGroupItem
+              value={val}
+              key={index}
+              className={
+                value === val
+                  ? "bg-white"
+                  : "bg-gray-600 hover:bg-white hover:text-black"
+              }
+            >
+              {val}
             </ToggleGroupItem>
           ))}
         </ToggleGroup>
