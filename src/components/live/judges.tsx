@@ -14,7 +14,7 @@ const Judges = () => {
       </div>
 
       <div className="relative mx-auto mt-10 flex w-full flex-col items-center">
-        <div className="grid w-1/2 grid-cols-2 gap-6 md:grid-cols-4 md:gap-10">
+        <div className="grid w-11/12 grid-cols-2 gap-6 md:w-1/2 md:grid-cols-4 md:gap-10">
           {JUDGES.map(({ name, role, img }) => (
             <Profile key={name} name={name} role={role} image={img} />
           ))}

@@ -1,7 +1,7 @@
 import aditya from "@/public/assets/judges/Aditya_Bhardwaj.webp";
 import advithi from "@/public/assets/judges/Advithi_Kethidi.webp";
 import allan from "@/public/assets/judges/Allan_Knight.webp";
-import amber from "@/public/assets/judges/Amber_Zheng.webp";
+import amber from "@/public/assets/judges/Amber_Zheng.jpeg";
 import andre from "@/public/assets/judges/Andre_Amante.webp";
 import alexis from "@/public/assets/judges/Alexis_Manalastas.png";
 import anna from "@/public/assets/judges/Anna_Lee.webp";
@@ -46,7 +46,7 @@ export const JUDGES: Judge[] = [
   },
   {
     name: "Alexis Manalastas",
-    img: uma,
+    img: alexis,
     role: "Gamespawn Vice President",
   },
   {
@@ -65,13 +65,13 @@ export const JUDGES: Judge[] = [
     role: "Software Engineer",
   },
   {
-    name: "Isabelle Celo",
-    img: isabelle,
+    name: "Advithi Kethidi",
+    img: advithi,
     role: "RoseHack 2025 Director",
   },
   {
-    name: "Advithi Kethidi",
-    img: advithi,
+    name: "Isabelle Celo",
+    img: isabelle,
     role: "RoseHack 2025 Director",
   },
   {
@@ -96,6 +96,7 @@ export const JUDGES: Judge[] = [
   },
   {
     name: "Rachit Prajapati",
+    role: "alumni",
     img: rachit,
   },
   {
