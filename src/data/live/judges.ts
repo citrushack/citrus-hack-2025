@@ -30,59 +30,9 @@ interface Judge {
 
 export const JUDGES: Judge[] = [
   {
-    name: "Divyank Shah",
-    img: divyank,
-    role: "Alumni",
-  },
-  {
-    name: "Anna Lee",
-    img: anna,
-  },
-  {
-    name: "Aditya Bhardwaj",
-    img: aditya,
-  },
-  {
-    name: "Andre Amante",
-    img: andre,
-    role: "SWE @ Pacific Northwest",
-  },
-  {
-    name: "Ryan Lew",
-    img: ryan,
-    role: "Residential Technical Advisor",
-  },
-  {
-    name: "Sarah Armstrong",
-    img: sarah,
-  },
-  {
-    name: "Lisa Chen",
-    img: lisa,
-    role: "PhD Candidate",
-  },
-  {
-    name: "Mohammad Jaminur Islam",
-    img: mohammad,
-    role: "Graduate Student Researcher",
-  },
-  {
     name: "Allan Knight",
     img: allan,
     role: "Assistant Professor of Teaching",
-  },
-  {
-    name: "Falak Tulsi",
-    img: falak,
-  },
-  {
-    name: "Raidah Fairooz",
-    img: raidah,
-    role: "Software Engineer",
-  },
-  {
-    name: "Nilanjan Chatterjee",
-    img: nilanjan,
   },
   {
     name: "Amber Zheng",
@@ -90,14 +40,9 @@ export const JUDGES: Judge[] = [
     role: "Product Manager @ TikTok",
   },
   {
-    name: "Uma Akundi",
-    img: uma,
-    role: "BCOE Senator",
-  },
-  {
-    name: "Isabelle Celo",
-    img: isabelle,
-    role: "RoseHack 2025 Director",
+    name: "Lisa Chen",
+    img: lisa,
+    role: "PhD Candidate",
   },
   {
     name: "Alexis Manalastas",
@@ -120,13 +65,68 @@ export const JUDGES: Judge[] = [
     role: "Software Engineer",
   },
   {
-    name: "Rachit Prajapati",
-    img: rachit,
+    name: "Isabelle Celo",
+    img: isabelle,
+    role: "RoseHack 2025 Director",
   },
   {
     name: "Advithi Kethidi",
     img: advithi,
     role: "RoseHack 2025 Director",
+  },
+  {
+    name: "Uma Akundi",
+    img: uma,
+    role: "BCOE Senator",
+  },
+  {
+    name: "Ryan Lew",
+    img: ryan,
+    role: "CSA VP External",
+  },
+  {
+    name: "Mohammad Jaminur Islam",
+    img: mohammad,
+    role: "Graduate Student Researcher",
+  },
+  {
+    name: "Andre Amante",
+    img: andre,
+    role: "Alumni",
+  },
+  {
+    name: "Rachit Prajapati",
+    img: rachit,
+  },
+  {
+    name: "Divyank Shah",
+    img: divyank,
+    role: "Alumni",
+  },
+  {
+    name: "Raidah Fairooz",
+    img: raidah,
+    role: "Alumni",
+  },
+  {
+    name: "Anna Lee",
+    img: anna,
+  },
+  {
+    name: "Aditya Bhardwaj",
+    img: aditya,
+  },
+  {
+    name: "Falak Tulsi",
+    img: falak,
+  },
+  {
+    name: "Sarah Armstrong",
+    img: sarah,
+  },
+  {
+    name: "Nilanjan Chatterjee",
+    img: nilanjan,
   },
   {
     name: "Archit Varade",
