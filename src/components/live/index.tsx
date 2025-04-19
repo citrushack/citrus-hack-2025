@@ -10,7 +10,7 @@ import Tracks from "./tracks";
 import Sponsors from "./sponsors";
 // import Team from "./team/team";
 import Committees from "./committees";
-// import Judges from "./judges";
+import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
 // import CurtainReveal from "./reveal";
@@ -60,9 +60,9 @@ const Live = () => {
           <Sponsors />
           <Team />
           <Committees />
-          {/* 
-    <Judges />
-    */}
+
+          <Judges />
+
           <FAQ />
           <Footer />
         </>
