@@ -29,7 +29,7 @@ export const COMMITTEES = [
 
   {
     name: "UI/UX",
-    members: ["Charleen Chen", "Neelesh Roy"],
+    members: ["Charleen Chen", "Neelesh Roy", "Natalie Grigorian"],
   },
   {
     name: "SOFTWARE",

@@ -16,7 +16,7 @@ import nasser from "@/public/assets/judges/Nasser_Ben.webp";
 import nilanjan from "@/public/assets/judges/Nilanjan_Chatterjee.webp";
 import rachit from "@/public/assets/judges/Rachit_Prajapati.webp";
 import raidah from "@/public/assets/judges/Raidah_Fairooz.webp";
-import ryan from "@/public/assets/judges/Ryan_Lew.webp";
+import ryan from "@/public/assets/judges/ryan_lew.webp";
 import sarah from "@/public/assets/judges/Sarah_Armstrong.webp";
 import uma from "@/public/assets/judges/Uma_Akundi.webp";
 import vishal from "@/public/assets/judges/Vishal_Chaurasia.webp";
