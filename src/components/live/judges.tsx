@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Profile from "./team/profile";
 import { JUDGES } from "@/data/live/judges";
 const Judges = () => {
