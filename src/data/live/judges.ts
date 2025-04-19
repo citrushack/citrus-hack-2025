@@ -3,6 +3,7 @@ import advithi from "@/public/assets/judges/Advithi_Kethidi.webp";
 import allan from "@/public/assets/judges/Allan_Knight.webp";
 import amber from "@/public/assets/judges/Amber_Zheng.webp";
 import andre from "@/public/assets/judges/Andre_Amante.webp";
+import alexis from "@/public/assets/judges/Alexis_Manalastas.png";
 import anna from "@/public/assets/judges/Anna_Lee.webp";
 import archit from "@/public/assets/judges/Archit_Varade.webp";
 import divyank from "@/public/assets/judges/Divyank_Shah.webp";
@@ -97,6 +98,11 @@ export const JUDGES: Judge[] = [
     name: "Isabelle Celo",
     img: isabelle,
     role: "RoseHack 2025 Director",
+  },
+  {
+    name: "Alexis Manalastas",
+    img: uma,
+    role: "Gamespawn Vice President",
   },
   {
     name: "Nasser Ben",
