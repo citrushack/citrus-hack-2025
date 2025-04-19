@@ -9,8 +9,9 @@ import { QUESTIONS } from "@/data/faq";
 // import Title from "@/components/ui/title";
 import Pop from "@/public/assets/poppiece.svg";
 import FAQt from "@/public/assets/filmroll4.svg";
-import film from "@/public/assets/filmm.svg";
+import leftFilm from "@/public/assets/leftRolling.svg";
 import Image from "next/image";
+import Film from "./rollingFn";
 
 const FAQ = () => {
   return (
@@ -18,7 +19,7 @@ const FAQ = () => {
       id="faq"
       className="mb-[10%] flex min-h-screen w-full flex-col items-center"
     >
-      <Image src={film} alt="nice" className="w-full" />
+      <Film imageSrc={leftFilm} />
       <div className="relative mt-[7%] w-full max-w-3xl p-4 md:p-0">
         <Image src={FAQt} alt="FAQ Title" className="w-fit" />
         <div className="w-full border-4 border-citrus-red-100 bg-[#FFDA84] px-6 py-10 shadow-lg">
@@ -49,7 +50,7 @@ const FAQ = () => {
           </Accordion>
         </div>
       </div>
-      <Image src={film} alt="nice" className="my-16 w-full" />
+      <Film imageSrc={leftFilm} />
     </div>
   );
 };
