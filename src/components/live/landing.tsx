@@ -1,4 +1,4 @@
-import Countdown from "@/components/ui/countdown";
+// import Countdown from "@/components/ui/countdown";
 import LandingAssets from "./landing-assets";
 import TextStroke from "./text-stroke";
 import CinemaLights from "./cinema-lights";
@@ -29,31 +29,32 @@ const Landing = ({ complete }: { complete: boolean }) => {
 
         <div className="mt-0 flex flex-col gap-1 text-center text-2xl md:mt-2 md:gap-4 md:text-4xl">
           <TextStroke
-            title="Released in"
+            title="Thank You"
             color={
               "text-outline-red text-center text-white text-2xl md:text-5xl"
             }
             subColor="text-center text-white text-2xl md:text-5xl"
           />
-          <div>Winston Chung Hall</div>
-          <div className="text-citrus-red-200">-- SHOW TIME --</div>
-          <div>April 19-20 2025</div>
+          <div className="text-citrus-red-200">For a cinematic experience</div>
+          <div className="text-citrus-red-200">We will return again next year!!</div>
+          {/* <div className="text-citrus-red-200">-- SHOW TIME --</div>
+          <div>April 19-20 2025</div> */}
         </div>
 
-        <Countdown
+        {/* <Countdown
           classNames={{
             digit: "text-citrus-red-100",
             background: "bg-transparent",
             unit: "text-black",
           }}
-        />
+        /> */}
       </div>
       {complete && (
         <>
           <div className="my-10 flex w-1/2 flex-wrap-reverse justify-center gap-5 md:my-16 md:w-3/5 md:gap-20 md:gap-y-14">
-            <Ticket title="Volunteers" link="form/volunteer" />
-            <Ticket title="Mentors" link="form/mentor" />
-            <Ticket title="Apply Now" link="form/participant" />
+            {/* <Ticket title="Volunteers" link="form/volunteer" />
+            <Ticket title="Mentors" link="form/mentor" /> */}
+            <Ticket title="Devpost" link="https://citrus-hack-2025.devpost.com/project-gallery" target="_blank" />
           </div>
 
           <LandingAssets />

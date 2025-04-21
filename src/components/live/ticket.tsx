@@ -9,11 +9,12 @@ import Link from "next/link";
 type TicketProps = {
   title: string;
   link: string;
+  target: string;
 };
 
-export default function Ticket({ title, link }: TicketProps) {
+export default function Ticket({ title, link, target}: TicketProps) {
   return (
-    <Link href={link} className="w-fit">
+    <Link href={link} target={target} className="w-fit">
       <motion.div
         className="relative flex cursor-pointer items-center justify-center overflow-hidden"
         initial={{ y: 0 }}
