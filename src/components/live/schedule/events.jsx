@@ -79,7 +79,7 @@ const Events = ({ events, totalDays }) => {
                 return (
                   <div
                     key={index}
-                    className={`font-workSans grid h-24 w-full grid-cols-4 items-center justify-center bg-citrus-darkred/50 px-4 text-xs font-semibold md:text-xl 2xl:text-2xl ${
+                    className={`font-workSans grid h-24 w-full grid-cols-4 items-center justify-center border-b-2 border-white bg-citrus-darkred/50 px-4 text-xs font-semibold md:text-xl 2xl:text-2xl ${
                       selectedDay === currentDay &&
                       new Date().toLocaleString("en-US", {
                         timeZone: "America/Los_Angeles",

@@ -10,13 +10,13 @@ import Tracks from "./tracks";
 import Sponsors from "./sponsors";
 // import Team from "./team/team";
 import Committees from "./committees";
-// import Judges from "./judges";
+import Judges from "./judges";
 import FAQ from "./faq";
 import Footer from "./footer";
 // import CurtainReveal from "./reveal";
 import Schedule from "./schedule";
 import Team from "./team/team";
-// import Keynote from "./keynote";
+import Keynote from "./keynote";
 
 const Live = () => {
   // const [complete, setComplete] = useState(false);
@@ -55,14 +55,14 @@ const Live = () => {
           <Landing complete />
           <About />
           <Tracks />
-          {/* <Keynote /> */}
+          <Keynote />
           <Schedule />
           <Sponsors />
           <Team />
           <Committees />
-          {/* 
-    <Judges />
-    */}
+
+          <Judges />
+
           <FAQ />
           <Footer />
         </>
