@@ -5,6 +5,7 @@ import curtain from "@/public/assets/sponsors/sponsorcurtain.svg";
 import right from "@/public/assets/sponsors/rspotlight.svg";
 import left from "@/public/assets/sponsors/lspotlight.svg";
 import acm from "@/public/assets/sponsors/ACM.svg";
+import Link from "next/link";
 
 const Sponsors = () => {
   return (
@@ -37,12 +38,14 @@ const Sponsors = () => {
         </div>
       </div>
       <div className="z-10 mt-2 flex w-3/5 flex-wrap items-center justify-between gap-6 rounded-xl p-2 md:w-2/3 md:p-6">
-        {SPOMSORS.map(({ image, alt }, index) => (
+        {SPOMSORS.map(({ image, alt, link }, index) => (
           <div
             key={index}
             className="w-1/3 transition-transform duration-500 hover:scale-105 hover:brightness-110 md:w-fit"
           >
-            <Image src={image} alt={alt} className="w-full md:w-fit" />
+            <Link href={link} target="blank">
+              <Image src={image} alt={alt} className="w-full md:w-fit" />
+            </Link>
           </div>
         ))}
       </div>

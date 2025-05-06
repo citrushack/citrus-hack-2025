@@ -36,7 +36,9 @@ const Landing = ({ complete }: { complete: boolean }) => {
             subColor="text-center text-white text-2xl md:text-5xl"
           />
           <div className="text-citrus-red-200">For a cinematic experience</div>
-          <div className="text-citrus-red-200">We will return again next year!!</div>
+          <div className="text-citrus-red-200">
+            We will return again next year!!
+          </div>
           {/* <div className="text-citrus-red-200">-- SHOW TIME --</div>
           <div>April 19-20 2025</div> */}
         </div>
@@ -54,7 +56,11 @@ const Landing = ({ complete }: { complete: boolean }) => {
           <div className="my-10 flex w-1/2 flex-wrap-reverse justify-center gap-5 md:my-16 md:w-3/5 md:gap-20 md:gap-y-14">
             {/* <Ticket title="Volunteers" link="form/volunteer" />
             <Ticket title="Mentors" link="form/mentor" /> */}
-            <Ticket title="Devpost" link="https://citrus-hack-2025.devpost.com/project-gallery" target="_blank" />
+            <Ticket
+              title="Devpost"
+              link="https://citrus-hack-2025.devpost.com/project-gallery"
+              target="_blank"
+            />
           </div>
 
           <LandingAssets />

@@ -12,7 +12,7 @@ type TicketProps = {
   target: string;
 };
 
-export default function Ticket({ title, link, target}: TicketProps) {
+export default function Ticket({ title, link, target }: TicketProps) {
   return (
     <Link href={link} target={target} className="w-fit">
       <motion.div
