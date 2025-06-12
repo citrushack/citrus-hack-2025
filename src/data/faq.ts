@@ -7,53 +7,49 @@ export const QUESTIONS: QuestionAnswer[] = [
   {
     question: "What is a hackathon?",
     answer:
-      "A hackathon is an event where people come together to collaborate on technology projects, typically over a short period of time. Participants work in teams to create software, hardware, or other tech solutions, often addressing specific challenges or themes.",
+      "A hackathon is an event where participants get the chance to come together build projects within a short period of time! Participants work in teams to create software, hardware, or other technical solutions, often addressing specific challenges and themes.",
   },
   {
-    question: "When does Citrus Hack start?",
+    question: "When and where is Citrus Hack?",
     answer:
-      "Citrus Hack will start Saturday Noon at 12pm on April 19. Stay tuned to the schedule for updated times",
+      "Citrus Hack will be held in spring 2026 (exact dates to be announced) at UC Riverside - Winston Chung Hall, where participantes will have 24 hours to build a project. There will be a comprehensive schedule of meal times, workshops, and activities in the final itinerary!",
   },
   {
-    question: "Where is the hackathon?",
+    question: "Who can participate?",
     answer:
-      "It will take at UCR!! In our favorite engineering buildings! It will be held throughout Winston Chung Hall and certain BCOE buildings and classrooms. There will be a comprehensive list of activities and their locations in the final itinerary!",
+      "Citrus Hack is open to all years, majors, and skills levels for students that are 18+.",
   },
   {
-    question: "Who can come to Citrus Hack?",
-    answer:
-      "Citrus Hack is targeted towards beginners, but we welcome anyone to participate regardless of their experience or education level.",
+    question: "How can I apply to Citrus Hack?",
+    answer: "We'll be releasing applications to participate, volunteer, mentor, judge, organize (committee), and sponsor during summer 2025. Keep an eye on our socials for updates!",
   },
   {
-    question: "Is Citrus Hack free?",
-    answer:
-      "Citrus Hack is a completely free event! You will be allowed to attend workshops, listen to some wonderful speakers, and best of all, win great prizes with no entrance fee. 🤠",
+    question: "How many members are allowed for each team?",
+    answer: "1-4 people per team.",
   },
   {
-    question: "How long do I have to hack?",
-    answer: "For Citrus you will have 24 hours!",
+    question: "How do I find a team?",
+    answer: "We will have oppotunites to meet other participants via the Discord server and at the event itself. You can also come with a team beforehand!",
   },
   {
-    question: "Do I have to hack or make a project?",
-    answer:
-      "Absolutely not!! While we encourage everyone to make a project anyone is welcome to come for the free food and shirt! ",
+    question: "Am I required to submit a project?",
+    answer: "You aren't required to submit a project! We encourage all participants to come and checkout the workshops, opportunities, free food, and free swag.",
   },
   {
-    question: "What if  I've never been to a hackathon?",
-    answer:
-      "All the more reason to come and experience a hackathon! You can learn from the various workshops, speakers, and mentors, and they can help guide a personal project of your choice if you want!",
+    question: "What if this is my 1st hackathon?",
+    answer: "We offer a wide range of workshops, speakers, and mentors to help you get started.",
   },
   {
-    question: "What if I don't have a team?",
-    answer:
-      "We will have oppotunites to meet new people as well as our team page will allow you to find people to work with!",
-  },
-  {
-    question: "Where will I submit?",
-    answer: "Devpost. We will tell provide guidence on submission as well!",
+    question: "How do I submit my team's project?",
+    answer: "To submit projects, teams must be registered together for Devpost and the Citrus Hack participant dashboard. Judging will take place in person and majority of your team is required to be present.",
   },
   {
     question: "My question isn't here.",
-    answer: "Feel free to email us your question at citrushack@gmail.com!",
+    answer: "Feel free to contact us at citrushack@gmail.com or @citrushack_ucr on Instagram!",
   },
+  // {
+  //   question: "What if I've never been to a hackathon?",
+  //   answer:
+  //     "All the more reason to come and experience a hackathon! You can learn from the various workshops, speakers, and mentors, and they can help guide a personal project of your choice if you want!",
+  // },
 ];

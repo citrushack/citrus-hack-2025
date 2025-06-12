@@ -54,14 +54,13 @@ const Live = () => {
           <Navigation />
           <Landing complete />
           <About />
-          <Tracks />
-          <Keynote />
-          <Schedule />
-          <Sponsors />
-          <Team />
-          <Committees />
-
-          <Judges />
+          {/* <Tracks /> */}
+          {/* <Keynote /> */}
+          {/* <Schedule /> */}
+          {/* <Sponsors /> */}
+          {/* {/* <Team /> */}
+          {/* <Committees />
+          <Judges /> */}
 
           <FAQ />
           <Footer />

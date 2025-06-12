@@ -85,13 +85,8 @@ const About = () => {
                   Citrus Hack{" "}
                 </span>
                 is a
-                <span className="font-bold text-citrus-yellow"> 24-hour </span>
+                <span className="font-bold text-citrus-yellow"> 24 hour </span>
                 hackathon and one of UC Riverside&apos;s largest hackathons.
-                This year, we&apos;re celebrating our{" "}
-                <span className="font-bold text-citrus-yellow">
-                  decade anniversary
-                </span>
-                !
               </p>
               <p>
                 Hackers get the opportunity to build a project to present to a
@@ -118,7 +113,7 @@ const About = () => {
             <Card
               text={
                 <>
-                  {10} <br /> Years
+                  {"10+"} <br /> Years
                 </>
               }
             />
@@ -139,7 +134,7 @@ const About = () => {
             <Card
               text={
                 <>
-                  {"20+"} <br /> Organizers
+                  {"40+"} <br /> Organizers
                 </>
               }
             />
