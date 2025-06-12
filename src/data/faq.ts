@@ -21,7 +21,8 @@ export const QUESTIONS: QuestionAnswer[] = [
   },
   {
     question: "How can I apply to Citrus Hack?",
-    answer: "We'll be releasing applications to participate, volunteer, mentor, judge, organize (committee), and sponsor during summer 2025. Keep an eye on our socials for updates!",
+    answer:
+      "We'll be releasing applications to participate, volunteer, mentor, judge, organize (committee), and sponsor during summer 2025. Keep an eye on our socials for updates!",
   },
   {
     question: "How many members are allowed for each team?",
@@ -29,23 +30,28 @@ export const QUESTIONS: QuestionAnswer[] = [
   },
   {
     question: "How do I find a team?",
-    answer: "We will have oppotunites to meet other participants via the Discord server and at the event itself. You can also come with a team beforehand!",
+    answer:
+      "We will have oppotunites to meet other participants via the Discord server and at the event itself. You can also come with a team beforehand!",
   },
   {
     question: "Am I required to submit a project?",
-    answer: "You aren't required to submit a project! We encourage all participants to come and checkout the workshops, opportunities, free food, and free swag.",
+    answer:
+      "You aren't required to submit a project! We encourage all participants to come and checkout the workshops, opportunities, free food, and free swag.",
   },
   {
     question: "What if this is my 1st hackathon?",
-    answer: "We offer a wide range of workshops, speakers, and mentors to help you get started.",
+    answer:
+      "We offer a wide range of workshops, speakers, and mentors to help you get started.",
   },
   {
     question: "How do I submit my team's project?",
-    answer: "To submit projects, teams must be registered together for Devpost and the Citrus Hack participant dashboard. Judging will take place in person and majority of your team is required to be present.",
+    answer:
+      "To submit projects, teams must be registered together for Devpost and the Citrus Hack participant dashboard. Judging will take place in person and majority of your team is required to be present.",
   },
   {
     question: "My question isn't here.",
-    answer: "Feel free to contact us at citrushack@gmail.com or @citrushack_ucr on Instagram!",
+    answer:
+      "Feel free to contact us at citrushack@gmail.com or @citrushack_ucr on Instagram!",
   },
   // {
   //   question: "What if I've never been to a hackathon?",
