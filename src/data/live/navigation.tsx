@@ -1,13 +1,13 @@
 import {
-  Calendar,
+  // Calendar,
   CircleHelp,
-  Gavel,
-  HandHeartIcon,
+  // Gavel,
+  // HandHeartIcon,
   House,
   Info,
-  Mic,
-  Users,
-  Waypoints,
+  // Mic,
+  // Users,
+  // Waypoints,
 } from "lucide-react";
 
 export const ITEMS = [
